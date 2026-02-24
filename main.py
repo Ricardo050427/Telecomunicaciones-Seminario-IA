@@ -7,11 +7,41 @@ df_original = None
 df_actual = None
 orden_estado = {}
 
+sierra = [
+    "Agua Prieta",
+    "Fronteras",
+    "Nacozari de García",
+    "Bavispe",
+    "Villa Hidalgo",
+    "Bacerac",
+    "Cumpas",
+    "Huásabas",
+    "Huachinera",
+    "Granados",
+    "Moctezuma",
+    "Divisaderos",
+    "Bacadéhuachi",
+    "Nácori Chico",
+    "Tepache",
+    "Mazatán",
+    "Villa Pesqueira",
+    "San Pedro de la Cueva",
+    "Bacanora",
+    "Sahuaripa",
+    "Tecoripa",
+    "Suaqui Grande",
+    "San Javier",
+    "Soyopa",
+    "Ónavas",
+    "Arivechi",
+    "Yécora"
+]
+
 def cargar_archivo():
     global df_original, df_actual
 
     ruta = filedialog.askopenfilename(
-        filetypes=[("Archivos Excel", "*.xlsx *.xls")]
+        filetypes=[("Archivos Excel", "*.xlsx *.xls *.CSV")]
     )
 
     if not ruta:
@@ -77,7 +107,7 @@ def exportar():
 
 def sin_internet():
     global df_actual
-    df_actual = df_original[df_original["INTERNET"] == "No"][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
+    df_actual = df_original[(df_original["INTERNET"] == "No") & (df_original["NOM_LOC"].isin(sierra))][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
     actualizar_tabla(df_actual)
 
 def abrir_maps():
