@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import pandas as pd
+import webbrowser
 
 df_original = None
 df_actual = None
@@ -74,6 +75,31 @@ def exportar():
         df_actual.to_excel(ruta, index=False)
         messagebox.showinfo("Éxito", "Archivo exportado correctamente")
 
+def sin_internet():
+    global df_actual
+    df_actual = df_original[df_original["INTERNET"] == "No"][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
+    actualizar_tabla(df_actual)
+
+def abrir_maps():
+    seleccionado = tabla.focus()
+
+    if not seleccionado:
+        return
+
+    valores = tabla.item(seleccionado, "values")
+
+    # Obtener índice de columnas
+    columnas = tabla["columns"]
+
+    lat_index = columnas.index("LATITUD")
+    lon_index = columnas.index("LONGITUD")
+
+    lat = valores[lat_index]
+    lon = valores[lon_index]
+
+    url = f"https://www.google.com/maps?q={lat},{lon}"
+    webbrowser.open(url)
+
 
 root = tk.Tk()
 root.title("interfaz")
@@ -83,6 +109,8 @@ frame_superior = tk.Frame(root)
 frame_superior.pack(pady=10)
 
 tk.Button(frame_superior, text="Cargar Excel", command=cargar_archivo).pack(side="left", padx=5)
+tk.Button(frame_superior, text="Sin Internet", command=sin_internet).pack(side="left", padx=5)
+tk.Button(frame_superior, text="Maps", command=abrir_maps).pack(side="left", padx=5)
 
 entrada_busqueda = tk.Entry(frame_superior, width=30)
 entrada_busqueda.pack(side="left", padx=5)
