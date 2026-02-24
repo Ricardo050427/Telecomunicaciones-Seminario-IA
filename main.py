@@ -8,33 +8,32 @@ df_actual = None
 orden_estado = {}
 
 sierra = [
-    "Agua Prieta",
-    "Fronteras",
-    "Nacozari de García",
-    "Bavispe",
-    "Villa Hidalgo",
-    "Bacerac",
-    "Cumpas",
-    "Huásabas",
-    "Huachinera",
-    "Granados",
-    "Moctezuma",
-    "Divisaderos",
-    "Bacadéhuachi",
-    "Nácori Chico",
-    "Tepache",
-    "Mazatán",
-    "Villa Pesqueira",
-    "San Pedro de la Cueva",
-    "Bacanora",
-    "Sahuaripa",
-    "Tecoripa",
-    "Suaqui Grande",
-    "San Javier",
-    "Soyopa",
-    "Ónavas",
-    "Arivechi",
-    "Yécora"
+    "Agua Prieta (26002)",
+    "Fronteras (26027)",
+    "Nacozari de García (26041)",
+    "Bavispe (26015)",
+    "Villa Hidalgo (26067)",
+    "Bacerac (26010)",
+    "Cumpas (26023)",
+    "Huásabas (26032)",
+    "Huachinera (26031)",
+    "Granados (26028)",
+    "Moctezuma (26038)",
+    "Divisaderos (26024)",
+    "Bacadéhuachi (26008)",
+    "Nácori Chico (26040)",
+    "Tepache (26063)",
+    "Mazatán (26037)",
+    "Villa Pesqueira (26068)",
+    "San Pedro de la Cueva (26057)",
+    "Bacanora (26009)",
+    "Sahuaripa (26052)",
+    "Suaqui Grande (26062)",
+    "San Javier (26054)",
+    "Soyopa (26061)",
+    "Onavas (26044)",
+    "Arivechi (26005)",
+    "Yécora (26069)"
 ]
 
 def cargar_archivo():
@@ -107,7 +106,18 @@ def exportar():
 
 def sin_internet():
     global df_actual
-    df_actual = df_original[(df_original["INTERNET"] == "No") & (df_original["NOM_LOC"].isin(sierra))][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
+    df_actual = df_original[(df_original["INTERNET"] == "No") & (df_original["NOM_MUN"].isin(sierra))][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
+    actualizar_tabla(df_actual)
+
+def esta_en_sierra():
+    global df_actual
+
+    sierra_sin_codigo = [m.split(" (")[0].strip().lower() for m in sierra]
+
+    df_actual = df_original[
+        df_original["municipio"].str.strip().str.lower().isin(sierra_sin_codigo)
+    ].copy()
+
     actualizar_tabla(df_actual)
 
 def abrir_maps():
@@ -141,6 +151,7 @@ frame_superior.pack(pady=10)
 tk.Button(frame_superior, text="Cargar Excel", command=cargar_archivo).pack(side="left", padx=5)
 tk.Button(frame_superior, text="Sin Internet", command=sin_internet).pack(side="left", padx=5)
 tk.Button(frame_superior, text="Maps", command=abrir_maps).pack(side="left", padx=5)
+tk.Button(frame_superior, text="Sierra", command=esta_en_sierra).pack(side="left", padx=5)
 
 entrada_busqueda = tk.Entry(frame_superior, width=30)
 entrada_busqueda.pack(side="left", padx=5)
