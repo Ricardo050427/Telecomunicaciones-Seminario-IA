@@ -219,6 +219,88 @@ def analizar_prioridad_torres():
     actualizar_tabla(df_actual)
     messagebox.showinfo("Análisis Completo", "Se ha generado el índice de prioridad por municipio.")
 
+
+def ver_detalle_municipio(event):
+    columnas_actuales = tabla["columns"]
+
+    if "PRIORIDAD" not in columnas_actuales:
+        return
+
+    seleccionado = tabla.focus()
+    if not seleccionado:
+        return
+
+    valores = tabla.item(seleccionado, "values")
+
+    try:
+        idx_nom_mun = list(columnas_actuales).index("NOM_MUN")
+        municipio_seleccionado = valores[idx_nom_mun]
+    except ValueError:
+        return
+
+    df_detalle = df_original[df_original["NOM_MUN"] == municipio_seleccionado].copy()
+
+    if df_detalle.empty:
+        messagebox.showinfo("Aviso", "No se encontraron localidades en la base de datos.")
+        return
+
+    ventana_detalle = tk.Toplevel(root)
+    ventana_detalle.title(f"Detalle de localidades sin red en {municipio_seleccionado}")
+    ventana_detalle.geometry("800x400")
+
+    frame_det = tk.Frame(ventana_detalle)
+    frame_det.pack(fill="both", expand=True, padx=10, pady=10)
+
+    scroll_y_det = tk.Scrollbar(frame_det)
+    scroll_y_det.pack(side="right", fill="y")
+    scroll_x_det = tk.Scrollbar(frame_det, orient="horizontal")
+    scroll_x_det.pack(side="bottom", fill="x")
+
+    tabla_det = ttk.Treeview(frame_det, yscrollcommand=scroll_y_det.set, xscrollcommand=scroll_x_det.set)
+    tabla_det.pack(fill="both", expand=True)
+
+    scroll_y_det.config(command=tabla_det.yview)
+    scroll_x_det.config(command=tabla_det.xview)
+
+    cols_mostrar = ["LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LATITUD", "LONGITUD"]
+
+    cols_mostrar = [c for c in cols_mostrar if c in df_detalle.columns]
+
+    tabla_det["columns"] = cols_mostrar
+    tabla_det["show"] = "headings"
+
+    for col in cols_mostrar:
+        tabla_det.heading(col, text=col)
+        ancho = 200 if col == "NOM_LOC" else 100
+        tabla_det.column(col, width=ancho)
+
+    for _, row in df_detalle.iterrows():
+        valores_fila = [row[col] for col in cols_mostrar]
+        tabla_det.insert("", "end", values=valores_fila)
+
+    def abrir_maps_detalle(e):
+        seleccionado_det = tabla_det.focus()
+        if not seleccionado_det:
+            return
+
+        valores_det = tabla_det.item(seleccionado_det, "values")
+        columnas_det = tabla_det["columns"]
+
+        try:
+            # Buscamos en qué posición quedaron la latitud y longitud en esta tablita
+            lat_index = list(columnas_det).index("LATITUD")
+            lon_index = list(columnas_det).index("LONGITUD")
+
+            lat = valores_det[lat_index]
+            lon = valores_det[lon_index]
+
+            url = f"https://www.google.com/maps?q={lat},{lon}"
+            webbrowser.open(url)
+        except ValueError:
+            pass
+
+    tabla_det.bind("<Double-1>", abrir_maps_detalle)
+
 root = tk.Tk()
 root.title("interfaz")
 root.geometry("1100x650")
@@ -253,5 +335,7 @@ tabla.pack(fill="both", expand=True)
 
 scroll_y.config(command=tabla.yview)
 scroll_x.config(command=tabla.xview)
+
+tabla.bind("<Double-1>", ver_detalle_municipio)
 
 root.mainloop()
