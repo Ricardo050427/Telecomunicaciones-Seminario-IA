@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import pandas as pd
 import webbrowser
+import math
+import numpy as np
 
 df_original = None
 df_actual = None
@@ -140,6 +142,82 @@ def abrir_maps():
     url = f"https://www.google.com/maps?q={lat},{lon}"
     webbrowser.open(url)
 
+def analizar_prioridad_torres():
+    global df_actual
+
+    # pedir el excel
+    ruta_torres = filedialog.askopenfilename(
+        title="Selecciona el Excel de las Torres",
+        filetypes=[("Archivos Excel/CSV", "*.xlsx *.xls *.csv")]
+    )
+    if not ruta_torres: return
+
+    try:
+        # leer el archivo
+        if ruta_torres.lower().endswith('.csv'):
+            df_torres = pd.read_csv(ruta_torres)
+        else:
+            df_torres = pd.read_excel(ruta_torres)
+    except Exception as e:
+        messagebox.showerror("Error", f"No se pudo leer el archivo: {e}")
+        return
+
+    df_locs = df_actual.copy()
+
+    if df_locs.empty:
+        messagebox.showwarning("Aviso", "No hay datos en la tabla. Carga las localidades primero.")
+        return
+
+    # acotar nombres de los municipios
+    df_locs['MUN_LIMPIO'] = df_locs['NOM_MUN'].astype(str).apply(lambda x: x.split(' (')[0].strip().upper())
+    df_torres['municipio'] = df_torres['municipio'].astype(str).str.strip().str.upper()
+
+    # contar cuantas torres hay por municipio
+    conteo_torres = df_torres['municipio'].value_counts().reset_index()
+    conteo_torres.columns = ['MUN_LIMPIO', 'TORRES_EXISTENTES']
+
+    df_locs['POBLACION'] = pd.to_numeric(df_locs['POBLACION'], errors='coerce').fillna(0)
+    df_locs['LATITUD'] = pd.to_numeric(df_locs['LATITUD'], errors='coerce')
+    df_locs['LONGITUD'] = pd.to_numeric(df_locs['LONGITUD'], errors='coerce')
+
+    resumen = []
+
+    for mun, grupo in df_locs.groupby('MUN_LIMPIO'):
+        pob_total = grupo['POBLACION'].sum()
+        num_locs = len(grupo)
+
+        # calcular centro de gravedad poblacional
+        if pob_total > 0:
+            lat_opt = (grupo['LATITUD'] * grupo['POBLACION']).sum() / pob_total
+            lon_opt = (grupo['LONGITUD'] * grupo['POBLACION']).sum() / pob_total
+        else:
+            lat_opt = grupo['LATITUD'].mean()
+            lon_opt = grupo['LONGITUD'].mean()
+
+        nombre_original = grupo['NOM_MUN'].iloc[0]
+
+        resumen.append({
+            'NOM_MUN': nombre_original,
+            'MUN_LIMPIO': mun,
+            'LOCS_SIN_RED': num_locs,
+            'POB_AFECTADA': int(pob_total),
+            'LATITUD': round(lat_opt, 6),
+            'LONGITUD': round(lon_opt, 6)
+        })
+
+    df_resumen = pd.DataFrame(resumen)
+
+    # cruzar ambas tablas
+    df_final = pd.merge(df_resumen, conteo_torres, on='MUN_LIMPIO', how='left')
+    df_final['TORRES_EXISTENTES'] = df_final['TORRES_EXISTENTES'].fillna(0).astype(int)
+
+    # indice de prioridad
+    df_final['PRIORIDAD'] = round(df_final['POB_AFECTADA'] / (df_final['TORRES_EXISTENTES'] + 1), 2)
+    df_final = df_final.sort_values(by='PRIORIDAD', ascending=False).drop(columns=['MUN_LIMPIO'])
+
+    df_actual = df_final
+    actualizar_tabla(df_actual)
+    messagebox.showinfo("Análisis Completo", "Se ha generado el índice de prioridad por municipio.")
 
 root = tk.Tk()
 root.title("interfaz")
@@ -152,6 +230,7 @@ tk.Button(frame_superior, text="Cargar Excel", command=cargar_archivo).pack(side
 tk.Button(frame_superior, text="Sin Internet", command=sin_internet).pack(side="left", padx=5)
 tk.Button(frame_superior, text="Maps", command=abrir_maps).pack(side="left", padx=5)
 tk.Button(frame_superior, text="Sierra", command=esta_en_sierra).pack(side="left", padx=5)
+tk.Button(frame_superior, text="Analizar Prioridad", command=analizar_prioridad_torres).pack(side="left", padx=5)
 
 entrada_busqueda = tk.Entry(frame_superior, width=30)
 entrada_busqueda.pack(side="left", padx=5)
