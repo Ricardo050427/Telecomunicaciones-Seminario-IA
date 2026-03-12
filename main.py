@@ -108,16 +108,16 @@ def exportar():
 
 def sin_internet():
     global df_actual
-    df_actual = df_original[(df_original["INTERNET"] == "No") & (df_original["NOM_MUN"].isin(sierra))][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
+    df_actual = df_original[(df_original["INTERNET"] == "No")][["MUN", "NOM_MUN", "LOC", "NOM_LOC", "POBLACION", "TOTHOG", "LONGITUD", "LATITUD", "ALTITUD"]]
     actualizar_tabla(df_actual)
 
 def esta_en_sierra():
     global df_actual
 
-    sierra_sin_codigo = [m.split(" (")[0].strip().lower() for m in sierra]
+    sierra_lower = [m.lower() for m in sierra]
 
     df_actual = df_original[
-        df_original["municipio"].str.strip().str.lower().isin(sierra_sin_codigo)
+        df_original["NOM_MUN"].str.strip().str.lower().isin(sierra_lower)
     ].copy()
 
     actualizar_tabla(df_actual)
