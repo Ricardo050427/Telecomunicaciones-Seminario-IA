@@ -5,6 +5,7 @@ import unicodedata
 import re
 import requests
 import time
+import os
 
 
 # ---------------------------------------------------------
@@ -37,13 +38,14 @@ def obtener_elevacion(lat, lon):
     url = f"https://api.open-meteo.com/v1/elevation?latitude={lat}&longitude={lon}"
     try:
         response = requests.get(url, timeout=5)
-        return response.json()['elevation'][0]
+        if response.status_code == 200:
+            return response.json()['elevation'][0]
+        return None
     except:
         return None
 
 
 def verificar_linea_vista(lat_loc, lon_loc, lat_torre, lon_torre, altura_torre):
-    # Si la altura viene vacía o nula, asumimos 30m por defecto
     if pd.isna(altura_torre) or altura_torre <= 0:
         altura_torre = 30.0
 
@@ -52,7 +54,7 @@ def verificar_linea_vista(lat_loc, lon_loc, lat_torre, lon_torre, altura_torre):
 
     if elev_loc is None or elev_torre is None: return "Desconocido (Error API)"
 
-    h_loc_total = elev_loc + 5.0  # Antena de casa (5m)
+    h_loc_total = elev_loc + 5.0  # Antena en casa (5m)
     h_torre_total = elev_torre + altura_torre
 
     bloqueado = False
@@ -66,49 +68,64 @@ def verificar_linea_vista(lat_loc, lon_loc, lat_torre, lon_torre, altura_torre):
         if elev_p is not None and elev_p >= h_imaginaria:
             bloqueado = True
             break
-        time.sleep(0.1)
+        time.sleep(0.05)  # Pequeña espera para no saturar API
 
     return "BLOQUEADA (Cerro)" if bloqueado else "Libre"
 
 
 # ---------------------------------------------------------
-# 3. CARGA Y FUSIÓN DE DATOS
+# 3. CARGA DE DATOS (Búsqueda en raíz y /Archivos)
 # ---------------------------------------------------------
-print("Cargando bases de datos...")
-df_internet = pd.read_excel('INTERNET_LOCALIDADES (1).xlsx')
-df_vuln = pd.read_excel('localidades_vulnerables_sonora FINAL.xlsx')
-df_torres = pd.read_excel('infraestructura_torres_limpia.xlsx')
+def cargar_excel(nombre_archivo):
+    rutas = [nombre_archivo, os.path.join('Archivos', nombre_archivo),
+             nombre_archivo.replace('.xlsx', ' (1).xlsx'),
+             os.path.join('Archivos', nombre_archivo.replace('.xlsx', ' (1).xlsx'))]
+    for r in rutas:
+        if os.path.exists(r):
+            print(f"Cargando {r}...")
+            return pd.read_excel(r)
+    raise FileNotFoundError(f"No se encontró el archivo {nombre_archivo} en ninguna ubicación conocida.")
 
+
+print("Iniciando procesamiento de datos...")
+df_internet = cargar_excel('INTERNET_LOCALIDADES.xlsx')
+df_vuln = cargar_excel('localidades_vulnerables_sonora FINAL.xlsx')
+df_torres = cargar_excel('infraestructura_torres_limpia.xlsx')
+
+# Normalización para cruce de datos
 df_internet['MUN_LIMPIO'] = df_internet['NOM_MUN'].apply(limpiar_texto)
 df_internet['LOC_LIMPIA'] = df_internet['NOM_LOC'].apply(limpiar_texto)
 df_vuln['MUN_LIMPIO'] = df_vuln['Municipio'].apply(limpiar_texto)
 df_vuln['LOC_LIMPIA'] = df_vuln['Localidad'].apply(limpiar_texto)
 
-# Traemos CFE además de la cobertura
+# Fusión de tablas
 columnas_traer = ['MUN_LIMPIO', 'LOC_LIMPIA', 'COB_BC', 'G_4G', 'CFE']
 df_maestro = pd.merge(df_vuln, df_internet[columnas_traer], on=['MUN_LIMPIO', 'LOC_LIMPIA'], how='inner')
 df_maestro = df_maestro.drop_duplicates(subset=['MUN_LIMPIO', 'LOC_LIMPIA'])
 
-# Limpiar Altura_m en torres (quitar '-' y convertir a número)
+# Limpiar Altura de torres
 df_torres['Altura_m'] = pd.to_numeric(df_torres['Altura_m'].astype(str).str.replace('-', ''), errors='coerce').fillna(0)
 
 # ---------------------------------------------------------
-# 4. FILTROS BÁSICOS
+# 4. FILTROS (Todas las localidades con necesidad)
 # ---------------------------------------------------------
 df_maestro['Viviendas_Sin_Internet'] = pd.to_numeric(
     df_maestro['Viviendas_Sin_Internet'].astype(str).str.replace(',', ''), errors='coerce').fillna(0)
+df_maestro['Viviendas_Habitadas'] = pd.to_numeric(
+    df_maestro['Viviendas_Habitadas'].astype(str).str.replace(',', ''), errors='coerce').fillna(0)
+
+# El usuario quiere al menos las ~1823 que tienen viviendas sin internet
 df_filtrado = df_maestro[df_maestro['Viviendas_Sin_Internet'] > 0].copy()
-df_filtrado = df_filtrado[~df_filtrado['G_4G'].astype(str).str.strip().str.lower().str.contains('garantizada')].copy()
 
 # ---------------------------------------------------------
-# 5. ANÁLISIS ESPACIAL Y LÍNEA DE VISTA
+# 5. ANÁLISIS ESPACIAL Y TOPOGRÁFICO
 # ---------------------------------------------------------
-print(f"Analizando topografía para {len(df_filtrado)} localidades...")
+print(f"Analizando {len(df_filtrado)} localidades. Este proceso puede tardar...")
 distancias, torres, status_los, alturas_t, backhaul_t = [], [], [], [], []
 
-contador = 1
-for _, poblado in df_filtrado.iterrows():
-    print(f"Analizando {contador}/{len(df_filtrado)}: {poblado['Localidad']}...")
+for i, (_, poblado) in enumerate(df_filtrado.iterrows(), 1):
+    if i % 10 == 0: print(f"Procesando: {i}/{len(df_filtrado)}...")
+
     dist_min = float('inf')
     t_ganadora = None
 
@@ -125,9 +142,11 @@ for _, poblado in df_filtrado.iterrows():
         alturas_t.append(t_ganadora['Altura_m'])
         backhaul_t.append(str(t_ganadora.get('Medio_Conexion', '')))
 
-        if dist_min <= 30:
-            linea = verificar_linea_vista(poblado['Latitud'], poblado['Longitud'], t_ganadora['Latitud'],
-                                          t_ganadora['Longitud'], t_ganadora['Altura_m'])
+        # Verificamos LOS si está a una distancia razonable (<40km)
+        if dist_min <= 40:
+            linea = verificar_linea_vista(poblado['Latitud'], poblado['Longitud'],
+                                          t_ganadora['Latitud'], t_ganadora['Longitud'],
+                                          t_ganadora['Altura_m'])
             status_los.append(linea)
         else:
             status_los.append("No aplica (Muy lejos)")
@@ -137,8 +156,6 @@ for _, poblado in df_filtrado.iterrows():
         backhaul_t.append("");
         status_los.append("N/A")
 
-    contador += 1
-
 df_filtrado['Distancia_Torre_Km'] = distancias
 df_filtrado['Torre_Cercana'] = torres
 df_filtrado['Linea_Vista'] = status_los
@@ -146,67 +163,106 @@ df_filtrado['Altura_Torre'] = alturas_t
 df_filtrado['Backhaul_Torre'] = backhaul_t
 
 # ---------------------------------------------------------
-# 6. SCORING FINAL (100 Puntos)
+# 6. SCORING DE INVERSIÓN (ROI WISP y Factibilidad)
 # ---------------------------------------------------------
-print("Calculando Dictamen Final Integral...")
-puntajes, dictamenes = [], []
+print("Calculando Prioridades de Inversión WISP...")
+puntajes, factibilidad = [], []
 
 for _, row in df_filtrado.iterrows():
     puntos = 0
-
-    # 1. POBLACIÓN (Max 35)
     viv = row['Viviendas_Sin_Internet']
-    if viv >= 500:
-        puntos += 35
-    elif 150 <= viv < 500:
-        puntos += 25
-    elif 50 <= viv < 150:
-        puntos += 15
-    else:
-        puntos += 5
+    total_viv = row['Viviendas_Habitadas']
+    if total_viv < viv:
+        total_viv = viv  # Sanity check
 
-    # 2. AISLAMIENTO CELULAR (Max 20)
-    cob = str(row['COB_BC']).strip().lower()
+    # A. POTENCIAL DE MERCADO Y DENSIDAD (Max 50)
+    # 1. Volumen (25 pts): Garantiza que haya casas suficientes (asintótica).
+    puntos_volumen = 25 * (viv / (viv + 150))
+
+    # 2. Concentración (25 pts): Premia lugares donde casi nadie tiene internet.
+    # Penaliza fuertemente a Hermosillo/grandes ciudades donde "viv" es grande pero es minúsculo respecto a "total_viv".
+    concentracion = (viv / total_viv) if total_viv > 0 else 0
+    puntos_concentracion = 25 * concentracion
+
+    puntos += puntos_volumen + puntos_concentracion
+
+    # B. COMPETENCIA / NECESIDAD (Max 30)
+    cob = str(row['G_4G']).strip().lower()
     if 'sin conectividad' in cob:
-        puntos += 20
-    elif '2g' in cob or 'no garantizada' in cob:
-        puntos += 15
-    elif '3g' in cob:
-        puntos += 5
-
-    # 3. INFRAESTRUCTURA CFE (Max 10)
-    if 'sí' in str(row['CFE']).strip().lower() or 'si' in str(row['CFE']).strip().lower():
-        puntos += 10
-
-    # 4. CALIDAD DE LA TORRE (Max 10)
-    if row['Altura_Torre'] >= 30: puntos += 5
-    bx = str(row['Backhaul_Torre']).lower()
-    if bx != 'nan' and 'no especific' not in bx and bx != '-': puntos += 5
-
-    # 5. DISTANCIA Y LÍNEA DE VISTA (Max 25)
-    dist = row['Distancia_Torre_Km']
-    los = row['Linea_Vista']
-
-    if dist <= 20 and los == 'Libre':
-        puntos += 25
-        dictamenes.append("1. Óptimo: PtP Confirmado")
-    elif dist <= 20 and los == 'BLOQUEADA (Cerro)':
-        puntos += 10
-        dictamenes.append("2. Cerca pero Bloqueado (Requiere Repetidor)")
-    elif 20 < dist <= 40:
-        puntos += 10
-        dictamenes.append("3. Requiere Torre Nueva (Viable Comercial)")
+        puntos += 30
+    elif 'no garantizada' in cob:
+        puntos += 15  # Oportunidad alta pero con competencia básica
     else:
-        dictamenes.append("4. Inviable (Subsidio Especial)")
+        puntos += 0  # Zonas ya cubiertas (Garantizada)
 
-    puntajes.append(puntos)
+    # C. INFRAESTRUCTURA Y DISTANCIA (Max 20)
+    dist = row['Distancia_Torre_Km']
+    puntos_tecnicos = max(0, 10 * (1 - dist / 40))  # 10 pts si está pegado, 0 pts a los 40km
+
+    # Electricidad CFE (Fundamental para ROI)
+    cfe = str(row['CFE']).strip().lower()
+    if any(x in cfe for x in ['s', 'si', 'sí']):
+        puntos_tecnicos += 10  # 10 pts si tiene luz
+
+    puntos += puntos_tecnicos
+
+    # D. PENALIZACIONES CRÍTICAS (Topografía y Sobredimensionamiento)
+    los = row['Linea_Vista']
+    resumen = "Viable Técnicamente"
+
+    # 1. Penalización Urbana (Los WISPs no entran a competir en ciudades gigantes con FTTH/Cable)
+    if total_viv > 20000:
+        puntos *= 0.1  # Metrópolis (Capitales)
+        resumen = "Mercado Sobredimensionado (Ciudad)"
+    elif total_viv > 5000:
+        puntos *= 0.5  # Ciudades Medianas (Requiere Fibra, no WISP)
+        resumen = "Alta Competencia Urbana"
+
+    # 2. Topografía
+    if los == 'BLOQUEADA (Cerro)':
+        puntos *= 0.3  # Penalización severa (70%)
+        if "Viable" in resumen:
+            resumen = "Requiere Repetidor (Costoso)"
+        else:
+            resumen += " + Requiere Repetidor"
+    elif los == 'Desconocido (Error API)':
+        puntos *= 0.8  # Penalización por incertidumbre
+        if "Viable" in resumen:
+            resumen = "Validar Topografía"
+        else:
+            resumen += " + Validar Topografía"
+    elif dist > 40:
+        resumen = "Fuera de Rango PtP"
+
+    puntajes.append(round(puntos, 2))
+    factibilidad.append(resumen)
 
 df_filtrado['Puntaje_Final'] = puntajes
-df_filtrado['Dictamen'] = dictamenes
+df_filtrado['Analisis_Factibilidad'] = factibilidad
 
-# Exportar
-col_export = ['Municipio', 'Localidad', 'Viviendas_Sin_Internet', 'CFE', 'COB_BC',
-              'Torre_Cercana', 'Distancia_Torre_Km', 'Linea_Vista', 'Puntaje_Final', 'Dictamen']
-df_final = df_filtrado.sort_values(by='Puntaje_Final', ascending=False)[col_export]
-df_final.to_excel('Dictamen_Maestro_Fase4.xlsx', index=False)
-print("¡Listo! El Dictamen Maestro con todas las variables ha sido generado.")
+# ---------------------------------------------------------
+# 7. EXPORTACIÓN (Nombres entendibles para todos)
+# ---------------------------------------------------------
+mapeo_columnas = {
+    'Municipio': 'Municipio',
+    'Localidad': 'Localidad',
+    'Viviendas_Habitadas': 'Casas Totales en la Localidad',
+    'Viviendas_Sin_Internet': 'Casas sin Internet (Mercado)',
+    'CFE': 'Tiene Electricidad (CFE)',
+    'G_4G': 'Estatus de Cobertura Celular',
+    'Torre_Cercana': 'Torre más Cercana',
+    'Distancia_Torre_Km': 'Distancia a Torre (km)',
+    'Linea_Vista': 'Línea de Vista',
+    'Puntaje_Final': 'Prioridad de Inversión WISP (0-100)',
+    'Analisis_Factibilidad': 'Diagnóstico Técnico y Comercial'
+}
+
+df_final = df_filtrado.sort_values(by='Puntaje_Final', ascending=False)[list(mapeo_columnas.keys())]
+df_final.rename(columns=mapeo_columnas, inplace=True)
+
+output_name = 'Dictamen_Maestro_Fase4_Final.xlsx'
+df_final.to_excel(output_name, index=False)
+
+print(f"\n¡Proceso completado con éxito!")
+print(f"Se han analizado {len(df_final)} localidades.")
+print(f"El archivo '{output_name}' está listo.")
