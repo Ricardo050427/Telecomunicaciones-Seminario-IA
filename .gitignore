@@ -1,0 +1,31 @@
+# Archivos a excluir de GitHub Pages (datos privados, scripts de trabajo)
+*.xlsx
+*.pdf
+*.log
+*.json
+torres.txt
+coberturas.txt
+seguridad.txt
+mapa-red-troncal.txt
+escuelas.txt
+Gobierno.txt
+torres_sonora.json.txt
+~$*
+
+# Scripts de Python (herramientas internas)
+*.py
+
+# Archivos temporales y de diagnóstico
+diag*.py
+fix*.py
+write_*.py
+append_*.py
+gen_*.py
+dashboard_js_p*.js
+output.log
+dashboard_data.json
+dashboard_data_computed.json
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dictamen Estratégico WISP Sonora — Dashboard de Inversión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- Leaflet.js -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header class="site-header">
+  <div class="header-glow"></div>
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" stroke="#8B1A2E" stroke-width="2"/>
+          <circle cx="18" cy="18" r="10" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <circle cx="18" cy="18" r="4" fill="#C0392B"/>
+          <line x1="18" y1="1" x2="18" y2="8" stroke="#8B1A2E" stroke-width="2"/>
+          <line x1="18" y1="28" x2="18" y2="35" stroke="#8B1A2E" stroke-width="2"/>
+          <line x1="1" y1="18" x2="8" y2="18" stroke="#8B1A2E" stroke-width="2"/>
+          <line x1="28" y1="18" x2="35" y2="18" stroke="#8B1A2E" stroke-width="2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="header-title">Dictamen Estratégico WISP</div>
+        <div class="header-subtitle">Sistema de Análisis de Inversión · Sonora, México</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        SIMULADOR ACTIVO
+      </div>
+      <div class="header-meta">
+        <span id="total-mrr-header">—</span>
+        <small>MRR Total Proyectado</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ NAV TABS ═══════════════════════════ -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="resumen" id="tab-resumen">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Resumen Ejecutivo
+  </button>
+  <button class="tab-btn" data-tab="rural" id="tab-rural">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 20 2 20"/></svg>
+    Nodos Rurales
+  </button>
+  <button class="tab-btn" data-tab="suburbano" id="tab-suburbano">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+    Nodos Suburbanos
+  </button>
+  <button class="tab-btn" data-tab="urbano" id="tab-urbano">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+    Zonas Urbanas
+  </button>
+  <button class="tab-btn" data-tab="simulador" id="tab-simulador">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    Panel de Control
+  </button>
+</nav>
+
+<!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
+<main class="main-content">
+
+  <!-- ─── TAB: RESUMEN EJECUTIVO ─── -->
+  <section class="tab-panel active" id="panel-resumen">
+
+    <!-- KPI Cards Row -->
+    <div class="kpi-row">
+      <div class="kpi-card kpi-primary">
+        <div class="kpi-icon">📡</div>
+        <div class="kpi-body">
+          <div class="kpi-label">Mercado Rural Viable</div>
+          <div class="kpi-value" id="kpi-rural-viable">3,938</div>
+          <div class="kpi-sub">hogares con LoS libre</div>
+          <div class="kpi-badge tier1" style="position:static;margin-top:10px;display:inline-block">68 Torres</div>
+        </div>
+      </div>
+      <div class="kpi-card kpi-secondary">
+        <div class="kpi-icon">🏘️</div>
+        <div class="kpi-body">
+          <div class="kpi-label">Mercado Suburbano Viable</div>
+          <div class="kpi-value" id="kpi-sub-viable">93,186</div>
+          <div class="kpi-sub">hogares con LoS libre</div>
+          <div class="kpi-badge tier1" style="position:static;margin-top:10px;display:inline-block">264 Nodos</div>
+        </div>
+      </div>
+      <div class="kpi-card kpi-tertiary">
+        <div class="kpi-icon">🏙️</div>
+        <div class="kpi-body">
+          <div class="kpi-label">Mercado Urbano Sin Internet</div>
+          <div class="kpi-value" id="kpi-urb-viable">233,311</div>
+          <div class="kpi-sub">viviendas objetivo</div>
+          <div class="kpi-badge tier2" style="position:static;margin-top:10px;display:inline-block">23 Ciudades</div>
+        </div>
+      </div>
+      <div class="kpi-card kpi-highlight">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-body">
+          <div class="kpi-label">MRR Total Proyectado</div>
+          <div class="kpi-value" id="kpi-mrr-total">—</div>
+          <div class="kpi-sub">ingreso mensual recurrente</div>
+          <div class="kpi-badge gold" style="position:static;margin-top:10px;display:inline-block">Portafolio Completo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="charts-row">
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3>Distribución de Mercado por Segmento</h3>
+          <span class="chart-tag">Hogares Viables</span>
+        </div>
+        <canvas id="chart-segmento" height="220"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3>MRR por Segmento</h3>
+          <span class="chart-tag">Ingresos Proyectados $MXN</span>
+        </div>
+        <canvas id="chart-mrr-seg" height="220"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3>Clasificación por Tier de Inversión</h3>
+          <span class="chart-tag">Rural + Suburbano</span>
+        </div>
+        <canvas id="chart-tiers" height="220"></canvas>
+      </div>
+    </div>
+
+    <!-- Top Nodos Row -->
+    <div class="two-col">
+      <div class="table-card">
+        <div class="table-header">
+          <h3>🔝 Top 8 Nodos Rurales por Mercado Viable</h3>
+        </div>
+        <table class="data-table" id="top-rurales-table">
+          <thead>
+            <tr><th>Torre</th><th>Mercado</th><th>Tier</th><th>MRR</th><th>ROI</th></tr>
+          </thead>
+          <tbody id="top-rurales-body"></tbody>
+        </table>
+      </div>
+      <div class="table-card">
+        <div class="table-header">
+          <h3>🔝 Top 8 Nodos Suburbanos por Mercado</h3>
+        </div>
+        <table class="data-table" id="top-sub-table">
+          <thead>
+            <tr><th>Torre Backhaul</th><th>Mercado</th><th>Tier</th><th>MRR</th><th>ROI</th></tr>
+          </thead>
+          <tbody id="top-sub-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Mapa Interactivo de Torres -->
+    <div class="chart-card full-width mapa-panel">
+      <div class="chart-header">
+        <h3>🗺️ Mapa de Infraestructura de Torres — Sonora</h3>
+        <span class="chart-tag">466 Torres Georeferenciadas</span>
+      </div>
+      <!-- Filtros del mapa -->
+      <div class="mapa-filtros">
+        <button class="mapa-filter-btn active" data-dep="all">Todas (466)</button>
+        <button class="mapa-filter-btn portafolio" data-dep="portafolio">⭐ Portafolio (68)</button>
+        <button class="mapa-filter-btn dep-t1" data-dep="tier1">🔴 Tier 1 (Inmediata)</button>
+        <button class="mapa-filter-btn dep-t2" data-dep="tier2">🟠 Tier 2 (Mediano)</button>
+        <button class="mapa-filter-btn dep-t3" data-dep="tier3">🟡 Tier 3 (Largo)</button>
+        <button class="mapa-filter-btn dep-t4" data-dep="tier4">⚫ Tier 4 (Satelital)</button>
+        <button class="mapa-filter-btn dep-cfe" data-dep="CFE">CFE</button>
+        <button class="mapa-filter-btn dep-seg" data-dep="Seguridad">Seguridad</button>
+        <button class="mapa-filter-btn dep-telemax" data-dep="Telemax">Telemax</button>
+        <button class="mapa-filter-btn dep-radio" data-dep="Radio Sonora">Radio Sonora</button>
+      </div>
+      <div id="mapa-torres" style="height:520px;width:100%;border-radius:12px;overflow:hidden;"></div>
+      <div class="mapa-legend">
+        <strong style="color:#aaa;font-size:.7rem;margin-right:4px">Torres Portafolio:</strong>
+        <span class="leg-item"><span class="leg-dot" style="background:#E74C3C"></span> Tier 1 — Inversión Inmediata</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#F39C12"></span> Tier 2 — Mediano Plazo</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#F1C40F"></span> Tier 3 — Largo Plazo</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#95A5A6"></span> Tier 4 — Satelital</span>
+        <span style="width:1px;height:16px;background:#333;margin:0 8px;display:inline-block"></span>
+        <strong style="color:#aaa;font-size:.7rem;margin-right:4px">Otras Torres:</strong>
+        <span class="leg-item"><span class="leg-dot" style="background:#F39C12"></span> CFE</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#E74C3C"></span> Seguridad</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#E67E22"></span> Telemax</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#9B59B6"></span> Radio Sonora</span>
+        <span class="leg-item"><span class="leg-dot" style="background:#27AE60"></span> Telefonía Rural</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─── TAB: NODOS RURALES ─── -->
+  <section class="tab-panel" id="panel-rural">
+    <div class="filter-bar">
+      <input type="text" id="rural-search" placeholder="🔍 Buscar torre o localidad..." class="search-input">
+      <select id="rural-tier-filter" class="filter-select">
+        <option value="">Todos los Tiers</option>
+        <option value="Tier 1">Tier 1 — Inversión Inmediata</option>
+        <option value="Tier 2">Tier 2 — Mediano Plazo</option>
+        <option value="Tier 4">Tier 4 — Satelital / Subsidio</option>
+      </select>
+      <select id="rural-sort" class="filter-select">
+        <option value="mercado">Ordenar: Mercado Viable ↓</option>
+        <option value="mrr">Ordenar: MRR ↓</option>
+        <option value="roi">Ordenar: ROI ↑</option>
+      </select>
+      <div class="filter-count" id="rural-count-label">— Torres</div>
+    </div>
+    <div class="cards-grid" id="rural-cards"></div>
+  </section>
+
+  <!-- ─── TAB: NODOS SUBURBANOS ─── -->
+  <section class="tab-panel" id="panel-suburbano">
+    <div class="filter-bar">
+      <input type="text" id="sub-search" placeholder="🔍 Buscar torre backhaul o localidad..." class="search-input">
+      <select id="sub-tier-filter" class="filter-select">
+        <option value="">Todos los Tiers</option>
+        <option value="Tier 1">Tier 1 — Inversión Inmediata</option>
+        <option value="Tier 2">Tier 2 — Mediano Plazo</option>
+        <option value="Tier 3">Tier 3 — Largo Plazo</option>
+      </select>
+      <select id="sub-sort" class="filter-select">
+        <option value="mercado">Ordenar: Mercado Viable ↓</option>
+        <option value="mrr">Ordenar: MRR ↓</option>
+        <option value="roi">Ordenar: ROI ↑</option>
+        <option value="localidades">Ordenar: Localidades ↓</option>
+      </select>
+      <div class="filter-count" id="sub-count-label">— Nodos</div>
+    </div>
+    <div class="cards-grid" id="sub-cards"></div>
+  </section>
+
+  <!-- ─── TAB: ZONAS URBANAS ─── -->
+  <section class="tab-panel" id="panel-urbano">
+    <div class="urban-summary-row" id="urban-kpi-row"></div>
+    <div class="filter-bar">
+      <input type="text" id="urb-search" placeholder="🔍 Buscar municipio o localidad..." class="search-input">
+      <select id="urb-sort" class="filter-select">
+        <option value="sin_internet">Ordenar: Sin Internet ↓</option>
+        <option value="mrr">Ordenar: MRR ↓</option>
+        <option value="roi">Ordenar: ROI ↑</option>
+      </select>
+      <div class="filter-count" id="urb-count-label">— Ciudades</div>
+    </div>
+    <div class="cards-grid" id="urban-cards"></div>
+  </section>
+
+  <!-- ─── TAB: PANEL DE CONTROL ─── -->
+  <section class="tab-panel" id="panel-simulador">
+    <div class="simulator-layout">
+      <div class="sim-controls">
+        <h2 class="sim-title">⚙️ Panel de Control Financiero</h2>
+        <p class="sim-desc">Ajusta los parámetros y los indicadores se recalcularán en tiempo real para los tres segmentos de mercado.</p>
+
+        <div class="sim-group">
+          <h4 class="sim-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 20 2 20"/></svg>
+            Segmento Rural
+          </h4>
+          <div class="sim-control">
+            <label>Tasa de Adopción Esperada</label>
+            <div class="slider-row">
+              <input type="range" id="sim-rural-adopt" min="0" max="100" value="35" step="1">
+              <span class="slider-val" id="sim-rural-adopt-val">35%</span>
+            </div>
+          </div>
+          <div class="sim-control">
+            <label>Ticket Mensual WISP ($MXN)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-rural-ticket" min="200" max="1200" value="500" step="50">
+              <span class="slider-val" id="sim-rural-ticket-val">$500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-group">
+          <h4 class="sim-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4"/></svg>
+            Segmento Suburbano
+          </h4>
+          <div class="sim-control">
+            <label>Tasa de Adopción Competitiva</label>
+            <div class="slider-row">
+              <input type="range" id="sim-sub-adopt" min="0" max="100" value="20" step="1">
+              <span class="slider-val" id="sim-sub-adopt-val">20%</span>
+            </div>
+          </div>
+          <div class="sim-control">
+            <label>Ticket Mensual Challenger ($MXN)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-sub-ticket" min="100" max="700" value="300" step="50">
+              <span class="slider-val" id="sim-sub-ticket-val">$300</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-group">
+          <h4 class="sim-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Segmento Urbano
+          </h4>
+          <div class="sim-control">
+            <label>Tasa de Adopción (Fichas Prepago)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-urb-adopt" min="0" max="100" value="15" step="1">
+              <span class="slider-val" id="sim-urb-adopt-val">15%</span>
+            </div>
+          </div>
+          <div class="sim-control">
+            <label>Gasto Mensual por Usuario ($MXN)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-urb-ticket" min="50" max="500" value="200" step="10">
+              <span class="slider-val" id="sim-urb-ticket-val">$200</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-group">
+          <h4 class="sim-group-title">🔧 Costos de Infraestructura</h4>
+          <div class="sim-control">
+            <label>Costo CPE por Cliente ($MXN)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-cpe" min="500" max="5000" value="2000" step="100">
+              <span class="slider-val" id="sim-cpe-val">$2,000</span>
+            </div>
+          </div>
+          <div class="sim-control">
+            <label>Costo por Nodo AP Wi-Fi 6 ($MXN)</label>
+            <div class="slider-row">
+              <input type="range" id="sim-nodo-cost" min="2000" max="20000" value="7500" step="500">
+              <span class="slider-val" id="sim-nodo-cost-val">$7,500</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="reset-btn" id="reset-btn">↺ Restablecer Valores Base</button>
+      </div>
+
+      <div class="sim-results">
+        <div class="sim-results-header">Resultados del Simulador</div>
+        <div class="sim-kpi-grid">
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">MRR Rural</div>
+            <div class="sim-kpi-value" id="sim-mrr-rural">—</div>
+          </div>
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">CAPEX Rural</div>
+            <div class="sim-kpi-value capex" id="sim-capex-rural">—</div>
+          </div>
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">MRR Suburbano</div>
+            <div class="sim-kpi-value" id="sim-mrr-sub">—</div>
+          </div>
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">CAPEX Suburbano</div>
+            <div class="sim-kpi-value capex" id="sim-capex-sub">—</div>
+          </div>
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">MRR Urbano</div>
+            <div class="sim-kpi-value" id="sim-mrr-urb">—</div>
+          </div>
+          <div class="sim-kpi">
+            <div class="sim-kpi-label">CAPEX Urbano</div>
+            <div class="sim-kpi-value capex" id="sim-capex-urb">—</div>
+          </div>
+
+        </div>
+        <canvas id="sim-chart" height="200"></canvas>
+        <div class="sim-note">
+          <strong>Nota metodológica:</strong> El MRR se calcula como Mercado Viable × Tasa de Adopción × Ticket Mensual. El CAPEX como Clientes Proyectados × Costo por Equipo. ROI = CAPEX / MRR.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════ MODAL ═══════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" style="display:none">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="dashboard_data.js"></script>
+<script src="torres_data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
