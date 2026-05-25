@@ -384,28 +384,31 @@ function buildResumenCharts() {
   });
 
   // CAPEX vs MRR top 10 rurales
-  destroyChart(chartCapexMrr);
-  const top10 = [...DATA_RURALES].sort((a,b) => b.mercado_viable-a.mercado_viable).slice(0,10);
-  chartCapexMrr = new Chart(document.getElementById('chart-capex-mrr'), {
-    type: 'bar',
-    data: {
-      labels: top10.map(r => r.nombre.length>18 ? r.nombre.slice(0,16)+'…' : r.nombre),
-      datasets: [
-        { label:'MRR ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket)),
-          backgroundColor: CHART_COLORS.tealLight, borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6 },
-        { label:'CAPEX ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.cpe_cost)),
-          backgroundColor: CHART_COLORS.wineLight, borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6 }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { position:'top', labels:{font:{size:11}} } },
-      scales: {
-        y: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
-        x: { grid: { display:false } }
+  const canvasCapexMrr = document.getElementById('chart-capex-mrr');
+  if (canvasCapexMrr) {
+    destroyChart(chartCapexMrr);
+    const top10 = [...DATA_RURALES].sort((a,b) => b.mercado_viable-a.mercado_viable).slice(0,10);
+    chartCapexMrr = new Chart(canvasCapexMrr, {
+      type: 'bar',
+      data: {
+        labels: top10.map(r => r.nombre.length>18 ? r.nombre.slice(0,16)+'…' : r.nombre),
+        datasets: [
+          { label:'MRR ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket)),
+            backgroundColor: CHART_COLORS.tealLight, borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6 },
+          { label:'CAPEX ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.cpe_cost)),
+            backgroundColor: CHART_COLORS.wineLight, borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: { legend: { position:'top', labels:{font:{size:11}} } },
+        scales: {
+          y: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
+          x: { grid: { display:false } }
+        }
       }
-    }
-  });
+    });
+  }
 }
 
 // ═══════════════════════════ TOP TABLES ═══════════════════════════
@@ -441,8 +444,10 @@ function updateHeaderKPI() {
   const sMrr = DATA_SUBURBANOS.reduce((s,r) => s + Math.round(r.mercado_viable*params.sub_adopt*params.sub_ticket),0);
   const uMrr = DATA_URBANOS.reduce((s,r) => s + Math.round(r.sin_internet*params.urb_adopt*params.urb_ticket),0);
   const total = rMrr + sMrr + uMrr;
-  document.getElementById('total-mrr-header').textContent = fmtMXN(total);
-  document.getElementById('kpi-mrr-total').textContent = fmtMXN(total);
+  const totalMrrHeaderEl = document.getElementById('total-mrr-header');
+  if (totalMrrHeaderEl) totalMrrHeaderEl.textContent = fmtMXN(total);
+  const kpiMrrTotalEl = document.getElementById('kpi-mrr-total');
+  if (kpiMrrTotalEl) kpiMrrTotalEl.textContent = fmtMXN(total);
 }
 
 // ═══════════════════════════ SIMULATOR ═══════════════════════════
