@@ -399,7 +399,29 @@ function buildResumenCharts() {
       },
       options: {
         responsive: true, maintainAspectRatio: true,
-        plugins: { legend: { position: 'bottom', labels: { padding:12, font:{size:10} } } }
+        plugins: {
+          legend: { position: 'bottom', labels: { padding:12, font:{size:10} } },
+          tooltip: {
+            titleColor: '#F0ECEC',
+            bodyColor: '#D4A843',
+            footerColor: '#A09090',
+            footerFont: { size: 10, weight: 'normal' },
+            callbacks: {
+              label: function(context) {
+                return 'Cantidad: ' + context.formattedValue + ' nodos';
+              },
+              footer: function(context) {
+                const descriptions = [
+                  'zonas con >= 150 viviendas viables',
+                  'zonas con 50 - 149 viviendas viables',
+                  'zonas con 25 - 49 viviendas viables',
+                  'zonas con < 25 viviendas viables'
+                ];
+                return descriptions[context[0].dataIndex];
+              }
+            }
+          }
+        }
       }
     });
   }

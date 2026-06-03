@@ -12,7 +12,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 875,
       "capex": 3500,
       "roi": 4.0,
@@ -36,8 +36,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 900,
       "capex": 6000,
       "roi": 6.7,
@@ -76,7 +76,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 12950,
       "capex": 51800,
       "roi": 4.0,
@@ -102,7 +102,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5100,
       "capex": 34000,
       "roi": 6.7,
@@ -128,7 +128,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 16500,
       "capex": 110000,
       "roi": 6.7,
@@ -163,8 +163,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 120,
       "capex": 800,
       "roi": 6.7,
@@ -189,7 +189,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6300,
       "capex": 42000,
       "roi": 6.7,
@@ -230,8 +230,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 360,
       "capex": 2400,
       "roi": 6.7,
@@ -311,7 +311,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 17820,
       "capex": 118800,
       "roi": 6.7,
@@ -468,8 +468,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 360,
       "capex": 2400,
       "roi": 6.7,
@@ -493,8 +493,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 360,
       "capex": 2400,
       "roi": 6.7,
@@ -530,7 +530,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5880,
       "capex": 39200,
       "roi": 6.7,
@@ -565,8 +565,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -604,7 +604,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 37500,
       "capex": 250000,
       "roi": 6.7,
@@ -635,7 +635,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10920,
       "capex": 72800,
       "roi": 6.7,
@@ -663,7 +663,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 17820,
       "capex": 118800,
       "roi": 6.7,
@@ -689,7 +689,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7560,
       "capex": 50400,
       "roi": 6.7,
@@ -714,7 +714,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14820,
       "capex": 98800,
       "roi": 6.7,
@@ -739,7 +739,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -768,7 +768,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -797,7 +797,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 20700,
       "capex": 138000,
       "roi": 6.7,
@@ -827,8 +827,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -851,7 +851,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 65640,
       "capex": 437600,
       "roi": 6.7,
@@ -942,8 +942,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -966,7 +966,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 18025,
       "capex": 72100,
       "roi": 4.0,
@@ -990,8 +990,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -1014,7 +1014,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 83400,
       "capex": 556000,
       "roi": 6.7,
@@ -1047,7 +1047,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14100,
       "capex": 94000,
       "roi": 6.7,
@@ -1079,7 +1079,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14100,
       "capex": 94000,
       "roi": 6.7,
@@ -1111,7 +1111,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 91980,
       "capex": 613200,
       "roi": 6.7,
@@ -1145,7 +1145,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14100,
       "capex": 94000,
       "roi": 6.7,
@@ -1173,7 +1173,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 72300,
       "capex": 482000,
       "roi": 6.7,
@@ -1243,7 +1243,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 48900,
       "capex": 326000,
       "roi": 6.7,
@@ -1267,8 +1267,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1260,
       "capex": 8400,
       "roi": 6.7,
@@ -1294,8 +1294,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1320,
       "capex": 8800,
       "roi": 6.7,
@@ -1320,7 +1320,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15360,
       "capex": 102400,
       "roi": 6.7,
@@ -1345,7 +1345,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6900,
       "capex": 46000,
       "roi": 6.7,
@@ -1391,7 +1391,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -1471,7 +1471,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 17340,
       "capex": 115600,
       "roi": 6.7,
@@ -1498,8 +1498,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 300,
       "capex": 2000,
       "roi": 6.7,
@@ -1536,7 +1536,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 19560,
       "capex": 130400,
       "roi": 6.7,
@@ -1568,7 +1568,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12360,
       "capex": 82400,
       "roi": 6.7,
@@ -1596,7 +1596,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 34020,
       "capex": 226800,
       "roi": 6.7,
@@ -1627,7 +1627,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8760,
       "capex": 58400,
       "roi": 6.7,
@@ -1653,7 +1653,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 22440,
       "capex": 149600,
       "roi": 6.7,
@@ -1716,7 +1716,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4020,
       "capex": 26800,
       "roi": 6.7,
@@ -1742,7 +1742,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9900,
       "capex": 66000,
       "roi": 6.7,
@@ -1771,7 +1771,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4260,
       "capex": 28400,
       "roi": 6.7,
@@ -1806,8 +1806,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 120,
       "capex": 800,
       "roi": 6.7,
@@ -1875,8 +1875,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -1903,7 +1903,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 25320,
       "capex": 168800,
       "roi": 6.7,
@@ -1944,7 +1944,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 19800,
       "capex": 132000,
       "roi": 6.7,
@@ -1978,7 +1978,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9240,
       "capex": 61600,
       "roi": 6.7,
@@ -2015,7 +2015,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 32640,
       "capex": 217600,
       "roi": 6.7,
@@ -2079,8 +2079,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -2118,7 +2118,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -2143,7 +2143,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 105900,
       "capex": 706000,
       "roi": 6.7,
@@ -2171,7 +2171,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6765,
       "capex": 43700,
       "roi": 6.5,
@@ -2207,8 +2207,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -2231,7 +2231,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -2256,7 +2256,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 30660,
       "capex": 204400,
       "roi": 6.7,
@@ -2283,7 +2283,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 41400,
       "capex": 276000,
       "roi": 6.7,
@@ -2320,7 +2320,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 10500,
       "capex": 42000,
       "roi": 4.0,
@@ -2344,8 +2344,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -2368,7 +2368,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15360,
       "capex": 102400,
       "roi": 6.7,
@@ -2393,7 +2393,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 21365,
       "capex": 131700,
       "roi": 6.2,
@@ -2424,7 +2424,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10860,
       "capex": 72400,
       "roi": 6.7,
@@ -2449,7 +2449,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15545,
       "capex": 87300,
       "roi": 5.6,
@@ -2479,7 +2479,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 19560,
       "capex": 130400,
       "roi": 6.7,
@@ -2511,7 +2511,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10860,
       "capex": 72400,
       "roi": 6.7,
@@ -2547,7 +2547,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6600,
       "capex": 44000,
       "roi": 6.7,
@@ -2571,8 +2571,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1320,
       "capex": 8800,
       "roi": 6.7,
@@ -2599,8 +2599,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1320,
       "capex": 8800,
       "roi": 6.7,
@@ -2628,7 +2628,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1620,
       "capex": 10800,
       "roi": 6.7,
@@ -2653,7 +2653,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1620,
       "capex": 10800,
       "roi": 6.7,
@@ -2677,8 +2677,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -2701,7 +2701,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 20700,
       "capex": 138000,
       "roi": 6.7,
@@ -2729,7 +2729,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10800,
       "capex": 72000,
       "roi": 6.7,
@@ -2762,7 +2762,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10800,
       "capex": 72000,
       "roi": 6.7,
@@ -2795,7 +2795,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 45780,
       "capex": 305200,
       "roi": 6.7,
@@ -2822,7 +2822,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 45780,
       "capex": 305200,
       "roi": 6.7,
@@ -2849,7 +2849,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11760,
       "capex": 78400,
       "roi": 6.7,
@@ -2875,7 +2875,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9240,
       "capex": 61600,
       "roi": 6.7,
@@ -2902,7 +2902,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 25800,
       "capex": 172000,
       "roi": 6.7,
@@ -2932,7 +2932,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 25800,
       "capex": 172000,
       "roi": 6.7,
@@ -2958,7 +2958,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11880,
       "capex": 79200,
       "roi": 6.7,
@@ -2983,7 +2983,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11880,
       "capex": 79200,
       "roi": 6.7,
@@ -3007,8 +3007,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -3030,8 +3030,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -3054,7 +3054,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8220,
       "capex": 54800,
       "roi": 6.7,
@@ -3080,7 +3080,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3360,
       "capex": 22400,
       "roi": 6.7,
@@ -3117,7 +3117,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -3153,8 +3153,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -3190,7 +3190,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 25440,
       "capex": 169600,
       "roi": 6.7,
@@ -3221,8 +3221,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -3271,7 +3271,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2700,
       "capex": 18000,
       "roi": 6.7,
@@ -3295,8 +3295,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 720,
       "capex": 4800,
       "roi": 6.7,
@@ -3321,7 +3321,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4800,
       "capex": 32000,
       "roi": 6.7,
@@ -3360,7 +3360,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14400,
       "capex": 96000,
       "roi": 6.7,
@@ -3400,8 +3400,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -3425,8 +3425,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1080,
       "capex": 7200,
       "roi": 6.7,
@@ -3450,8 +3450,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1080,
       "capex": 7200,
       "roi": 6.7,
@@ -3476,7 +3476,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -3501,7 +3501,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1500,
       "capex": 10000,
       "roi": 6.7,
@@ -3558,8 +3558,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -3604,7 +3604,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5880,
       "capex": 39200,
       "roi": 6.7,
@@ -3684,7 +3684,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 6320,
       "capex": 27200,
       "roi": 4.3,
@@ -3711,8 +3711,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 720,
       "capex": 4800,
       "roi": 6.7,
@@ -3739,7 +3739,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12120,
       "capex": 80800,
       "roi": 6.7,
@@ -3794,7 +3794,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10440,
       "capex": 69600,
       "roi": 6.7,
@@ -3820,7 +3820,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 195600,
       "capex": 1304000,
       "roi": 6.7,
@@ -3892,7 +3892,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 25980,
       "capex": 173200,
       "roi": 6.7,
@@ -3922,7 +3922,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 100080,
       "capex": 667200,
       "roi": 6.7,
@@ -3960,7 +3960,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 38280,
       "capex": 255200,
       "roi": 6.7,
@@ -3989,7 +3989,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 191100,
       "capex": 1274000,
       "roi": 6.7,
@@ -4066,7 +4066,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5880,
       "capex": 39200,
       "roi": 6.7,
@@ -4103,7 +4103,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 21780,
       "capex": 145200,
       "roi": 6.7,
@@ -4130,7 +4130,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3600,
       "capex": 24000,
       "roi": 6.7,
@@ -4168,7 +4168,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 60600,
       "capex": 404000,
       "roi": 6.7,
@@ -4198,7 +4198,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5460,
       "capex": 36400,
       "roi": 6.7,
@@ -4229,7 +4229,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 79740,
       "capex": 531600,
       "roi": 6.7,
@@ -4284,7 +4284,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 76200,
       "capex": 508000,
       "roi": 6.7,
@@ -4318,7 +4318,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1800,
       "capex": 12000,
       "roi": 6.7,
@@ -4343,7 +4343,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5520,
       "capex": 36800,
       "roi": 6.7,
@@ -4369,7 +4369,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4380,
       "capex": 29200,
       "roi": 6.7,
@@ -4396,7 +4396,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -4421,7 +4421,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15720,
       "capex": 104800,
       "roi": 6.7,
@@ -4445,8 +4445,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 600,
       "capex": 4000,
       "roi": 6.7,
@@ -4474,7 +4474,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -4500,7 +4500,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9780,
       "capex": 65200,
       "roi": 6.7,
@@ -4582,8 +4582,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural + Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -4613,7 +4613,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11880,
       "capex": 79200,
       "roi": 6.7,
@@ -4638,7 +4638,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 29460,
       "capex": 196400,
       "roi": 6.7,
@@ -4686,7 +4686,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 48240,
       "capex": 321600,
       "roi": 6.7,
@@ -4725,7 +4725,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12960,
       "capex": 86400,
       "roi": 6.7,
@@ -4781,7 +4781,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 41280,
       "capex": 275200,
       "roi": 6.7,
@@ -4807,7 +4807,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 22140,
       "capex": 147600,
       "roi": 6.7,
@@ -4834,7 +4834,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 13650,
       "capex": 54600,
       "roi": 4.0,
@@ -4870,7 +4870,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 37500,
       "capex": 250000,
       "roi": 6.7,
@@ -4900,8 +4900,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 360,
       "capex": 2400,
       "roi": 6.7,
@@ -4926,7 +4926,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8220,
       "capex": 54800,
       "roi": 6.7,
@@ -4962,7 +4962,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -4998,7 +4998,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8220,
       "capex": 54800,
       "roi": 6.7,
@@ -5024,7 +5024,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11760,
       "capex": 78400,
       "roi": 6.7,
@@ -5050,7 +5050,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5760,
       "capex": 38400,
       "roi": 6.7,
@@ -5091,7 +5091,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 16890,
       "capex": 70600,
       "roi": 4.2,
@@ -5121,7 +5121,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 27060,
       "capex": 180400,
       "roi": 6.7,
@@ -5161,7 +5161,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 20880,
       "capex": 139200,
       "roi": 6.7,
@@ -5187,7 +5187,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 54900,
       "capex": 366000,
       "roi": 6.7,
@@ -5237,8 +5237,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -5261,7 +5261,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7560,
       "capex": 50400,
       "roi": 6.7,
@@ -5300,7 +5300,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 21360,
       "capex": 142400,
       "roi": 6.7,
@@ -5326,7 +5326,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1920,
       "capex": 12800,
       "roi": 6.7,
@@ -5350,8 +5350,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -5374,7 +5374,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1920,
       "capex": 12800,
       "roi": 6.7,
@@ -5398,8 +5398,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 120,
       "capex": 800,
       "roi": 6.7,
@@ -5424,7 +5424,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -5490,7 +5490,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 50160,
       "capex": 334400,
       "roi": 6.7,
@@ -5542,7 +5542,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 25805,
       "capex": 122100,
       "roi": 4.7,
@@ -5618,7 +5618,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 31200,
       "capex": 208000,
       "roi": 6.7,
@@ -5644,7 +5644,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11640,
       "capex": 77600,
       "roi": 6.7,
@@ -5725,7 +5725,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5100,
       "capex": 34000,
       "roi": 6.7,
@@ -5839,7 +5839,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 26400,
       "capex": 176000,
       "roi": 6.7,
@@ -5877,7 +5877,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 45300,
       "capex": 290800,
       "roi": 6.4,
@@ -5919,7 +5919,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 41085,
       "capex": 216500,
       "roi": 5.3,
@@ -5954,7 +5954,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 16625,
       "capex": 66500,
       "roi": 4.0,
@@ -5980,7 +5980,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 154740,
       "capex": 1031600,
       "roi": 6.7,
@@ -6028,7 +6028,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 33540,
       "capex": 223600,
       "roi": 6.7,
@@ -6057,8 +6057,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1380,
       "capex": 9200,
       "roi": 6.7,
@@ -6087,8 +6087,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 240,
       "capex": 1600,
       "roi": 6.7,
@@ -6113,7 +6113,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6600,
       "capex": 44000,
       "roi": 6.7,
@@ -6149,7 +6149,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 25375,
       "capex": 101500,
       "roi": 4.0,
@@ -6176,7 +6176,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 18420,
       "capex": 122800,
       "roi": 6.7,
@@ -6206,7 +6206,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5820,
       "capex": 38800,
       "roi": 6.7,
@@ -6234,7 +6234,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 55510,
       "capex": 359800,
       "roi": 6.5,
@@ -6267,7 +6267,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 52740,
       "capex": 351600,
       "roi": 6.7,
@@ -6298,8 +6298,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 480,
       "capex": 3200,
       "roi": 6.7,
@@ -6325,7 +6325,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4560,
       "capex": 30400,
       "roi": 6.7,
@@ -6351,7 +6351,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 16975,
       "capex": 67900,
       "roi": 4.0,
@@ -6431,7 +6431,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 36990,
       "capex": 238200,
       "roi": 6.4,
@@ -6511,7 +6511,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 137880,
       "capex": 919200,
       "roi": 6.7,
@@ -6552,8 +6552,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -6578,7 +6578,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 17460,
       "capex": 77200,
       "roi": 4.4,
@@ -6631,8 +6631,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -6657,7 +6657,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3780,
       "capex": 25200,
       "roi": 6.7,
@@ -6682,7 +6682,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7320,
       "capex": 48800,
       "roi": 6.7,
@@ -6719,7 +6719,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 273300,
       "capex": 1822000,
       "roi": 6.7,
@@ -6774,8 +6774,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -6798,7 +6798,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5400,
       "capex": 36000,
       "roi": 6.7,
@@ -6835,7 +6835,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12420,
       "capex": 82800,
       "roi": 6.7,
@@ -6871,7 +6871,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 135720,
       "capex": 904800,
       "roi": 6.7,
@@ -6922,7 +6922,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -6960,7 +6960,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 14525,
       "capex": 58100,
       "roi": 4.0,
@@ -6985,7 +6985,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5460,
       "capex": 36400,
       "roi": 6.7,
@@ -7012,7 +7012,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 16275,
       "capex": 65100,
       "roi": 4.0,
@@ -7042,8 +7042,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 7175,
       "capex": 28700,
       "roi": 4.0,
@@ -7068,7 +7068,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 15115,
       "capex": 72300,
       "roi": 4.8,
@@ -7096,7 +7096,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 41400,
       "capex": 276000,
       "roi": 6.7,
@@ -7122,7 +7122,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 31980,
       "capex": 213200,
       "roi": 6.7,
@@ -7191,8 +7191,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -7217,7 +7217,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 56940,
       "capex": 379600,
       "roi": 6.7,
@@ -7242,7 +7242,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8820,
       "capex": 58800,
       "roi": 6.7,
@@ -7267,7 +7267,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11220,
       "capex": 74800,
       "roi": 6.7,
@@ -7295,8 +7295,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 7525,
       "capex": 30100,
       "roi": 4.0,
@@ -7345,8 +7345,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -7369,7 +7369,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 7880,
       "capex": 32000,
       "roi": 4.1,
@@ -7406,7 +7406,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10860,
       "capex": 72400,
       "roi": 6.7,
@@ -7431,7 +7431,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 16680,
       "capex": 111200,
       "roi": 6.7,
@@ -7460,7 +7460,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 21100,
       "capex": 127600,
       "roi": 6.0,
@@ -7493,7 +7493,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 17850,
       "capex": 71400,
       "roi": 4.0,
@@ -7518,7 +7518,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 10800,
       "capex": 72000,
       "roi": 6.7,
@@ -7551,7 +7551,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8400,
       "capex": 56000,
       "roi": 6.7,
@@ -7598,7 +7598,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 148920,
       "capex": 992800,
       "roi": 6.7,
@@ -7649,7 +7649,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 102840,
       "capex": 685600,
       "roi": 6.7,
@@ -7698,8 +7698,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural + Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1535,
       "capex": 7900,
       "roi": 5.1,
@@ -7726,8 +7726,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -7753,7 +7753,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 3500,
       "capex": 14000,
       "roi": 4.0,
@@ -7778,7 +7778,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 91980,
       "capex": 613200,
       "roi": 6.7,
@@ -7803,7 +7803,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3420,
       "capex": 22800,
       "roi": 6.7,
@@ -7898,7 +7898,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 33660,
       "capex": 224400,
       "roi": 6.7,
@@ -7926,7 +7926,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 33840,
       "capex": 225600,
       "roi": 6.7,
@@ -7957,7 +7957,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 82560,
       "capex": 550400,
       "roi": 6.7,
@@ -7986,7 +7986,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 17400,
       "capex": 116000,
       "roi": 6.7,
@@ -8011,7 +8011,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 32700,
       "capex": 218000,
       "roi": 6.7,
@@ -8044,7 +8044,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2160,
       "capex": 14400,
       "roi": 6.7,
@@ -8069,7 +8069,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 18200,
       "capex": 72800,
       "roi": 4.0,
@@ -8096,7 +8096,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14040,
       "capex": 93600,
       "roi": 6.7,
@@ -8132,7 +8132,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1740,
       "capex": 11600,
       "roi": 6.7,
@@ -8168,7 +8168,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2725,
       "capex": 14900,
       "roi": 5.5,
@@ -8197,7 +8197,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -8234,7 +8234,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 41040,
       "capex": 273600,
       "roi": 6.7,
@@ -8259,8 +8259,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -8294,7 +8294,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -8318,8 +8318,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -8344,7 +8344,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 14700,
       "capex": 58800,
       "roi": 4.0,
@@ -8381,7 +8381,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5700,
       "capex": 38000,
       "roi": 6.7,
@@ -8438,8 +8438,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 7350,
       "capex": 29400,
       "roi": 4.0,
@@ -8467,8 +8467,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 5950,
       "capex": 23800,
       "roi": 4.0,
@@ -8504,7 +8504,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1560,
       "capex": 10400,
       "roi": 6.7,
@@ -8540,7 +8540,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural",
       "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 525,
       "capex": 2100,
       "roi": 4.0,
@@ -8577,7 +8577,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2700,
       "capex": 18000,
       "roi": 6.7,
@@ -8614,7 +8614,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7860,
       "capex": 52400,
       "roi": 6.7,
@@ -8639,7 +8639,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 67620,
       "capex": 450800,
       "roi": 6.7,
@@ -8666,7 +8666,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 17325,
       "capex": 69300,
       "roi": 4.0,
@@ -8695,7 +8695,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 31020,
       "capex": 206800,
       "roi": 6.7,
@@ -8724,7 +8724,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12900,
       "capex": 86000,
       "roi": 6.7,
@@ -8750,7 +8750,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9120,
       "capex": 60800,
       "roi": 6.7,
@@ -8778,7 +8778,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8280,
       "capex": 55200,
       "roi": 6.7,
@@ -8814,7 +8814,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8880,
       "capex": 59200,
       "roi": 6.7,
@@ -8843,7 +8843,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2700,
       "capex": 18000,
       "roi": 6.7,
@@ -8869,7 +8869,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4680,
       "capex": 31200,
       "roi": 6.7,
@@ -8894,7 +8894,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 89280,
       "capex": 595200,
       "roi": 6.7,
@@ -8922,7 +8922,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 69540,
       "capex": 463600,
       "roi": 6.7,
@@ -8951,7 +8951,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 14340,
       "capex": 95600,
       "roi": 6.7,
@@ -8979,7 +8979,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15540,
       "capex": 103600,
       "roi": 6.7,
@@ -9010,7 +9010,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 18505,
       "capex": 120100,
       "roi": 6.5,
@@ -9040,7 +9040,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 54420,
       "capex": 362800,
       "roi": 6.7,
@@ -9071,7 +9071,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 13980,
       "capex": 93200,
       "roi": 6.7,
@@ -9097,7 +9097,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9720,
       "capex": 64800,
       "roi": 6.7,
@@ -9133,7 +9133,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 28020,
       "capex": 186800,
       "roi": 6.7,
@@ -9159,7 +9159,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3300,
       "capex": 22000,
       "roi": 6.7,
@@ -9184,7 +9184,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11580,
       "capex": 77200,
       "roi": 6.7,
@@ -9212,7 +9212,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 22320,
       "capex": 148800,
       "roi": 6.7,
@@ -9241,7 +9241,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8460,
       "capex": 56400,
       "roi": 6.7,
@@ -9267,7 +9267,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 60960,
       "capex": 406400,
       "roi": 6.7,
@@ -9296,8 +9296,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -9322,7 +9322,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 42780,
       "capex": 285200,
       "roi": 6.7,
@@ -9350,7 +9350,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 73980,
       "capex": 493200,
       "roi": 6.7,
@@ -9378,7 +9378,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5820,
       "capex": 38800,
       "roi": 6.7,
@@ -9405,7 +9405,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1860,
       "capex": 12400,
       "roi": 6.7,
@@ -9431,8 +9431,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 420,
       "capex": 2800,
       "roi": 6.7,
@@ -9457,7 +9457,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 55020,
       "capex": 366800,
       "roi": 6.7,
@@ -9485,7 +9485,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 34980,
       "capex": 233200,
       "roi": 6.7,
@@ -9516,7 +9516,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 22740,
       "capex": 151600,
       "roi": 6.7,
@@ -9546,8 +9546,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1380,
       "capex": 9200,
       "roi": 6.7,
@@ -9574,7 +9574,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 15180,
       "capex": 101200,
       "roi": 6.7,
@@ -9607,7 +9607,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 16140,
       "capex": 107600,
       "roi": 6.7,
@@ -9634,7 +9634,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 11760,
       "capex": 78400,
       "roi": 6.7,
@@ -9664,7 +9664,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 4560,
       "capex": 30400,
       "roi": 6.7,
@@ -9691,7 +9691,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2220,
       "capex": 14800,
       "roi": 6.7,
@@ -9716,7 +9716,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 32880,
       "capex": 219200,
       "roi": 6.7,
@@ -9744,7 +9744,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 17880,
       "capex": 119200,
       "roi": 6.7,
@@ -9771,7 +9771,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 20340,
       "capex": 135600,
       "roi": 6.7,
@@ -9800,7 +9800,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 36180,
       "capex": 241200,
       "roi": 6.7,
@@ -9829,7 +9829,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 5400,
       "capex": 36000,
       "roi": 6.7,
@@ -9854,7 +9854,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6480,
       "capex": 43200,
       "roi": 6.7,
@@ -9881,7 +9881,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2280,
       "capex": 15200,
       "roi": 6.7,
@@ -9907,7 +9907,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 6840,
       "capex": 45600,
       "roi": 6.7,
@@ -9944,7 +9944,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9720,
       "capex": 64800,
       "roi": 6.7,
@@ -9970,7 +9970,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3420,
       "capex": 22800,
       "roi": 6.7,
@@ -9996,7 +9996,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7800,
       "capex": 52000,
       "roi": 6.7,
@@ -10021,7 +10021,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2040,
       "capex": 13600,
       "roi": 6.7,
@@ -10047,7 +10047,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 2820,
       "capex": 18800,
       "roi": 6.7,
@@ -10071,8 +10071,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -10095,7 +10095,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 13500,
       "capex": 90000,
       "roi": 6.7,
@@ -10121,7 +10121,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 12900,
       "capex": 86000,
       "roi": 6.7,
@@ -10151,7 +10151,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8400,
       "capex": 56000,
       "roi": 6.7,
@@ -10179,7 +10179,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 46020,
       "capex": 306800,
       "roi": 6.7,
@@ -10214,7 +10214,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 9780,
       "capex": 65200,
       "roi": 6.7,
@@ -10240,7 +10240,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3420,
       "capex": 22800,
       "roi": 6.7,
@@ -10267,7 +10267,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1680,
       "capex": 11200,
       "roi": 6.7,
@@ -10291,8 +10291,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1140,
       "capex": 7600,
       "roi": 6.7,
@@ -10317,7 +10317,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 7980,
       "capex": 53200,
       "roi": 6.7,
@@ -10345,8 +10345,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 540,
       "capex": 3600,
       "roi": 6.7,
@@ -10372,7 +10372,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3120,
       "capex": 20800,
       "roi": 6.7,
@@ -10397,8 +10397,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 5950,
       "capex": 23800,
       "roi": 4.0,
@@ -10435,7 +10435,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Rural + Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 43915,
       "capex": 264300,
       "roi": 6.0,
@@ -10468,8 +10468,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 240,
       "capex": 1600,
       "roi": 6.7,
@@ -10494,7 +10494,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 24480,
       "capex": 163200,
       "roi": 6.7,
@@ -10523,7 +10523,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 1,
-      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 80880,
       "capex": 539200,
       "roi": 6.7,
@@ -10571,7 +10571,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3720,
       "capex": 24800,
       "roi": 6.7,
@@ -10607,8 +10607,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 300,
       "capex": 2000,
       "roi": 6.7,
@@ -10646,7 +10646,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "nivel": "Tier 3: Baja Prioridad (25-49 casas viables)",
       "mrr": 1980,
       "capex": 13200,
       "roi": 6.7,
@@ -10675,7 +10675,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 3180,
       "capex": 21200,
       "roi": 6.7,
@@ -10710,8 +10710,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -10799,8 +10799,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 0,
       "capex": 0,
       "roi": null,
@@ -10877,8 +10877,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 180,
       "capex": 1200,
       "roi": 6.7,
@@ -10914,7 +10914,7 @@ const DATA_TORRES = [
     "portafolio": {
       "segmento": "Suburbano",
       "tier": 2,
-      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "nivel": "Tier 2: Potencial Medio (50-149 casas viables)",
       "mrr": 8700,
       "capex": 58000,
       "roi": 6.7,
@@ -10944,8 +10944,8 @@ const DATA_TORRES = [
     "activo": true,
     "portafolio": {
       "segmento": "Suburbano",
-      "tier": 3,
-      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "tier": 4,
+      "nivel": "Tier 4: Inviable Comercial (<25 casas viables)",
       "mrr": 1140,
       "capex": 7600,
       "roi": 6.7,
