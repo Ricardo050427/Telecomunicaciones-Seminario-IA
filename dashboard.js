@@ -28,9 +28,23 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
-    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
-    if (btn.dataset.tab === 'simulador') updateSimulator();
-    if (btn.dataset.tab === 'resumen') { setTimeout(function(){ if(mapaInstance) mapaInstance.invalidateSize(); else initMapaTorres(); }, 150); }
+    const tabName = btn.dataset.tab;
+    document.getElementById('panel-' + tabName).classList.add('active');
+    
+    if (tabName === 'simulador') {
+      updateSimulator();
+    } else if (tabName === 'rural') {
+      applyRuralFilters();
+    } else if (tabName === 'suburbano') {
+      applySubFilters();
+    } else if (tabName === 'urbano') {
+      applyUrbFilters();
+    } else if (tabName === 'resumen') {
+      updateHeaderKPI();
+      buildResumenCharts();
+      buildTopTables();
+      setTimeout(function(){ if(mapaInstance) mapaInstance.invalidateSize(); else initMapaTorres(); }, 150);
+    }
   });
 });
 
@@ -311,103 +325,118 @@ let chartSegmento, chartMrrSeg, chartTiers, chartCapexMrr, simChart;
 function destroyChart(c) { if (c) c.destroy(); }
 
 function buildResumenCharts() {
-  // Pie - mercado por segmento
-  destroyChart(chartSegmento);
-  chartSegmento = new Chart(document.getElementById('chart-segmento'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Rural', 'Suburbano', 'Urbano'],
-      datasets: [{
-        data: [
-          DATA_RURALES.reduce((s,r) => s+r.mercado_viable,0),
-          DATA_SUBURBANOS.reduce((s,r) => s+r.mercado_viable,0),
-          DATA_URBANOS.reduce((s,r) => s+r.sin_internet,0)
-        ],
-        backgroundColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
-        borderColor: '#1C1C1C', borderWidth: 3
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { position: 'bottom', labels: { padding:16, font:{size:11} } } }
-    }
-  });
-
-  // Bar - MRR por segmento
-  destroyChart(chartMrrSeg);
-  const rMrr = DATA_RURALES.reduce((s,r) => s + Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket),0);
-  const sMrr = DATA_SUBURBANOS.reduce((s,r) => s + Math.round(r.mercado_viable*params.sub_adopt*params.sub_ticket),0);
-  const uMrr = DATA_URBANOS.reduce((s,r) => s + Math.round(r.sin_internet*params.urb_adopt*params.urb_ticket),0);
-  chartMrrSeg = new Chart(document.getElementById('chart-mrr-seg'), {
-    type: 'bar',
-    data: {
-      labels: ['Rural','Suburbano','Urbano'],
-      datasets: [{
-        label: 'MRR ($MXN)',
-        data: [rMrr, sMrr, uMrr],
-        backgroundColor: [CHART_COLORS.wineLight, CHART_COLORS.tealLight, CHART_COLORS.purpleLight],
-        borderColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
-        borderWidth: 2, borderRadius: 8
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true, indexAxis: 'y',
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
-        y: { grid: { display: false } }
-      }
-    }
-  });
-
-  // Tier distribution doughnut
-  destroyChart(chartTiers);
-  const allNodos = [...DATA_RURALES, ...DATA_SUBURBANOS];
-  const t1 = allNodos.filter(r => r.tier===1).length;
-  const t2 = allNodos.filter(r => r.tier===2).length;
-  const t3 = allNodos.filter(r => r.tier===3).length;
-  const t4 = allNodos.filter(r => r.tier===4).length;
-  chartTiers = new Chart(document.getElementById('chart-tiers'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Tier 1 - Inmediata','Tier 2 - Mediano','Tier 3 - Largo','Tier 4 - Satelital'],
-      datasets: [{
-        data: [t1, t2, t3, t4],
-        backgroundColor: ['rgba(192,57,43,0.8)','rgba(212,168,67,0.8)','rgba(107,63,160,0.8)','rgba(100,100,100,0.5)'],
-        borderColor: '#1C1C1C', borderWidth: 3
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { position: 'bottom', labels: { padding:12, font:{size:10} } } }
-    }
-  });
-
-  // CAPEX vs MRR top 10 rurales
-  const canvasCapexMrr = document.getElementById('chart-capex-mrr');
-  if (canvasCapexMrr) {
-    destroyChart(chartCapexMrr);
-    const top10 = [...DATA_RURALES].sort((a,b) => b.mercado_viable-a.mercado_viable).slice(0,10);
-    chartCapexMrr = new Chart(canvasCapexMrr, {
-      type: 'bar',
+  // Pie - mercado por segmento (static: only build once)
+  if (!chartSegmento) {
+    chartSegmento = new Chart(document.getElementById('chart-segmento'), {
+      type: 'doughnut',
       data: {
-        labels: top10.map(r => r.nombre.length>18 ? r.nombre.slice(0,16)+'…' : r.nombre),
-        datasets: [
-          { label:'MRR ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket)),
-            backgroundColor: CHART_COLORS.tealLight, borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6 },
-          { label:'CAPEX ($)', data: top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.cpe_cost)),
-            backgroundColor: CHART_COLORS.wineLight, borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6 }
-        ]
+        labels: ['Rural', 'Suburbano', 'Urbano'],
+        datasets: [{
+          data: [
+            DATA_RURALES.reduce((s,r) => s+r.mercado_viable,0),
+            DATA_SUBURBANOS.reduce((s,r) => s+r.mercado_viable,0),
+            DATA_URBANOS.reduce((s,r) => s+r.sin_internet,0)
+          ],
+          backgroundColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
+          borderColor: '#1C1C1C', borderWidth: 3
+        }]
       },
       options: {
         responsive: true, maintainAspectRatio: true,
-        plugins: { legend: { position:'top', labels:{font:{size:11}} } },
+        plugins: { legend: { position: 'bottom', labels: { padding:16, font:{size:11} } } }
+      }
+    });
+  }
+
+  // Bar - MRR por segmento (dynamic)
+  const rMrr = DATA_RURALES.reduce((s,r) => s + Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket),0);
+  const sMrr = DATA_SUBURBANOS.reduce((s,r) => s + Math.round(r.mercado_viable*params.sub_adopt*params.sub_ticket),0);
+  const uMrr = DATA_URBANOS.reduce((s,r) => s + Math.round(r.sin_internet*params.urb_adopt*params.urb_ticket),0);
+  
+  if (chartMrrSeg) {
+    chartMrrSeg.data.datasets[0].data = [rMrr, sMrr, uMrr];
+    chartMrrSeg.update('none');
+  } else {
+    chartMrrSeg = new Chart(document.getElementById('chart-mrr-seg'), {
+      type: 'bar',
+      data: {
+        labels: ['Rural','Suburbano','Urbano'],
+        datasets: [{
+          label: 'MRR ($MXN)',
+          data: [rMrr, sMrr, uMrr],
+          backgroundColor: [CHART_COLORS.wineLight, CHART_COLORS.tealLight, CHART_COLORS.purpleLight],
+          borderColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
+          borderWidth: 2, borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true, indexAxis: 'y',
+        plugins: { legend: { display: false } },
         scales: {
-          y: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
-          x: { grid: { display:false } }
+          x: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
+          y: { grid: { display: false } }
         }
       }
     });
+  }
+
+  // Tier distribution doughnut (static: only build once)
+  if (!chartTiers) {
+    const allNodos = [...DATA_RURALES, ...DATA_SUBURBANOS];
+    const t1 = allNodos.filter(r => r.tier===1).length;
+    const t2 = allNodos.filter(r => r.tier===2).length;
+    const t3 = allNodos.filter(r => r.tier===3).length;
+    const t4 = allNodos.filter(r => r.tier===4).length;
+    chartTiers = new Chart(document.getElementById('chart-tiers'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Tier 1 - Inmediata','Tier 2 - Mediano','Tier 3 - Largo','Tier 4 - Satelital'],
+        datasets: [{
+          data: [t1, t2, t3, t4],
+          backgroundColor: ['rgba(192,57,43,0.8)','rgba(212,168,67,0.8)','rgba(107,63,160,0.8)','rgba(100,100,100,0.5)'],
+          borderColor: '#1C1C1C', borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: { legend: { position: 'bottom', labels: { padding:12, font:{size:10} } } }
+      }
+    });
+  }
+
+  // CAPEX vs MRR top 10 rurales (dynamic)
+  const canvasCapexMrr = document.getElementById('chart-capex-mrr');
+  if (canvasCapexMrr) {
+    const top10 = [...DATA_RURALES].sort((a,b) => b.mercado_viable-a.mercado_viable).slice(0,10);
+    const mrrVals = top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.rural_ticket));
+    const capexVals = top10.map(r => Math.round(r.mercado_viable*params.rural_adopt*params.cpe_cost));
+
+    if (chartCapexMrr) {
+      chartCapexMrr.data.datasets[0].data = mrrVals;
+      chartCapexMrr.data.datasets[1].data = capexVals;
+      chartCapexMrr.update('none');
+    } else {
+      chartCapexMrr = new Chart(canvasCapexMrr, {
+        type: 'bar',
+        data: {
+          labels: top10.map(r => r.nombre.length>18 ? r.nombre.slice(0,16)+'…' : r.nombre),
+          datasets: [
+            { label:'MRR ($)', data: mrrVals,
+              backgroundColor: CHART_COLORS.tealLight, borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6 },
+            { label:'CAPEX ($)', data: capexVals,
+              backgroundColor: CHART_COLORS.wineLight, borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6 }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: true,
+          plugins: { legend: { position:'top', labels:{font:{size:11}} } },
+          scales: {
+            y: { ticks: { callback: v => '$'+Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
+            x: { grid: { display:false } }
+          }
+        }
+      });
+    }
   }
 }
 
@@ -479,25 +508,30 @@ function updateSimulator() {
   buildTopTables();
 
   // Sim chart
-  destroyChart(simChart);
-  simChart = new Chart(document.getElementById('sim-chart'), {
-    type: 'bar',
-    data: {
-      labels: ['Rural','Suburbano','Urbano'],
-      datasets: [
-        { label:'MRR ($)', data:[rMrr,sMrr,uMrr], backgroundColor:[CHART_COLORS.tealLight,CHART_COLORS.tealLight,CHART_COLORS.tealLight], borderColor:[CHART_COLORS.teal,CHART_COLORS.teal,CHART_COLORS.teal], borderWidth:2, borderRadius:8 },
-        { label:'CAPEX ($)', data:[rCap,sCap,uCap], backgroundColor:[CHART_COLORS.wineLight,CHART_COLORS.wineLight,CHART_COLORS.wineLight], borderColor:[CHART_COLORS.wine,CHART_COLORS.wine,CHART_COLORS.wine], borderWidth:2, borderRadius:8 }
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:true,
-      plugins:{ legend:{position:'top'} },
-      scales: {
-        y:{ ticks:{callback: v=>'$'+Number(v).toLocaleString('es-MX')}, grid:{color:CHART_COLORS.border2} },
-        x:{ grid:{display:false} }
+  if (simChart) {
+    simChart.data.datasets[0].data = [rMrr, sMrr, uMrr];
+    simChart.data.datasets[1].data = [rCap, sCap, uCap];
+    simChart.update('none');
+  } else {
+    simChart = new Chart(document.getElementById('sim-chart'), {
+      type: 'bar',
+      data: {
+        labels: ['Rural','Suburbano','Urbano'],
+        datasets: [
+          { label:'MRR ($)', data:[rMrr,sMrr,uMrr], backgroundColor:[CHART_COLORS.tealLight,CHART_COLORS.tealLight,CHART_COLORS.tealLight], borderColor:[CHART_COLORS.teal,CHART_COLORS.teal,CHART_COLORS.teal], borderWidth:2, borderRadius:8 },
+          { label:'CAPEX ($)', data:[rCap,sCap,uCap], backgroundColor:[CHART_COLORS.wineLight,CHART_COLORS.wineLight,CHART_COLORS.wineLight], borderColor:[CHART_COLORS.wine,CHART_COLORS.wine,CHART_COLORS.wine], borderWidth:2, borderRadius:8 }
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:true,
+        plugins:{ legend:{position:'top'} },
+        scales: {
+          y:{ ticks:{callback: v=>'$'+Number(v).toLocaleString('es-MX')}, grid:{color:CHART_COLORS.border2} },
+          x:{ grid:{display:false} }
+        }
       }
-    }
-  });
+    });
+  }
 }
 
 // Slider bindings
@@ -508,9 +542,6 @@ function bindSlider(id, valId, paramKey, fmt, mult) {
     params[paramKey] = parseFloat(el.value) * (mult||1);
     val.textContent = fmt(el.value);
     updateSimulator();
-    applyRuralFilters();
-    applySubFilters();
-    applyUrbFilters();
   });
 }
 
@@ -717,6 +748,19 @@ function initMapaTorres() {
   });
 
   mapaInstance.addLayer(clusterGroup);
+
+  // Dynamically update the count labels on the filter buttons
+  const totalCount = allMarkers.length;
+  const portafolioCount = allMarkers.filter(m => !!m._torreData.portafolio).length;
+  
+  document.querySelectorAll('.mapa-filter-btn').forEach(btn => {
+    const dep = btn.dataset.dep;
+    if (dep === 'all') {
+      btn.textContent = 'Todas (' + totalCount + ')';
+    } else if (dep === 'portafolio') {
+      btn.textContent = '⭐ Portafolio (' + portafolioCount + ')';
+    }
+  });
 
   // Fix: invalidateSize after tab becomes visible
   setTimeout(function() {

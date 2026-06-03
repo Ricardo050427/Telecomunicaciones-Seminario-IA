@@ -33,7 +33,24 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 900,
+      "capex": 6000,
+      "roi": 6.7,
+      "mercado_viable": 15,
+      "mercado_bruto": 15,
+      "localidades_los": [
+        "Basopa",
+        "El Guayparín (San Carlos)",
+        "San Antonio Escalante (AGROPREMIER)",
+        "Piamonte"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4306,
@@ -57,19 +74,19 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
       "mrr": 12950,
       "capex": 51800,
       "roi": 4.0,
       "mercado_viable": 74,
-      "mercado_bruto": 74,
+      "mercado_bruto": 77,
       "localidades_los": [
         "Adivino",
         "San Fermín"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -81,7 +98,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BACANORA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5100,
+      "capex": 34000,
+      "roi": 6.7,
+      "mercado_viable": 85,
+      "mercado_bruto": 128,
+      "localidades_los": [
+        "Bacanora. | BLOQUEADAS (2): El Destacamento",
+        "Santa Teresa"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4309,
@@ -92,7 +124,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "MAZATÁN",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 16500,
+      "capex": 110000,
+      "roi": 6.7,
+      "mercado_viable": 275,
+      "mercado_bruto": 275,
+      "localidades_los": [
+        "Mazatán"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4310,
@@ -114,7 +160,21 @@ const DATA_TORRES = [
     "dep": "Hacienda",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 120,
+      "capex": 800,
+      "roi": 6.7,
+      "mercado_viable": 2,
+      "mercado_bruto": 2,
+      "localidades_los": [
+        "Danny"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4312,
@@ -125,7 +185,38 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6300,
+      "capex": 42000,
+      "roi": 6.7,
+      "mercado_viable": 105,
+      "mercado_bruto": 136,
+      "localidades_los": [
+        "La Yesca",
+        "El Real del Catorce",
+        "Campestre Ejido la Yesca",
+        "Siete Cerros",
+        "La Gallinita",
+        "Campo el Águila",
+        "Santa Lucía",
+        "La Valenciana (La Peaña)",
+        "Las Palmas [Viñedo]",
+        "Las Bebelamas",
+        "Granja Santa Raquel",
+        "La Reyna",
+        "Agroquímicos JAM",
+        "Agropecuaria Jam. | BLOQUEADAS (2): Cuadra las Quintas",
+        "Corrales San Juanero. | Sin dato (4): Hacienda los Tesoros [Fraccionamiento]",
+        "El Mezquital del Oro (El Águila)",
+        "La Fortuna",
+        "La Estación Dessens"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4313,
@@ -136,7 +227,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 360,
+      "capex": 2400,
+      "roi": 6.7,
+      "mercado_viable": 6,
+      "mercado_bruto": 6,
+      "localidades_los": [
+        "El Chanate"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4314,
@@ -202,7 +307,22 @@ const DATA_TORRES = [
     "dep": "Hacienda",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 17820,
+      "capex": 118800,
+      "roi": 6.7,
+      "mercado_viable": 297,
+      "mercado_bruto": 297,
+      "localidades_los": [
+        "La Victoria",
+        "Santa Rita"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4320,
@@ -345,7 +465,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "GRANADOS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 360,
+      "capex": 2400,
+      "roi": 6.7,
+      "mercado_viable": 6,
+      "mercado_bruto": 6,
+      "localidades_los": [
+        "Jalisco"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4333,
@@ -356,7 +490,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "GRANADOS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 360,
+      "capex": 2400,
+      "roi": 6.7,
+      "mercado_viable": 6,
+      "mercado_bruto": 6,
+      "localidades_los": [
+        "Jalisco"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4334,
@@ -378,7 +526,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "SAN FELIPE DE JESÚS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5880,
+      "capex": 39200,
+      "roi": 6.7,
+      "mercado_viable": 98,
+      "mercado_bruto": 98,
+      "localidades_los": [
+        "San Felipe de Jesús"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4336,
@@ -400,7 +562,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "SAN FELIPE DE JESÚS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 16,
+      "localidades_los": [
+        "Café Keyla. | BLOQUEADAS (3): Quitovac",
+        "Villa Hermosa",
+        "El Mirador [Café]"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4338,
@@ -422,7 +600,27 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "CUMPAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 37500,
+      "capex": 250000,
+      "roi": 6.7,
+      "mercado_viable": 625,
+      "mercado_bruto": 941,
+      "localidades_los": [
+        "Cumpas",
+        "Ojo de Agua",
+        "Teonadepa",
+        "La Colonia. | BLOQUEADAS (4): Los Hoyos",
+        "El Valle (Colonia el Valle)",
+        "Los Hoyos (Colonia Sur)",
+        "Tierras Prietas"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4340,
@@ -433,7 +631,24 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BANÁMICHI",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10920,
+      "capex": 72800,
+      "roi": 6.7,
+      "mercado_viable": 182,
+      "mercado_bruto": 182,
+      "localidades_los": [
+        "Banámichi",
+        "Las Delicias",
+        "La Mora",
+        "El Bajío de Palo Blanco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4341,
@@ -444,7 +659,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "OPODEPE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 17820,
+      "capex": 118800,
+      "roi": 6.7,
+      "mercado_viable": 297,
+      "mercado_bruto": 297,
+      "localidades_los": [
+        "Querobabi",
+        "San Juan de las Flores"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4342,
@@ -455,7 +685,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ARIZPE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7560,
+      "capex": 50400,
+      "roi": 6.7,
+      "mercado_viable": 126,
+      "mercado_bruto": 129,
+      "localidades_los": [
+        "Sinoquipe. | BLOQUEADAS (1): Las Cendraditas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4343,
@@ -466,7 +710,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "VILLA HIDALGO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14820,
+      "capex": 98800,
+      "roi": 6.7,
+      "mercado_viable": 247,
+      "mercado_bruto": 247,
+      "localidades_los": [
+        "Villa Hidalgo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4344,
@@ -477,7 +735,25 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "MAGDALENA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 39,
+      "localidades_los": [
+        "San Lorenzo",
+        "Valenzuela [Partes Usadas]",
+        "La Biznaga",
+        "Casa Blanca. | BLOQUEADAS (2): El Carrizo",
+        "Buena Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4345,
@@ -488,7 +764,25 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "MAGDALENA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 39,
+      "localidades_los": [
+        "San Lorenzo",
+        "Valenzuela [Partes Usadas]",
+        "La Biznaga",
+        "Casa Blanca. | BLOQUEADAS (2): El Carrizo",
+        "Buena Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4346,
@@ -499,7 +793,27 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "MAGDALENA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 20700,
+      "capex": 138000,
+      "roi": 6.7,
+      "mercado_viable": 345,
+      "mercado_bruto": 413,
+      "localidades_los": [
+        "San Ignacio",
+        "El Tasícuri",
+        "La Mesa de Bedolla",
+        "El Ranchito",
+        "El Manchón de Casas",
+        "Los Pozos Viejos",
+        "El Alballar. | BLOQUEADAS (1): Terrenate"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4347,
@@ -510,7 +824,19 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "PITIQUITO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 69,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4348,
@@ -521,7 +847,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "ALTAR",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 65640,
+      "capex": 437600,
+      "roi": 6.7,
+      "mercado_viable": 1094,
+      "mercado_bruto": 1094,
+      "localidades_los": [
+        "Altar",
+        "La Angostura"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4349,
@@ -598,7 +939,19 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CABORCA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 6,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4356,
@@ -634,7 +987,19 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "IMURIS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 5,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4359,
@@ -645,7 +1010,29 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "IMURIS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 83400,
+      "capex": 556000,
+      "roi": 6.7,
+      "mercado_viable": 1390,
+      "mercado_bruto": 1390,
+      "localidades_los": [
+        "Imuris",
+        "Campo Carretero",
+        "El Crucero",
+        "La Estación",
+        "La Mesa",
+        "Cañada del Diablo",
+        "El Pantano (Calle los Alisos)",
+        "El Ranchito",
+        "Yerbabuena"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4360,
@@ -656,7 +1043,28 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "IMURIS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14100,
+      "capex": 94000,
+      "roi": 6.7,
+      "mercado_viable": 235,
+      "mercado_bruto": 248,
+      "localidades_los": [
+        "Los Janos",
+        "Estación Cumeral",
+        "Las Viguitas",
+        "Cerro Blanco",
+        "Las Canoas",
+        "Ejido las Mesas (Cuesta El Cumaro). | BLOQUEADAS (3): El Álamo",
+        "La Cantina",
+        "La Casa de Piedra"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4361,
@@ -667,7 +1075,28 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "IMURIS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14100,
+      "capex": 94000,
+      "roi": 6.7,
+      "mercado_viable": 235,
+      "mercado_bruto": 248,
+      "localidades_los": [
+        "Los Janos",
+        "Estación Cumeral",
+        "Las Viguitas",
+        "Cerro Blanco",
+        "Las Canoas",
+        "Ejido las Mesas (Cuesta El Cumaro). | BLOQUEADAS (3): El Álamo",
+        "La Cantina",
+        "La Casa de Piedra"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4362,
@@ -678,7 +1107,30 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CABORCA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 91980,
+      "capex": 613200,
+      "roi": 6.7,
+      "mercado_viable": 1533,
+      "mercado_bruto": 1533,
+      "localidades_los": [
+        "Plutarco Elías Calles (La Y Griega)",
+        "El Diamante (La Retranca)",
+        "Lauro G. Caloca",
+        "Huanímaro (Plan de Ayala)",
+        "Llanos San Francisco",
+        "San Gabriel",
+        "Sin Son",
+        "Loleyta",
+        "Don Marcelo (Santa Elvira)",
+        "San Andrés [Viñedos]"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4363,
@@ -689,7 +1141,24 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ATIL",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14100,
+      "capex": 94000,
+      "roi": 6.7,
+      "mercado_viable": 235,
+      "mercado_bruto": 302,
+      "localidades_los": [
+        "Atil",
+        "Tubutama",
+        "El Rincón. | BLOQUEADAS (2): La Reforma",
+        "Alfonso Traslaviña (A Lado del Estadio)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4364,
@@ -700,7 +1169,33 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "FRONTERAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 72300,
+      "capex": 482000,
+      "roi": 6.7,
+      "mercado_viable": 1205,
+      "mercado_bruto": 1392,
+      "localidades_los": [
+        "Esqueda",
+        "Fronteras",
+        "Kilómetro Cuarenta y Siete",
+        "Cuquiarachi",
+        "Adolfo Ruíz Cortínez",
+        "La Reforma",
+        "San Isidro. | BLOQUEADAS (7): Turicachi",
+        "El Rusbayo",
+        "Agua Blanca",
+        "Los Chinos",
+        "El Pozo",
+        "Ajos del Norte",
+        "La Mesa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4365,
@@ -744,7 +1239,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NACO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 48900,
+      "capex": 326000,
+      "roi": 6.7,
+      "mercado_viable": 815,
+      "mercado_bruto": 815,
+      "localidades_los": [
+        "Naco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4369,
@@ -755,7 +1264,23 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "PUERTO PEÑASCO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1260,
+      "capex": 8400,
+      "roi": 6.7,
+      "mercado_viable": 21,
+      "mercado_bruto": 21,
+      "localidades_los": [
+        "Agua Zarca",
+        "Relleno Sanitario de Puerto Peñasco",
+        "Las Lágrimas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4370,
@@ -766,7 +1291,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ARIVECHI",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1320,
+      "capex": 8800,
+      "roi": 6.7,
+      "mercado_viable": 22,
+      "mercado_bruto": 22,
+      "localidades_los": [
+        "Bámori"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4371,
@@ -777,7 +1316,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "URES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15360,
+      "capex": 102400,
+      "roi": 6.7,
+      "mercado_viable": 256,
+      "mercado_bruto": 256,
+      "localidades_los": [
+        "San Pedro de Ures (San Pedro)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4372,
@@ -788,7 +1341,31 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6900,
+      "capex": 46000,
+      "roi": 6.7,
+      "mercado_viable": 115,
+      "mercado_bruto": 116,
+      "localidades_los": [
+        "Benito Juárez",
+        "Poblado Calle Nueve",
+        "Calle Nueve y Canal Bajo",
+        "Campo Número Seis (Cinco y Medio)",
+        "Campo 34",
+        "Crucero Seiscientos y Meridiano",
+        "Santos Castro",
+        "Campo Veintidós",
+        "La Escoba (Calle Uno y Seiscientos)",
+        "Bloque 602 (500 y Meridiano)",
+        "Hermur. | Sin dato (1): Cruz Briseño"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4373,
@@ -810,7 +1387,21 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "SAN LUIS RÍO COLORADO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 33,
+      "localidades_los": [
+        "Las Adelitas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4375,
@@ -876,7 +1467,24 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "SAN LUIS RÍO COLORADO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 17340,
+      "capex": 115600,
+      "roi": 6.7,
+      "mercado_viable": 289,
+      "mercado_bruto": 304,
+      "localidades_los": [
+        "San Pedro de la Cueva",
+        "San José de Batuc (Batuquito). | BLOQUEADAS (3): La Ranchería (Rancherías)",
+        "El Carrizal",
+        "El Limbo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4381,
@@ -887,7 +1495,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "SAN LUIS RÍO COLORADO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 300,
+      "capex": 2000,
+      "roi": 6.7,
+      "mercado_viable": 5,
+      "mercado_bruto": 5,
+      "localidades_los": [
+        "Ninguno [Irma Rodríguez]",
+        "El Yavé"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4382,
@@ -909,7 +1532,28 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "GENERAL PLUTARCO ELÍAS CALLES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 19560,
+      "capex": 130400,
+      "roi": 6.7,
+      "mercado_viable": 326,
+      "mercado_bruto": 326,
+      "localidades_los": [
+        "Álvaro Obregón",
+        "Desemboque",
+        "El Bahía",
+        "María Dámaso (Tierra Nueva)",
+        "Bahía Dos",
+        "SPR María Dámaso II",
+        "María Isabel de los Olivos",
+        "Cancún"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4384,
@@ -920,7 +1564,24 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GENERAL PLUTARCO ELÍAS CALLES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12360,
+      "capex": 82400,
+      "roi": 6.7,
+      "mercado_viable": 206,
+      "mercado_bruto": 214,
+      "localidades_los": [
+        "El Desierto de Sonora",
+        "Adolfo López Mateos",
+        "Colinas de Sonoidag. | BLOQUEADAS (2): Nueva Creación Cajeme",
+        "Mariano Escobedo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4385,
@@ -931,7 +1592,27 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "BÁCUM",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 34020,
+      "capex": 226800,
+      "roi": 6.7,
+      "mercado_viable": 567,
+      "mercado_bruto": 567,
+      "localidades_los": [
+        "Loma de Bácum",
+        "Bataconcica (Museo Chopocuni)",
+        "La Bomba (Juan Maldonado Tetabiate)",
+        "Jori",
+        "Chucari",
+        "La Caída",
+        "La Miseria (Loma Chiquitita)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4386,
@@ -942,7 +1623,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NAVOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8760,
+      "capex": 58400,
+      "roi": 6.7,
+      "mercado_viable": 146,
+      "mercado_bruto": 146,
+      "localidades_los": [
+        "El Jijiri",
+        "Las Pilas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4387,
@@ -953,7 +1649,26 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NAVOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 22440,
+      "capex": 149600,
+      "roi": 6.7,
+      "mercado_viable": 374,
+      "mercado_bruto": 377,
+      "localidades_los": [
+        "Tierra Blanca",
+        "Camoa",
+        "Santa Rosa",
+        "Jusibampo",
+        "Ranchería",
+        "Campo 24-A. | BLOQUEADAS (1): Chícoras"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4388,
@@ -997,7 +1712,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4020,
+      "capex": 26800,
+      "roi": 6.7,
+      "mercado_viable": 67,
+      "mercado_bruto": 67,
+      "localidades_los": [
+        "Puente de Picos",
+        "Frente a PEMEX"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4392,
@@ -1008,7 +1738,25 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9900,
+      "capex": 66000,
+      "roi": 6.7,
+      "mercado_viable": 165,
+      "mercado_bruto": 165,
+      "localidades_los": [
+        "Zona de Granjas (Granjas Mica)",
+        "Ejido Tepeyac",
+        "Bachoco Veinticuatro Cero Tres [Avícola]",
+        "Espíritu Santo [Agrícola]",
+        "Zona de Tolerancia"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4393,
@@ -1019,7 +1767,32 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4260,
+      "capex": 28400,
+      "roi": 6.7,
+      "mercado_viable": 71,
+      "mercado_bruto": 72,
+      "localidades_los": [
+        "El Crucero (Cero Norte)",
+        "María del Carmen",
+        "Sahuaripa Uno",
+        "Campo Dulce (El Sahueso)",
+        "Covadonga",
+        "Granja Pecuaria #7",
+        "La Misión",
+        "Agroval Cinco (Santa Martha)",
+        "San Enrique (El Suspiro)",
+        "Campo Nuevo",
+        "La Choya",
+        "TEQSA (Las Polleras). | Sin dato (1): La Morena Dos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4394,
@@ -1030,7 +1803,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ROSARIO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 120,
+      "capex": 800,
+      "roi": 6.7,
+      "mercado_viable": 2,
+      "mercado_bruto": 2,
+      "localidades_los": [
+        "Progenitora Núcleo Tres"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4395,
@@ -1085,7 +1872,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 16,
+      "localidades_los": [
+        "Café Keyla. | BLOQUEADAS (3): Quitovac",
+        "Villa Hermosa",
+        "El Mirador [Café]"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4400,
@@ -1096,7 +1899,26 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 25320,
+      "capex": 168800,
+      "roi": 6.7,
+      "mercado_viable": 422,
+      "mercado_bruto": 422,
+      "localidades_los": [
+        "San José de Guaymas",
+        "Lomas de Colosio",
+        "La Salvación",
+        "El Arroyo",
+        "La Cuadrita",
+        "Santa Martha"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4401,
@@ -1118,7 +1940,30 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 19800,
+      "capex": 132000,
+      "roi": 6.7,
+      "mercado_viable": 330,
+      "mercado_bruto": 360,
+      "localidades_los": [
+        "Santa Clara",
+        "San Germán",
+        "San Antonio de Padua",
+        "Villa Bemela",
+        "San Jesús",
+        "Huerta Emiliano Zapata",
+        "El Cachoral. | BLOQUEADAS (4): El Renacimiento",
+        "Buenos Aires (Los Nápoles)",
+        "Santa Gabriela",
+        "San Ramón"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4403,
@@ -1129,7 +1974,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9240,
+      "capex": 61600,
+      "roi": 6.7,
+      "mercado_viable": 154,
+      "mercado_bruto": 185,
+      "localidades_los": [
+        "San Carlos (San Carlos Nuevo Guaymas). | BLOQUEADAS (2): La Manga (Campo Pesquero la Manga)",
+        "La Manga Dos. | Sin dato (1): Costa del Mar"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4404,
@@ -1151,7 +2011,61 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 32640,
+      "capex": 217600,
+      "roi": 6.7,
+      "mercado_viable": 544,
+      "mercado_bruto": 548,
+      "localidades_los": [
+        "El Triunfo",
+        "La Peaña Nueva",
+        "San Luis",
+        "El Dorado",
+        "Salvador Alvarado",
+        "NCPE Ignacio Zaragoza (El Chicotazo)",
+        "Los Dos Amigos (Las Calvas de Arriba)",
+        "El Fundador",
+        "Dos Triángulos",
+        "La Breita (Santa Amelia)",
+        "El Sapo",
+        "El Veinte (La Peaña)",
+        "La Brea",
+        "Nuevo Guadalupe de Jesús (San Blas)",
+        "Bervano",
+        "Veintitrés de Octubre (La Biznaga)",
+        "El Piave",
+        "San Martín",
+        "Santa Susana (Chorona)",
+        "Sacramento",
+        "Pinos Altos (Santa Bertha)",
+        "El Bura",
+        "Campo el Grande",
+        "Santa Daniela (Santa Cecilia)",
+        "Todos Santos",
+        "Unión de Crédito Agrícola de Hermosillo",
+        "Niños Heroés",
+        "Santa Laura",
+        "El Sacrificio",
+        "Carolina",
+        "El Bajío",
+        "La Tinajita",
+        "El Porvenir",
+        "Palo Verde",
+        "Los Mexicanos",
+        "El Mariachi",
+        "Grandes Fincas [Campestre]",
+        "Santa Amelia",
+        "Los Alamitos. | BLOQUEADAS (1): La Habana [Establo]. | Sin dato (3): Campo Grande Número Dos",
+        "Santander",
+        "La Habana Número Dos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4406,
@@ -1162,7 +2076,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "GENERAL PLUTARCO ELÍAS CALLES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 16,
+      "localidades_los": [
+        "Café Keyla. | BLOQUEADAS (3): Quitovac",
+        "Villa Hermosa",
+        "El Mirador [Café]"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4407,
@@ -1184,7 +2114,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "SAN JAVIER",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 64,
+      "localidades_los": [
+        "Santa Martha. | BLOQUEADAS (1): La Polvadera"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4409,
@@ -1195,7 +2139,24 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 105900,
+      "capex": 706000,
+      "roi": 6.7,
+      "mercado_viable": 1765,
+      "mercado_bruto": 1776,
+      "localidades_los": [
+        "Marte R. Gómez (Tobarito)",
+        "Antonio Rosales",
+        "Rosa Amalia Ceballos",
+        "La Fresno y Seiscientos. | Sin dato (1): Pascual V. Ayón"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4410,
@@ -1208,18 +2169,30 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 525,
-      "capex": 2100,
-      "roi": 4.0,
-      "mercado_viable": 3,
-      "mercado_bruto": 3,
+      "segmento": "Rural + Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6765,
+      "capex": 43700,
+      "roi": 6.5,
+      "mercado_viable": 107,
+      "mercado_bruto": 332,
       "localidades_los": [
-        "Guadalupe"
+        "Guadalupe",
+        "La Habana Tres",
+        "Viñas de la Costa (El Chamizal)",
+        "La Habana [Porcícola y Avícola]",
+        "Ejido Nuevo San Miguel",
+        "Aquiles Serdán (Santa Inés)",
+        "Santa María",
+        "La Paloma",
+        "El Guamuchilar (Centrito)",
+        "El Nuevo Tejabán",
+        "Granja Camou Uno",
+        "El Rey",
+        "Las Abejas. | BLOQUEADAS (1): Alejandro Carrillo Marcor"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -1231,7 +2204,19 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "SOYOPA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 3,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4412,
@@ -1267,7 +2252,23 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 30660,
+      "capex": 204400,
+      "roi": 6.7,
+      "mercado_viable": 511,
+      "mercado_bruto": 511,
+      "localidades_los": [
+        "Progreso (Campo 47)",
+        "31 de Octubre",
+        "Capetamaya"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4414,
@@ -1278,7 +2279,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "SAHUARIPA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 41400,
+      "capex": 276000,
+      "roi": 6.7,
+      "mercado_viable": 690,
+      "mercado_bruto": 690,
+      "localidades_los": [
+        "Sahuaripa",
+        "Seguadehuachi"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4415,
@@ -1325,7 +2341,19 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 369,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4421,
@@ -1336,7 +2364,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15360,
+      "capex": 102400,
+      "roi": 6.7,
+      "mercado_viable": 256,
+      "mercado_bruto": 256,
+      "localidades_los": [
+        "San Pedro de Ures (San Pedro)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4423,
@@ -1349,20 +2391,24 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 4025,
-      "capex": 16100,
-      "roi": 4.0,
-      "mercado_viable": 23,
-      "mercado_bruto": 58,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 21365,
+      "capex": 131700,
+      "roi": 6.2,
+      "mercado_viable": 312,
+      "mercado_bruto": 362,
       "localidades_los": [
         "Nuevo Tepupa. | BLOQUEADAS (3): Huépari",
         "Nuevo Suaqui",
-        "La Mesa del Progreso"
+        "La Mesa del Progreso",
+        "San Pedro de la Cueva",
+        "San José de Batuc (Batuquito). | BLOQUEADAS (3): La Ranchería (Rancherías)",
+        "El Carrizal",
+        "El Limbo"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1374,7 +2420,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "SAN PEDRO DE LA CUEVA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10860,
+      "capex": 72400,
+      "roi": 6.7,
+      "mercado_viable": 181,
+      "mercado_bruto": 194,
+      "localidades_los": [
+        "Tepache. | BLOQUEADAS (1): Casa Grande"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4425,
@@ -1387,18 +2447,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 6125,
-      "capex": 24500,
-      "roi": 4.0,
-      "mercado_viable": 35,
-      "mercado_bruto": 35,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15545,
+      "capex": 87300,
+      "roi": 5.6,
+      "mercado_viable": 192,
+      "mercado_bruto": 211,
       "localidades_los": [
-        "El Carmen"
+        "El Carmen",
+        "Pueblo Nuevo",
+        "Topahue",
+        "El Torreón",
+        "Agropecuaria Blanca Julia",
+        "Los Cochitos. | BLOQUEADAS (1): San José de Gracia"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1410,7 +2475,28 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "URES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 19560,
+      "capex": 130400,
+      "roi": 6.7,
+      "mercado_viable": 326,
+      "mercado_bruto": 326,
+      "localidades_los": [
+        "Álvaro Obregón",
+        "Desemboque",
+        "El Bahía",
+        "María Dámaso (Tierra Nueva)",
+        "Bahía Dos",
+        "SPR María Dámaso II",
+        "María Isabel de los Olivos",
+        "Cancún"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4427,
@@ -1421,7 +2507,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "TEPACHE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10860,
+      "capex": 72400,
+      "roi": 6.7,
+      "mercado_viable": 181,
+      "mercado_bruto": 194,
+      "localidades_los": [
+        "Tepache. | BLOQUEADAS (1): Casa Grande"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4428,
@@ -1443,7 +2543,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "DIVISADEROS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6600,
+      "capex": 44000,
+      "roi": 6.7,
+      "mercado_viable": 110,
+      "mercado_bruto": 110,
+      "localidades_los": [
+        "Divisaderos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4430,
@@ -1454,7 +2568,24 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "CARBÓ",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1320,
+      "capex": 8800,
+      "roi": 6.7,
+      "mercado_viable": 22,
+      "mercado_bruto": 22,
+      "localidades_los": [
+        "Las Canoras",
+        "La Poza",
+        "El Retiro",
+        "Rancho Sesenta"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4431,
@@ -1465,7 +2596,24 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "CARBÓ",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1320,
+      "capex": 8800,
+      "roi": 6.7,
+      "mercado_viable": 22,
+      "mercado_bruto": 22,
+      "localidades_los": [
+        "Las Canoras",
+        "La Poza",
+        "El Retiro",
+        "Rancho Sesenta"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4432,
@@ -1476,7 +2624,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "NÁCORI CHICO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1620,
+      "capex": 10800,
+      "roi": 6.7,
+      "mercado_viable": 27,
+      "mercado_bruto": 27,
+      "localidades_los": [
+        "Buena Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4433,
@@ -1487,7 +2649,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "NÁCORI CHICO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1620,
+      "capex": 10800,
+      "roi": 6.7,
+      "mercado_viable": 27,
+      "mercado_bruto": 27,
+      "localidades_los": [
+        "Buena Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4434,
@@ -1498,7 +2674,19 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "RAYÓN",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 19,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4435,
@@ -1509,7 +2697,24 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BAVIÁCORA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 20700,
+      "capex": 138000,
+      "roi": 6.7,
+      "mercado_viable": 345,
+      "mercado_bruto": 348,
+      "localidades_los": [
+        "Baviácora",
+        "San José (San José de Baviácora)",
+        "Satebachi",
+        "El Rodeo (El Rodeo de Aconchi). | BLOQUEADAS (1): Las Tres Palmas"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4436,
@@ -1520,7 +2725,29 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "MOCTEZUMA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10800,
+      "capex": 72000,
+      "roi": 6.7,
+      "mercado_viable": 180,
+      "mercado_bruto": 190,
+      "localidades_los": [
+        "La Carabina",
+        "Solidaridad",
+        "Comunidad Xóchitl (Grupo Xóchitl)",
+        "La Ladrillera Canal Alto",
+        "Ampliación Ladrillera",
+        "18 de Septiembre",
+        "Bordo del Canal Alto Sur",
+        "El Milagro (Pedro García Navarro)",
+        "Canal Alto los Capomos. | Sin dato (1): Bordo del Canal (Calzada Francisco Villanueva)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4437,
@@ -1531,7 +2758,29 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "MOCTEZUMA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10800,
+      "capex": 72000,
+      "roi": 6.7,
+      "mercado_viable": 180,
+      "mercado_bruto": 190,
+      "localidades_los": [
+        "La Carabina",
+        "Solidaridad",
+        "Comunidad Xóchitl (Grupo Xóchitl)",
+        "La Ladrillera Canal Alto",
+        "Ampliación Ladrillera",
+        "18 de Septiembre",
+        "Bordo del Canal Alto Sur",
+        "El Milagro (Pedro García Navarro)",
+        "Canal Alto los Capomos. | Sin dato (1): Bordo del Canal (Calzada Francisco Villanueva)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4438,
@@ -1542,7 +2791,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "BENJAMÍN HILL",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 45780,
+      "capex": 305200,
+      "roi": 6.7,
+      "mercado_viable": 763,
+      "mercado_bruto": 763,
+      "localidades_los": [
+        "Benjamín Hill",
+        "Comunidad San Miguel",
+        "San Juan"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4439,
@@ -1553,7 +2818,23 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BENJAMÍN HILL",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 45780,
+      "capex": 305200,
+      "roi": 6.7,
+      "mercado_viable": 763,
+      "mercado_bruto": 763,
+      "localidades_los": [
+        "Benjamín Hill",
+        "Comunidad San Miguel",
+        "San Juan"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4440,
@@ -1564,7 +2845,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "HUACHINERA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11760,
+      "capex": 78400,
+      "roi": 6.7,
+      "mercado_viable": 196,
+      "mercado_bruto": 210,
+      "localidades_los": [
+        "Huachinera",
+        "Juribana. | BLOQUEADAS (1): Tamichopa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4441,
@@ -1577,18 +2873,20 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 5,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9240,
+      "capex": 61600,
+      "roi": 6.7,
+      "mercado_viable": 154,
+      "mercado_bruto": 166,
       "localidades_los": [
-        ". | BLOQUEADAS (1): La Otra Banda"
+        ". | BLOQUEADAS (1): La Otra Banda",
+        "Cucurpe. | BLOQUEADAS (2): La Brisca",
+        "Boidolino"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1602,21 +2900,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 70,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 25800,
+      "capex": 172000,
+      "roi": 6.7,
+      "mercado_viable": 430,
+      "mercado_bruto": 557,
       "localidades_los": [
         ". | BLOQUEADAS (4): Chinapa",
         "Buenavista",
         "Basochuca",
-        "La Bolita (La Bolita de Chinapa)"
+        "La Bolita (La Bolita de Chinapa)",
+        "Arizpe. | BLOQUEADAS (2): Tahuichopa",
+        "Bamori"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1628,7 +2928,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ARIZPE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 25800,
+      "capex": 172000,
+      "roi": 6.7,
+      "mercado_viable": 430,
+      "mercado_bruto": 487,
+      "localidades_los": [
+        "Arizpe. | BLOQUEADAS (2): Tahuichopa",
+        "Bamori"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4444,
@@ -1639,7 +2954,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "BACERAC",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11880,
+      "capex": 79200,
+      "roi": 6.7,
+      "mercado_viable": 198,
+      "mercado_bruto": 198,
+      "localidades_los": [
+        "Bacerac"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4445,
@@ -1650,7 +2979,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BACERAC",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11880,
+      "capex": 79200,
+      "roi": 6.7,
+      "mercado_viable": 198,
+      "mercado_bruto": 198,
+      "localidades_los": [
+        "Bacerac"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4446,
@@ -1661,7 +3004,19 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "NACOZARI DE GARCÍA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 52,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4447,
@@ -1672,7 +3027,19 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "NACOZARI DE GARCÍA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 52,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4448,
@@ -1683,7 +3050,22 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "BAVISPE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8220,
+      "capex": 54800,
+      "roi": 6.7,
+      "mercado_viable": 137,
+      "mercado_bruto": 137,
+      "localidades_los": [
+        "Bavispe",
+        "La Galerita"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4449,
@@ -1694,7 +3076,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "SANTA ANA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3360,
+      "capex": 22400,
+      "roi": 6.7,
+      "mercado_viable": 56,
+      "mercado_bruto": 56,
+      "localidades_los": [
+        "El Pantanito",
+        "La Galera"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4450,
@@ -1718,18 +3115,19 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 11,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 75,
       "localidades_los": [
-        ". | BLOQUEADAS (1): El Barrio"
+        ". | BLOQUEADAS (1): El Barrio",
+        "Santa Martha. | BLOQUEADAS (1): La Polvadera"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -1752,7 +3150,21 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "MAGDALENA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 23,
+      "localidades_los": [
+        "Colonia los Rosales. | BLOQUEADAS (1): La Misión"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4454,
@@ -1776,18 +3188,25 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 2,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 25440,
+      "capex": 169600,
+      "roi": 6.7,
+      "mercado_viable": 424,
+      "mercado_bruto": 426,
       "localidades_los": [
-        ". | BLOQUEADAS (1): La Nueva Colonia de Chinapa (La Colonia)"
+        ". | BLOQUEADAS (1): La Nueva Colonia de Chinapa (La Colonia)",
+        "Bacoachi",
+        "Unámichi",
+        "Cañada de la Cruz (La Cruz)",
+        "Mututicachi",
+        "Bajío de Nuestra Señora de Guadalupe (Bajío Guadalupe)",
+        "Chaparaco Nuevo",
+        "El Chaparaco (Chaparaco Viejo)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1799,7 +3218,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "CANANEA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 16,
+      "localidades_los": [
+        "Café Keyla. | BLOQUEADAS (3): Quitovac",
+        "Villa Hermosa",
+        "El Mirador [Café]"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4457,
@@ -1832,7 +3267,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CANANEA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2700,
+      "capex": 18000,
+      "roi": 6.7,
+      "mercado_viable": 45,
+      "mercado_bruto": 48,
+      "localidades_los": [
+        "Emiliano Zapata. | BLOQUEADAS (1): Ojo de Agua"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4460,
@@ -1843,7 +3292,21 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CANANEA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 720,
+      "capex": 4800,
+      "roi": 6.7,
+      "mercado_viable": 12,
+      "mercado_bruto": 14,
+      "localidades_los": [
+        "Ninguno [Zona de Tolerancia]. | BLOQUEADAS (1): Las Gallinas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4461,
@@ -1854,7 +3317,24 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "CANANEA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4800,
+      "capex": 32000,
+      "roi": 6.7,
+      "mercado_viable": 80,
+      "mercado_bruto": 141,
+      "localidades_los": [
+        "Cuitaca",
+        "La Ciénega. | BLOQUEADAS (3): Vicente Guerrero",
+        "San Rafael",
+        "El Ranchito"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4462,
@@ -1878,19 +3358,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 19,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14400,
+      "capex": 96000,
+      "roi": 6.7,
+      "mercado_viable": 240,
+      "mercado_bruto": 273,
       "localidades_los": [
         ". | BLOQUEADAS (2): San Juan",
-        "La Arizona (El Correo)"
+        "La Arizona (El Correo)",
+        "Sáric",
+        "Cerro Prieto",
+        "Aquimuri (Veredas Curvosas)",
+        "Antonio Pérez. | BLOQUEADAS (1): Los Chirriones"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -1913,7 +3397,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NACO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "La Morita"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4466,
@@ -1924,7 +3422,21 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "NOGALES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1080,
+      "capex": 7200,
+      "roi": 6.7,
+      "mercado_viable": 18,
+      "mercado_bruto": 23,
+      "localidades_los": [
+        "Los Pinitos [Fraccionamiento Campestre]. | BLOQUEADAS (1): Los Arbolitos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4467,
@@ -1935,7 +3447,21 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "NOGALES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1080,
+      "capex": 7200,
+      "roi": 6.7,
+      "mercado_viable": 18,
+      "mercado_bruto": 23,
+      "localidades_los": [
+        "Los Pinitos [Fraccionamiento Campestre]. | BLOQUEADAS (1): Los Arbolitos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4468,
@@ -1971,7 +3497,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NOGALES",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1500,
+      "capex": 10000,
+      "roi": 6.7,
+      "mercado_viable": 25,
+      "mercado_bruto": 25,
+      "localidades_los": [
+        "Faustino Félix Escalante"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4470,
@@ -2015,7 +3555,19 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "PUERTO PEÑASCO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 11,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4474,
@@ -2048,7 +3600,21 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "PUERTO PEÑASCO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5880,
+      "capex": 39200,
+      "roi": 6.7,
+      "mercado_viable": 98,
+      "mercado_bruto": 98,
+      "localidades_los": [
+        "San Felipe de Jesús"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4477,
@@ -2116,18 +3682,21 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 5600,
-      "capex": 22400,
-      "roi": 4.0,
-      "mercado_viable": 32,
-      "mercado_bruto": 32,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 6320,
+      "capex": 27200,
+      "roi": 4.3,
+      "mercado_viable": 44,
+      "mercado_bruto": 52,
       "localidades_los": [
-        "La Labor de Santa Lucía (El Mezquital)"
+        "La Labor de Santa Lucía (El Mezquital)",
+        "La Laborcita",
+        "Las Cabras. | BLOQUEADAS (2): Aguaje Grande [Rancho]",
+        "Los Conejos"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2139,7 +3708,23 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "ÁLAMOS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 720,
+      "capex": 4800,
+      "roi": 6.7,
+      "mercado_viable": 12,
+      "mercado_bruto": 20,
+      "localidades_los": [
+        "La Laborcita",
+        "Las Cabras. | BLOQUEADAS (2): Aguaje Grande [Rancho]",
+        "Los Conejos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4484,
@@ -2150,7 +3735,29 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "ÁLAMOS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12120,
+      "capex": 80800,
+      "roi": 6.7,
+      "mercado_viable": 202,
+      "mercado_bruto": 428,
+      "localidades_los": [
+        "Minas Nuevas",
+        "El Tezal",
+        "La Uvalama",
+        "Los Bustillos",
+        "El Rincón Viejo. | BLOQUEADAS (5): La Aduana",
+        "Nuevo Piedras Verdes",
+        "La Higuera",
+        "Los Arenales",
+        "Las Chicuritas (Agua Cercada)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4485,
@@ -2183,7 +3790,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HUATABAMPO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10440,
+      "capex": 69600,
+      "roi": 6.7,
+      "mercado_viable": 174,
+      "mercado_bruto": 174,
+      "localidades_los": [
+        "Baynorillo",
+        "El Chori (El Choya)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4488,
@@ -2194,7 +3816,68 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "HUATABAMPO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 195600,
+      "capex": 1304000,
+      "roi": 6.7,
+      "mercado_viable": 3260,
+      "mercado_bruto": 3260,
+      "localidades_los": [
+        "Júpare",
+        "Pozo Dulce",
+        "Sahuaral de Otero (Sahuaral de Abajo)",
+        "Las Parras",
+        "El Huitchaca",
+        "Navobaxia",
+        "Citaváro",
+        "El Caro",
+        "Las Milpas",
+        "17 de Octubre",
+        "Pueblo Viejo",
+        "El Tábare",
+        "Baburo",
+        "Buiyarumo",
+        "Las Mamias",
+        "El Sufragio",
+        "Zamicarit",
+        "La Primavera",
+        "La Reforma",
+        "Morelos",
+        "La Arenita",
+        "La Esquina",
+        "Oraba",
+        "Las Parritas (El Changuito)",
+        "El Porvenir",
+        "Aquichopo",
+        "Las Flores",
+        "La Rosita",
+        "Huepaco",
+        "La China",
+        "El Dátil",
+        "Juliantabampo",
+        "El Juparito (Huepaco)",
+        "La Cochera",
+        "La Alameda",
+        "La Galera",
+        "La Trinidad",
+        "La Rueda (Morelos)",
+        "Jupateco",
+        "Camajoa",
+        "El Embarcadero",
+        "El Vigía",
+        "La Escondida",
+        "El Ranchito",
+        "El Chinalito",
+        "La Laguna",
+        "La Colonita",
+        "Cicivari"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4489,
@@ -2205,7 +3888,26 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "ETCHOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 25980,
+      "capex": 173200,
+      "roi": 6.7,
+      "mercado_viable": 433,
+      "mercado_bruto": 433,
+      "localidades_los": [
+        "Sebampo",
+        "Colonia Soto (Caurará)",
+        "Los Viejos",
+        "Mabejaqui",
+        "Caurajaqui",
+        "El Tanque (El Tanque Colorado)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4490,
@@ -2216,7 +3918,34 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "ETCHOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 100080,
+      "capex": 667200,
+      "roi": 6.7,
+      "mercado_viable": 1668,
+      "mercado_bruto": 1668,
+      "localidades_los": [
+        "Sahuaral",
+        "La Bocana",
+        "Mochipaco",
+        "Villa Tres Cruces",
+        "Las Guayabas",
+        "Campanichaca",
+        "Mochipaco Nuevo",
+        "El Capusarit",
+        "La Vasconia (Del Apellido Vasco)",
+        "Guayabitas (La Sábila)",
+        "Invasión las Guayabas",
+        "Salitral",
+        "Kilómetro Veinte (El Uno)",
+        "El Carrizal (El Bacar)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4491,
@@ -2227,7 +3956,25 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "ETCHOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 38280,
+      "capex": 255200,
+      "roi": 6.7,
+      "mercado_viable": 638,
+      "mercado_bruto": 649,
+      "localidades_los": [
+        "Basconcobe",
+        "La Línea (La Línea de Basconcobe)",
+        "El Campito (Campo Número Tres)",
+        "Cuadrilatero Diez",
+        "El Caracol (Ejido de las Guayabas). | Sin dato (1): El Pilfo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4492,
@@ -2238,7 +3985,40 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "ETCHOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 191100,
+      "capex": 1274000,
+      "roi": 6.7,
+      "mercado_viable": 3185,
+      "mercado_bruto": 3196,
+      "localidades_los": [
+        "Bacobampo",
+        "El Rodeo",
+        "San Pedro Nuevo",
+        "San Pedro Viejo",
+        "Guayparín",
+        "Las Playitas",
+        "El Salitral",
+        "Talamante (Colonia Talamante)",
+        "Campo León",
+        "Campo Número 13",
+        "Campo Número 18",
+        "Tiriscohuasa",
+        "Burabampo",
+        "Tejabanes Viejos",
+        "El Mezquital de Burabampo",
+        "El Vivero",
+        "El Nuevo Retiro",
+        "Campo Catorce",
+        "Mezquital San Pedro",
+        "Cuadrilátero Nueve. | Sin dato (1): Dos Arbolitos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4493,
@@ -2282,7 +4062,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "NAVOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5880,
+      "capex": 39200,
+      "roi": 6.7,
+      "mercado_viable": 98,
+      "mercado_bruto": 98,
+      "localidades_los": [
+        "El Dátil",
+        "Mezquital de Abajo"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4497,
@@ -2304,7 +4099,23 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "NAVOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 21780,
+      "capex": 145200,
+      "roi": 6.7,
+      "mercado_viable": 363,
+      "mercado_bruto": 363,
+      "localidades_los": [
+        "Guaymitas",
+        "Cuchilla de Bahuises",
+        "Valle Buey"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4499,
@@ -2315,7 +4126,23 @@ const DATA_TORRES = [
     "dep": "Radio Sonora",
     "municipio": "NAVOJOA",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3600,
+      "capex": 24000,
+      "roi": 6.7,
+      "mercado_viable": 60,
+      "mercado_bruto": 60,
+      "localidades_los": [
+        "Batayaqui",
+        "El Veranito",
+        "Agua Nueva"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4500,
@@ -2337,7 +4164,26 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 60600,
+      "capex": 404000,
+      "roi": 6.7,
+      "mercado_viable": 1010,
+      "mercado_bruto": 1021,
+      "localidades_los": [
+        "Quetchehueca",
+        "Morelos Uno",
+        "Morelos Dos",
+        "Nueva Casa de Teras",
+        "Héctor Aguilar (Bloque 1603)",
+        "Espanos Agropecuaria (Bloque 1605). | Sin dato (1): El Bosque (Calle Quince)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4502,
@@ -2348,7 +4194,27 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5460,
+      "capex": 36400,
+      "roi": 6.7,
+      "mercado_viable": 91,
+      "mercado_bruto": 91,
+      "localidades_los": [
+        "Guadalupe Victoria",
+        "Bordo del Canal Bajo",
+        "México (Grupo México)",
+        "Oficina Distrito de Riego",
+        "El Seis Viejo (El Seis)",
+        "El Rodeo",
+        "El Topete"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4503,
@@ -2359,7 +4225,29 @@ const DATA_TORRES = [
     "dep": "SEC",
     "municipio": "CAJEME",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 79740,
+      "capex": 531600,
+      "roi": 6.7,
+      "mercado_viable": 1329,
+      "mercado_bruto": 1329,
+      "localidades_los": [
+        "Providencia",
+        "Cuauhtémoc (Campo Cinco)",
+        "Ejido Tepeyac (Campo Dos)",
+        "La Argentina",
+        "Calle Muerta",
+        "San Ignacio (Campo 2)",
+        "Bordo del Canal",
+        "El Ranchito",
+        "Chamizal (Predio Tozalcahui)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4504,
@@ -2392,7 +4280,30 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "BÁCUM",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 76200,
+      "capex": 508000,
+      "roi": 6.7,
+      "mercado_viable": 1270,
+      "mercado_bruto": 1281,
+      "localidades_los": [
+        "Bácum",
+        "Mora Villalobos (Campo 29)",
+        "Santa Teresa",
+        "La Tinajera",
+        "Campo Veintiocho",
+        "Agropecuaria 4G",
+        "Campo Aurora (Aurora)",
+        "Bruno Ibarra (Rancho Cerezo)",
+        "María Jesús Gutiérrez",
+        "El Alamito. | Sin dato (1): Colonia Sepúlveda"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4507,
@@ -2403,7 +4314,21 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1800,
+      "capex": 12000,
+      "roi": 6.7,
+      "mercado_viable": 30,
+      "mercado_bruto": 30,
+      "localidades_los": [
+        "Babojori"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4508,
@@ -2414,7 +4339,22 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "GUAYMAS",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5520,
+      "capex": 36800,
+      "roi": 6.7,
+      "mercado_viable": 92,
+      "mercado_bruto": 92,
+      "localidades_los": [
+        "Casa Azul",
+        "Compuertas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4509,
@@ -2427,18 +4367,20 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 4,
+      "segmento": "Rural + Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4380,
+      "capex": 29200,
+      "roi": 6.7,
+      "mercado_viable": 73,
+      "mercado_bruto": 77,
       "localidades_los": [
-        ". | BLOQUEADAS (1): Las Tortolas"
+        ". | BLOQUEADAS (1): Las Tortolas",
+        "Estación Oroz (Oroz)",
+        "Guasimitas"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2475,7 +4417,21 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "SUAQUI GRANDE",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15720,
+      "capex": 104800,
+      "roi": 6.7,
+      "mercado_viable": 262,
+      "mercado_bruto": 262,
+      "localidades_los": [
+        "Suaqui Grande"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4512,
@@ -2486,7 +4442,24 @@ const DATA_TORRES = [
     "dep": "Seguridad",
     "municipio": "HERMOSILLO",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 600,
+      "capex": 4000,
+      "roi": 6.7,
+      "mercado_viable": 10,
+      "mercado_bruto": 10,
+      "localidades_los": [
+        "San Juan (Campo Nuevo)",
+        "Los Arrieros [Gasolinera]",
+        "La Trinidad",
+        "Rincón de Guadalupe las Avispas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4513,
@@ -2523,7 +4496,24 @@ const DATA_TORRES = [
     "dep": "Telemax",
     "municipio": "SANTA CRUZ",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9780,
+      "capex": 65200,
+      "roi": 6.7,
+      "mercado_viable": 163,
+      "mercado_bruto": 359,
+      "localidades_los": [
+        "Santa Cruz",
+        "Las Modestas. | BLOQUEADAS (3): Miguel Hidalgo (San Lázaro)",
+        "Francisco Miguel Cárdenas Valdez (Los Picos)",
+        "La Pompita"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4515,
@@ -2591,22 +4581,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 57,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 63,
       "localidades_los": [
         ". | BLOQUEADAS (5): La Caridad (Fracción G)",
         "El Abanico",
         "Santo Domingo",
         "Satélite Tres",
-        "El Globo"
+        "El Globo",
+        "Las Higueras. | BLOQUEADAS (1): Nacozari Viejo"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2618,7 +4609,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11880,
+      "capex": 79200,
+      "roi": 6.7,
+      "mercado_viable": 198,
+      "mercado_bruto": 198,
+      "localidades_los": [
+        "Bacerac"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3969,
@@ -2629,7 +4634,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "ACONCHI",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 29460,
+      "capex": 196400,
+      "roi": 6.7,
+      "mercado_viable": 491,
+      "mercado_bruto": 528,
+      "localidades_los": [
+        "Aconchi",
+        "La Estancia. | BLOQUEADAS (1): San Pablo (San Pablo de Aconchi)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3842,
@@ -2662,7 +4682,24 @@ const DATA_TORRES = [
     "dep": "H. Ayto de Moctezuma",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 48240,
+      "capex": 321600,
+      "roi": 6.7,
+      "mercado_viable": 804,
+      "mercado_bruto": 831,
+      "localidades_los": [
+        "Moctezuma",
+        "San Patricio de la Mesa",
+        "Nícora. | BLOQUEADAS (2): El Llano",
+        "San Clemente de Terapa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3853,
@@ -2684,7 +4721,23 @@ const DATA_TORRES = [
     "dep": "UNISON",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12960,
+      "capex": 86400,
+      "roi": 6.7,
+      "mercado_viable": 216,
+      "mercado_bruto": 219,
+      "localidades_los": [
+        "Chibucú",
+        "La Laguna de Tesia",
+        "Ninguno [Pablo Ozuna]. | BLOQUEADAS (1): Santa María"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3861,
@@ -2724,7 +4777,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 41280,
+      "capex": 275200,
+      "roi": 6.7,
+      "mercado_viable": 688,
+      "mercado_bruto": 688,
+      "localidades_los": [
+        "Heroica Ciudad de Ures",
+        "Santiago de Ures (Santiago)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3886,
@@ -2735,7 +4803,23 @@ const DATA_TORRES = [
     "dep": "C5i",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 22140,
+      "capex": 147600,
+      "roi": 6.7,
+      "mercado_viable": 369,
+      "mercado_bruto": 369,
+      "localidades_los": [
+        "Vicente Guerrero (El Portón)",
+        "Las Areneras",
+        "Tozalcahui"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3993,
@@ -2748,14 +4832,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
       "mrr": 13650,
       "capex": 54600,
       "roi": 4.0,
       "mercado_viable": 78,
-      "mercado_bruto": 255,
+      "mercado_bruto": 299,
       "localidades_los": [
         "Yocojigua",
         "La Gacela",
@@ -2770,7 +4854,7 @@ const DATA_TORRES = [
         "Rancho Viejo",
         "Paredones"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2782,7 +4866,27 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 37500,
+      "capex": 250000,
+      "roi": 6.7,
+      "mercado_viable": 625,
+      "mercado_bruto": 941,
+      "localidades_los": [
+        "Cumpas",
+        "Ojo de Agua",
+        "Teonadepa",
+        "La Colonia. | BLOQUEADAS (4): Los Hoyos",
+        "El Valle (Colonia el Valle)",
+        "Los Hoyos (Colonia Sur)",
+        "Tierras Prietas"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3948,
@@ -2793,7 +4897,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 360,
+      "capex": 2400,
+      "roi": 6.7,
+      "mercado_viable": 6,
+      "mercado_bruto": 6,
+      "localidades_los": [
+        "Jalisco"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3949,
@@ -2804,7 +4922,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8220,
+      "capex": 54800,
+      "roi": 6.7,
+      "mercado_viable": 137,
+      "mercado_bruto": 137,
+      "localidades_los": [
+        "Huásabas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3967,
@@ -2862,7 +4994,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8220,
+      "capex": 54800,
+      "roi": 6.7,
+      "mercado_viable": 137,
+      "mercado_bruto": 137,
+      "localidades_los": [
+        "Bavispe",
+        "La Galerita"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3957,
@@ -2873,7 +5020,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11760,
+      "capex": 78400,
+      "roi": 6.7,
+      "mercado_viable": 196,
+      "mercado_bruto": 210,
+      "localidades_los": [
+        "Huachinera",
+        "Juribana. | BLOQUEADAS (1): Tamichopa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3968,
@@ -2886,19 +5048,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 31,
+      "segmento": "Rural + Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5760,
+      "capex": 38400,
+      "roi": 6.7,
+      "mercado_viable": 96,
+      "mercado_bruto": 138,
       "localidades_los": [
         ". | BLOQUEADAS (2): La Aurora",
-        "Los Puertecitos (El Puertecito)"
+        "Los Puertecitos (El Puertecito)",
+        "El Molinote (Hacienda la Concepción)",
+        "Suaqui",
+        "La Capilla",
+        "La Labor. | Sin dato (1): Las Tortugas"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2923,22 +5089,23 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 15750,
-      "capex": 63000,
-      "roi": 4.0,
-      "mercado_viable": 90,
-      "mercado_bruto": 161,
+      "mrr": 16890,
+      "capex": 70600,
+      "roi": 4.2,
+      "mercado_viable": 109,
+      "mercado_bruto": 182,
       "localidades_los": [
         "Opodepe",
         "Tres Álamos. | BLOQUEADAS (4): Merésichic",
         "Pueblo Viejo",
         "La Saucedita (Rancho Nuevo)",
-        "Mesa San Juan"
+        "Mesa San Juan",
+        "Santa Margarita. | BLOQUEADAS (1): San Antonio del Saucito (El Saucito)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -2950,7 +5117,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 27060,
+      "capex": 180400,
+      "roi": 6.7,
+      "mercado_viable": 451,
+      "mercado_bruto": 451,
+      "localidades_los": [
+        "Guadalupe (Guadalupe de Ures)",
+        "El Sauz (Sauz de Ures)",
+        "San Rafael",
+        "La Estancia",
+        "El Huahui (Adentro)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3961,
@@ -2972,7 +5157,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Sin asignar",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 20880,
+      "capex": 139200,
+      "roi": 6.7,
+      "mercado_viable": 348,
+      "mercado_bruto": 348,
+      "localidades_los": [
+        "Rayón",
+        "La Paz (La Paz de Rayón)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3963,
@@ -2983,7 +5183,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Sin asignar",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 54900,
+      "capex": 366000,
+      "roi": 6.7,
+      "mercado_viable": 915,
+      "mercado_bruto": 915,
+      "localidades_los": [
+        "Carbó",
+        "Zanjón",
+        "Pozo Manuel",
+        "Viñedo Selva (Bacatete)",
+        "La Ladrillera"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3964,
@@ -3016,7 +5234,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Sin asignar",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 3,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3970,
@@ -3027,7 +5257,24 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7560,
+      "capex": 50400,
+      "roi": 6.7,
+      "mercado_viable": 126,
+      "mercado_bruto": 126,
+      "localidades_los": [
+        "Huépac",
+        "Ranchito de Huépac",
+        "Ojo de Agua de Huépac",
+        "La Bombita Dos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3971,
@@ -3049,7 +5296,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 21360,
+      "capex": 142400,
+      "roi": 6.7,
+      "mercado_viable": 356,
+      "mercado_bruto": 356,
+      "localidades_los": [
+        "Quiriego",
+        "Bacusa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3973,
@@ -3060,7 +5322,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1920,
+      "capex": 12800,
+      "roi": 6.7,
+      "mercado_viable": 32,
+      "mercado_bruto": 32,
+      "localidades_los": [
+        "Antonio Rosales (Las Ánimas)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3974,
@@ -3071,7 +5347,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 3,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3975,
@@ -3082,7 +5370,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1920,
+      "capex": 12800,
+      "roi": 6.7,
+      "mercado_viable": 32,
+      "mercado_bruto": 32,
+      "localidades_los": [
+        "El Sauz"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3976,
@@ -3093,7 +5395,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 120,
+      "capex": 800,
+      "roi": 6.7,
+      "mercado_viable": 2,
+      "mercado_bruto": 2,
+      "localidades_los": [
+        "Progenitora Núcleo Tres"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3978,
@@ -3104,7 +5420,29 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 33,
+      "localidades_los": [
+        "Monumentos",
+        "Colonia Hidalgo",
+        "Queta Chicuate",
+        "Ninguno [Manuel García Ortiz]",
+        "Ninguno [Jorge Segura Ornelas]",
+        "Ninguno [Roberto Salgado]",
+        "Ninguno [Juana García Anguiano]",
+        "La Fortuna [Rancho]",
+        "Ninguno [Hermanos Adame]"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3979,
@@ -3148,7 +5486,48 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 50160,
+      "capex": 334400,
+      "roi": 6.7,
+      "mercado_viable": 836,
+      "mercado_bruto": 858,
+      "localidades_los": [
+        "Lagunitas",
+        "Independencia",
+        "Río Norte",
+        "El Barrote",
+        "El Fronterizo",
+        "Pozas de Arvizu (La Reserva)",
+        "Colonia del Río",
+        "Río Sur",
+        "La Azteca",
+        "La Esperanza",
+        "Amalia Lira Bejarano",
+        "Reynaldo Quiroz",
+        "Consuelo Viuda de Alcántar",
+        "Roberto Conde Lara",
+        "Rancho de Arturo",
+        "Campillo",
+        "La Compuerta",
+        "Asunción Ávila Ruiz",
+        "Antonio [Empaque]",
+        "Francisca Herrera",
+        "José Aguirre",
+        "Ninguno [Juana Zambrano Ramírez]",
+        "Josefina Esqueda",
+        "Norberto García Cruz",
+        "Raquel Valenzuela",
+        "Ninguno [González Núñez]",
+        "Guadalupe Torres. | Sin dato (2): La Escondida",
+        "El Profesor"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3983,
@@ -3161,18 +5540,21 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 18725,
-      "capex": 74900,
-      "roi": 4.0,
-      "mercado_viable": 107,
-      "mercado_bruto": 109,
+      "mrr": 25805,
+      "capex": 122100,
+      "roi": 4.7,
+      "mercado_viable": 225,
+      "mercado_bruto": 227,
       "localidades_los": [
-        "Llano Blanco (Rancho Seco). | BLOQUEADAS (1): Arturo Monteverde"
+        "Llano Blanco (Rancho Seco). | BLOQUEADAS (1): Arturo Monteverde",
+        "16 de Septiembre",
+        "Santa Matilde",
+        "María Eugenia (Los Chacuales)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -3186,14 +5568,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 1,
       "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
-      "mrr": 30800,
-      "capex": 123200,
-      "roi": 4.0,
-      "mercado_viable": 176,
-      "mercado_bruto": 439,
+      "mrr": 31580,
+      "capex": 128400,
+      "roi": 4.1,
+      "mercado_viable": 189,
+      "mercado_bruto": 925,
       "localidades_los": [
         "Los Tanques",
         "La Tescalama. | BLOQUEADAS (10): Techobampo",
@@ -3205,9 +5587,22 @@ const DATA_TORRES = [
         "San Antonio del Cupis",
         "Yoricarichic",
         "Las Uvalamas",
-        "Taymuco"
+        "Taymuco",
+        "Las Choyitas",
+        "Topiyeca. | BLOQUEADAS (12): San Bernardo",
+        "Mexiquillo",
+        "El Tabelo (San José del Tabelo)",
+        "Nahuibampo",
+        "Chorijoa",
+        "Mascuragüi",
+        "Macoyahui",
+        "Vado Cuate",
+        "Casas Coloradas",
+        "Burapaquito",
+        "La Esperanza (Testapochi)",
+        "El Tabelito"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -3219,7 +5614,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 31200,
+      "capex": 208000,
+      "roi": 6.7,
+      "mercado_viable": 520,
+      "mercado_bruto": 520,
+      "localidades_los": [
+        "Pitiquito",
+        "Familia Cortez Pacheco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3991,
@@ -3230,7 +5640,30 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11640,
+      "capex": 77600,
+      "roi": 6.7,
+      "mercado_viable": 194,
+      "mercado_bruto": 454,
+      "localidades_los": [
+        "El Mocúzari (Conicárit)",
+        "Campamento las Casitas (El Mocúzarit)",
+        "El Campamento de la CNA. | BLOQUEADAS (8): Osobampo",
+        "Tres Hermanos",
+        "Barrio Cantúa",
+        "Santa Bárbara",
+        "Barrio Corral",
+        "El Tablón",
+        "Campamento de la CFE",
+        "Tres Marías. | Sin dato (1): Argentina"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3994,
@@ -3243,23 +5676,40 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 1,
       "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
-      "mrr": 26425,
-      "capex": 105700,
-      "roi": 4.0,
-      "mercado_viable": 151,
-      "mercado_bruto": 241,
+      "mrr": 46225,
+      "capex": 237700,
+      "roi": 5.1,
+      "mercado_viable": 481,
+      "mercado_bruto": 892,
       "localidades_los": [
         "Tapizuelas",
         "Los Muertos",
         "Casanate",
         "La Cuesta del Carrizal. | BLOQUEADAS (3): Basiroa",
         "Las Ánimas",
-        "El Remudadero"
+        "El Remudadero",
+        "El Chinal",
+        "El Zapote",
+        "La Quintera",
+        "Cerro Colorado (El Colorado)",
+        "El Carrizal",
+        "El Maquipito",
+        "El Sombrerito. | BLOQUEADAS (11): El Maquipo",
+        "Potrero de Alcántar",
+        "El Cajón del Sabino (El Cajón)",
+        "El Paso",
+        "El Sabino Grande (El Sabino)",
+        "El Salado",
+        "El Mezquital",
+        "La Mina de la Cruz",
+        "Potrero de Reuter",
+        "Sivilimora",
+        "El Reparo"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3271,7 +5721,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5100,
+      "capex": 34000,
+      "roi": 6.7,
+      "mercado_viable": 85,
+      "mercado_bruto": 128,
+      "localidades_los": [
+        "Bacanora. | BLOQUEADAS (2): El Destacamento",
+        "Santa Teresa"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3997,
@@ -3284,14 +5749,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 1,
       "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
       "mrr": 42875,
       "capex": 171500,
       "roi": 4.0,
       "mercado_viable": 245,
-      "mercado_bruto": 245,
+      "mercado_bruto": 248,
       "localidades_los": [
         "Josefa Ortiz de Domínguez",
         "La Primavera",
@@ -3307,7 +5772,7 @@ const DATA_TORRES = [
         "El Molino",
         "El Delirio"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -3321,14 +5786,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 1,
       "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
-      "mrr": 58450,
-      "capex": 233800,
-      "roi": 4.0,
-      "mercado_viable": 334,
-      "mercado_bruto": 334,
+      "mrr": 70750,
+      "capex": 315800,
+      "roi": 4.5,
+      "mercado_viable": 539,
+      "mercado_bruto": 550,
       "localidades_los": [
         "Último Esfuerzo",
         "La Alameda (Cortázar)",
@@ -3336,9 +5801,29 @@ const DATA_TORRES = [
         "Santo Niño",
         "Campo la T",
         "Constitución I",
-        "San Ramón Uno (Familia Méndez Espinoza)"
+        "San Ramón Uno (Familia Méndez Espinoza)",
+        "Poblado San Felipe",
+        "San Ramón",
+        "Juan Jiménez Hernández (Colonia Vicente Guerrero)",
+        "El Cairo",
+        "Santa Elena (El Bonito)",
+        "Bella Vista",
+        "Rodríguez Santiago",
+        "Antonio Ruiz González",
+        "El Puebla",
+        "Tepic",
+        "Juan Jiménez",
+        "Los Olivos",
+        "Chinobampo",
+        "Andrés Ignacio (Mártires de Cananea)",
+        "Sentispac (Yedith)",
+        "Campo Aguilar",
+        "Campo Esquivel II",
+        "La Palma",
+        "Antonio Martínez",
+        "Aurelio Sibriano. | Sin dato (1): La Rivera"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3350,7 +5835,34 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 26400,
+      "capex": 176000,
+      "roi": 6.7,
+      "mercado_viable": 440,
+      "mercado_bruto": 440,
+      "localidades_los": [
+        "Adolfo Orive de Alba",
+        "Rodolfo Campodónico",
+        "15 de Septiembre",
+        "Juan Álvarez",
+        "Lázaro Cárdenas",
+        "El Bajío",
+        "Villa de Guadalupe",
+        "Barrio de Guadalupe",
+        "Santa Marlene",
+        "Santa Laura",
+        "Santa Rita",
+        "Los Renegados",
+        "Santa Silvia",
+        "El Oasis de la Coahuila"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4003,
@@ -3363,19 +5875,35 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 4200,
-      "capex": 16800,
-      "roi": 4.0,
-      "mercado_viable": 24,
-      "mercado_bruto": 24,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 45300,
+      "capex": 290800,
+      "roi": 6.4,
+      "mercado_viable": 709,
+      "mercado_bruto": 709,
       "localidades_los": [
         "Yaqui Justiciero",
-        "Don Nacho"
+        "Don Nacho",
+        "Siempre Viva",
+        "La Almita",
+        "Jesús García",
+        "Santa Eduwiges (La Cachora)",
+        "San Isidro",
+        "México Sesenta y Ocho",
+        "Viñedos Viva",
+        "Floridita",
+        "El Rocío",
+        "Santa Cecilia",
+        "Juan García Cabral",
+        "Don Emilio",
+        "Los Franciscos",
+        "Los Sapos",
+        "Santa Mónica",
+        "La Esmeralda I"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3389,20 +5917,28 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 21525,
-      "capex": 86100,
-      "roi": 4.0,
-      "mercado_viable": 123,
-      "mercado_bruto": 123,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 41085,
+      "capex": 216500,
+      "roi": 5.3,
+      "mercado_viable": 449,
+      "mercado_bruto": 449,
       "localidades_los": [
         "Ures",
         "La Mochomera (La Morena)",
-        "Alfa Estrella"
+        "Alfa Estrella",
+        "Álvaro Obregón",
+        "Desemboque",
+        "El Bahía",
+        "María Dámaso (Tierra Nueva)",
+        "Bahía Dos",
+        "SPR María Dámaso II",
+        "María Isabel de los Olivos",
+        "Cancún"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3440,7 +5976,44 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 154740,
+      "capex": 1031600,
+      "roi": 6.7,
+      "mercado_viable": 2579,
+      "mercado_bruto": 2592,
+      "localidades_los": [
+        "Cócorit",
+        "Estación Corral",
+        "Loma de Guamúchil",
+        "Los Hornos",
+        "Buenavista",
+        "Tajimaroa",
+        "Kilómetro Nueve (El Pueblito)",
+        "Veracruz (El Chorizo)",
+        "San Antonio",
+        "Los Limones",
+        "La Villa",
+        "Techarobo",
+        "La Huerta",
+        "La Bloquera (Loma de Esquer)",
+        "El Dique",
+        "Los Magueyes",
+        "José María Ramos",
+        "Jesús Zazueta",
+        "La Aurora",
+        "Rancho San Luis",
+        "Oviáchic",
+        "Alejandro Soto",
+        "Cesareo Juárez",
+        "Agrícola DIO. | BLOQUEADAS (1): Avícola Rancho Grande"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4008,
@@ -3451,7 +6024,26 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 33540,
+      "capex": 223600,
+      "roi": 6.7,
+      "mercado_viable": 559,
+      "mercado_bruto": 559,
+      "localidades_los": [
+        "Yucuribampo",
+        "Francisco Villa",
+        "Tesopobampo",
+        "Díaz Ordaz",
+        "El Henequén",
+        "Centauro del Norte"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4009,
@@ -3462,7 +6054,26 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1380,
+      "capex": 9200,
+      "roi": 6.7,
+      "mercado_viable": 23,
+      "mercado_bruto": 26,
+      "localidades_los": [
+        "Caporachi",
+        "El Pintor",
+        "Murijakichi",
+        "Nanenachi",
+        "El Baicimaco (Agua del Cerro)",
+        "Cañada Ancha. | BLOQUEADAS (1): El Carrizal"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4047,
@@ -3473,7 +6084,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 240,
+      "capex": 1600,
+      "roi": 6.7,
+      "mercado_viable": 4,
+      "mercado_bruto": 4,
+      "localidades_los": [
+        "Guadalupe (Jiménez)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4011,
@@ -3484,7 +6109,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6600,
+      "capex": 44000,
+      "roi": 6.7,
+      "mercado_viable": 110,
+      "mercado_bruto": 110,
+      "localidades_los": [
+        "Divisaderos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4014,
@@ -3533,7 +6172,26 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 18420,
+      "capex": 122800,
+      "roi": 6.7,
+      "mercado_viable": 307,
+      "mercado_bruto": 318,
+      "localidades_los": [
+        "Vícam Pueblo",
+        "Casas Blancas",
+        "Barrio Platanal",
+        "San Francisco",
+        "Papalote",
+        "El Platanal. | Sin dato (1): Los Limones"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4017,
@@ -3544,7 +6202,24 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5820,
+      "capex": 38800,
+      "roi": 6.7,
+      "mercado_viable": 97,
+      "mercado_bruto": 97,
+      "localidades_los": [
+        "Tórim",
+        "Lencho",
+        "Coracepe",
+        "Salsipuedes"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4018,
@@ -3557,18 +6232,26 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 3850,
-      "capex": 15400,
-      "roi": 4.0,
-      "mercado_viable": 22,
-      "mercado_bruto": 22,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 55510,
+      "capex": 359800,
+      "roi": 6.5,
+      "mercado_viable": 883,
+      "mercado_bruto": 883,
       "localidades_los": [
-        "General Mariano Escobedo"
+        "General Mariano Escobedo",
+        "Ortíz",
+        "Guadalupe",
+        "Profesor Graciano Sánchez",
+        "General Lázaro Cárdenas",
+        "General Felipe Ángeles",
+        "General Esteban Baca Calderón (El Hecho)",
+        "General Álvaro Obregón",
+        "Las Norias"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3580,7 +6263,28 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 52740,
+      "capex": 351600,
+      "roi": 6.7,
+      "mercado_viable": 879,
+      "mercado_bruto": 879,
+      "localidades_los": [
+        "Pótam",
+        "Rahum",
+        "Pimienta",
+        "El Pescado",
+        "La ETA",
+        "El Alamito",
+        "Cuesta Alta",
+        "El Ranchito"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4020,
@@ -3591,7 +6295,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 480,
+      "capex": 3200,
+      "roi": 6.7,
+      "mercado_viable": 8,
+      "mercado_bruto": 8,
+      "localidades_los": [
+        "Campestre San Alberto",
+        "El Basurón"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4021,
@@ -3602,7 +6321,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4560,
+      "capex": 30400,
+      "roi": 6.7,
+      "mercado_viable": 76,
+      "mercado_bruto": 76,
+      "localidades_los": [
+        "Huiribis",
+        "Pitahaya (Belem)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4022,
@@ -3640,14 +6374,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 1,
       "nivel": "Tier 1: Inversión Inmediata (>=150 casas viables)",
-      "mrr": 35000,
-      "capex": 140000,
-      "roi": 4.0,
-      "mercado_viable": 200,
-      "mercado_bruto": 200,
+      "mrr": 41600,
+      "capex": 184000,
+      "roi": 4.4,
+      "mercado_viable": 310,
+      "mercado_bruto": 310,
       "localidades_los": [
         "San Arturo",
         "Campo Dolores",
@@ -3660,9 +6394,28 @@ const DATA_TORRES = [
         "Hermanos Serdán",
         "El Bienestar",
         "Los Janos Uno",
-        "Los Cuatro (Palermo)"
+        "Los Cuatro (Palermo)",
+        "Alejandría Uno",
+        "Viñedo la Costa",
+        "La Ventanita",
+        "Santa Martha Cuatro (Agroval Cuatro)",
+        "El Rosario",
+        "San Miguel",
+        "Santa Martha Uno (El Molino)",
+        "Santa Eduwiges",
+        "La Mocha (Padre Kino)",
+        "San Marcos",
+        "Agroindustrial de Sonora",
+        "El Caculla",
+        "Santa Martha (Agroval Tres)",
+        "Agrobal 6",
+        "Rosario Perlette",
+        "El Mohino",
+        "Agroval Dos (Santa Martha Dos)",
+        "El Tatay (Santa Martha)",
+        "Desarrollo (Pericos Dos)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -3676,19 +6429,73 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 3150,
-      "capex": 12600,
-      "roi": 4.0,
-      "mercado_viable": 18,
-      "mercado_bruto": 18,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 36990,
+      "capex": 238200,
+      "roi": 6.4,
+      "mercado_viable": 582,
+      "mercado_bruto": 584,
       "localidades_los": [
         "San Jorge",
-        "La Esperanza"
+        "La Esperanza",
+        "Plan de Ayala",
+        "Mineros de Pilares",
+        "San Enrique",
+        "Santa María (La Treinta y Uno de Octubre)",
+        "La Joya",
+        "Santa Margarita",
+        "Santa Elvira",
+        "Nochitongo",
+        "El Futuro",
+        "San Alberto (La 31 de Octubre)",
+        "Villa Luz (El Pocito)",
+        "Antonio Narro (El Perico)",
+        "La Atlántida",
+        "Nazaret (La Ponderosa)",
+        "El Palomar",
+        "Costa Rica",
+        "San Valentín",
+        "20 de Noviembre",
+        "La Trácala",
+        "San Juan y el Pinito",
+        "Dolores",
+        "Compa Uno",
+        "Orebalma",
+        "Jacinto López",
+        "Los Pocitos",
+        "Masocoba",
+        "Santa Fe",
+        "San Herminio (Los Ángeles)",
+        "La Providencia",
+        "Tehuacán",
+        "Santa Josefina",
+        "Hércules Uno",
+        "Cristóbal Colón",
+        "Carmen Dolores",
+        "Felizardo Castro",
+        "Moctezuma",
+        "El Mezquite",
+        "Chapacolor",
+        "Narciso Mendoza",
+        "San Sebastián",
+        "Venecia",
+        "Río Blanco",
+        "San Isidro (Obregón)",
+        "Los Ángeles",
+        "Viva México",
+        "San Vicente",
+        "Francisco Eusebio Kino (Colonia Kino)",
+        "El Tejabán",
+        "Nápoles",
+        "El Chamizal (Salsipuedes)",
+        "San Alfonso",
+        "América",
+        "Crucero Doce y Veintiséis. | Sin dato (2): El Tecolote",
+        "El Milagro"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -3700,7 +6507,38 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 137880,
+      "capex": 919200,
+      "roi": 6.7,
+      "mercado_viable": 2298,
+      "mercado_bruto": 2301,
+      "localidades_los": [
+        "Pesqueira",
+        "Zamora",
+        "El Saucito",
+        "El Zacatón",
+        "Villa Dorada",
+        "Santa Elena (La Providencia)",
+        "Los Gordos",
+        "Viñedo Escondido",
+        "Sol Azteca",
+        "Campo la Valiana",
+        "Agro Industrias GRESBA (Engorda San Juan)",
+        "Villa Guadalupe [Campestre]",
+        "Santa Teresa (Los Ruices)",
+        "Pozo Enrique",
+        "El Beny [Viñedo]",
+        "Las Merceditas (Agronuts). | Sin dato (3): Agrícola Martha",
+        "Viñedos 2000 Norte (La Tracalita)",
+        "Agrícola el Bacame"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4031,
@@ -3711,7 +6549,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "Unión de Ladrilleros Manuel Dorado"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4033,
@@ -3724,21 +6576,47 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 14700,
-      "capex": 58800,
-      "roi": 4.0,
-      "mercado_viable": 84,
-      "mercado_bruto": 121,
+      "mrr": 17460,
+      "capex": 77200,
+      "roi": 4.4,
+      "mercado_viable": 130,
+      "mercado_bruto": 278,
       "localidades_los": [
         "El Choyudo (Los Japoneses). | BLOQUEADAS (4): San Juanico",
         "El Colorado",
         "Tetabiate (Las Vírgenes Seis)",
-        "El Diamante Dos"
+        "El Diamante Dos",
+        "San Carlos (Empaque San Carlos)",
+        "Floresta",
+        "La Cuichi (Pelícano)",
+        "San Carlos (El Pocito)",
+        "San Carlitos",
+        "Los Pericos (El Cholay). | BLOQUEADAS (20): Establo la Tesota (Tesota)",
+        "Puerto Arturo",
+        "Tastiota",
+        "Lic. Ignacio Ramírez y su anexo San Pedro [NCPE]",
+        "San Gonzalo",
+        "El Milagro",
+        "Granja Genitch",
+        "Las Conchas (Tortillería)",
+        "La Gaviota",
+        "El Retiro",
+        "El Refugio",
+        "Santa Carmen",
+        "Nuevo Suaqui",
+        "El Quetzal (El Cholay)",
+        "La Paz",
+        "San Gonzalito",
+        "Los Huicos",
+        "San Francisco (El Sahuaral)",
+        "Siberia Dos",
+        "Los Cuatitos (Siberia Tres). | Sin dato (2): Acuícola Selecta",
+        "Crucero (Cuatro y Veintiséis)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -3750,7 +6628,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "San Eduardo Dos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4035,
@@ -3761,7 +6653,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3780,
+      "capex": 25200,
+      "roi": 6.7,
+      "mercado_viable": 63,
+      "mercado_bruto": 63,
+      "localidades_los": [
+        "Aribabi"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4036,
@@ -3772,7 +6678,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7320,
+      "capex": 48800,
+      "roi": 6.7,
+      "mercado_viable": 122,
+      "mercado_bruto": 122,
+      "localidades_los": [
+        "Álvaro Obregón",
+        "El Nacapul"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4037,
@@ -3794,7 +6715,52 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 273300,
+      "capex": 1822000,
+      "roi": 6.7,
+      "mercado_viable": 4555,
+      "mercado_bruto": 4555,
+      "localidades_los": [
+        "La Unión",
+        "Yavaros (Isla las Viejas)",
+        "Loma de Etchoropo",
+        "Etchoropo",
+        "La Sábila",
+        "Bachantahui",
+        "San Antonio",
+        "El Riíto de Mazaray (Riíto Muerto)",
+        "Loma de Moroncárit",
+        "Moroncárit",
+        "El Riíto",
+        "La Escalera",
+        "Campo Diecinueve",
+        "Los Buitbores",
+        "Mochibampo",
+        "6 de Enero",
+        "El Alto San Cristóbal",
+        "Chapultepec",
+        "Torocoba",
+        "Luis Echeverría Zuno",
+        "Bacapaco",
+        "La Cuchilla de San Antonio",
+        "La Cuchilla del Etchoropo",
+        "Chijubampo",
+        "Unificación Campesina (Cola Seca)",
+        "La Esperanza",
+        "Playa Huatabampito",
+        "La Curva de la Sávila",
+        "Huacaporo",
+        "La Primavera Sur",
+        "Las Guayabitas",
+        "El Mazaray"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4039,
@@ -3805,7 +6771,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 11,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4041,
@@ -3816,7 +6794,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5400,
+      "capex": 36000,
+      "roi": 6.7,
+      "mercado_viable": 90,
+      "mercado_bruto": 90,
+      "localidades_los": [
+        "Cuauhtémoc",
+        "Ignacio Zaragoza (La Mesa)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4042,
@@ -3838,7 +6831,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12420,
+      "capex": 82800,
+      "roi": 6.7,
+      "mercado_viable": 207,
+      "mercado_bruto": 207,
+      "localidades_los": [
+        "Fundición"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4044,
@@ -3860,7 +6867,47 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 135720,
+      "capex": 904800,
+      "roi": 6.7,
+      "mercado_viable": 2262,
+      "mercado_bruto": 2262,
+      "localidades_los": [
+        "El Recodo",
+        "El Siviral",
+        "Nachuquis (San Antonio Nachuquis)",
+        "Chinotahueca",
+        "Aquichopo",
+        "Navolato",
+        "Rancho Camargo",
+        "El Centenario",
+        "Buenavista",
+        "Macochín",
+        "Sapochopo",
+        "Sapomora",
+        "5 de Junio",
+        "Kutantaka",
+        "El Jopo",
+        "Punta de la Laguna",
+        "El Baburo",
+        "El Quinto Viejo (El Culebrón)",
+        "El Saucito",
+        "Aquisahuali",
+        "El Quinto",
+        "Jupacobe",
+        "Cutataila",
+        "Colegio del Pacífico",
+        "El Cumbro",
+        "Los Parosis",
+        "Cohuirimpo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4063,
@@ -3936,18 +6983,20 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 5,
+      "segmento": "Rural + Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5460,
+      "capex": 36400,
+      "roi": 6.7,
+      "mercado_viable": 91,
+      "mercado_bruto": 154,
       "localidades_los": [
-        ". | BLOQUEADAS (1): Machilibampo"
+        ". | BLOQUEADAS (1): Machilibampo",
+        "Tepahui. | BLOQUEADAS (2): Goijaquía",
+        "Las Minitas"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -4017,19 +7066,21 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 10675,
-      "capex": 42700,
-      "roi": 4.0,
-      "mercado_viable": 61,
-      "mercado_bruto": 61,
+      "mrr": 15115,
+      "capex": 72300,
+      "roi": 4.8,
+      "mercado_viable": 135,
+      "mercado_bruto": 140,
       "localidades_los": [
         "La Estrella",
-        "Progenitora Núcleo Dos (Bachoco)"
+        "Progenitora Núcleo Dos (Bachoco)",
+        "Cedros",
+        "Progenitora Núcleo Uno (Bachoco). | BLOQUEADAS (1): Santa Ana de Padilla"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -4041,7 +7092,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 41400,
+      "capex": 276000,
+      "roi": 6.7,
+      "mercado_viable": 690,
+      "mercado_bruto": 690,
+      "localidades_los": [
+        "Sahuaripa",
+        "Seguadehuachi"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4071,
@@ -4052,7 +7118,33 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 31980,
+      "capex": 213200,
+      "roi": 6.7,
+      "mercado_viable": 533,
+      "mercado_bruto": 533,
+      "localidades_los": [
+        "Islita",
+        "El Cheque Ocho",
+        "El Bordo",
+        "Zona del Canal (Ejido Islitas)",
+        "Carlos Monroy",
+        "Moctezuma Dos",
+        "Alicia Figueroa",
+        "Gabriel Parra",
+        "Juan Velázquez",
+        "Hermanos Salas",
+        "Ninguno [Islita]",
+        "El Welton",
+        "El Arco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4072,
@@ -4096,7 +7188,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "Colonia Ladrillera Norte"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4076,
@@ -4107,7 +7213,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "Pendiente",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 56940,
+      "capex": 379600,
+      "roi": 6.7,
+      "mercado_viable": 949,
+      "mercado_bruto": 949,
+      "localidades_los": [
+        "Golfo de Santa Clara"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4077,
@@ -4118,7 +7238,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8820,
+      "capex": 58800,
+      "roi": 6.7,
+      "mercado_viable": 147,
+      "mercado_bruto": 183,
+      "localidades_los": [
+        "San Miguel de Horcasitas. | BLOQUEADAS (1): Los Ángeles (La Fábrica de los Ángeles)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4078,
@@ -4129,7 +7263,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11220,
+      "capex": 74800,
+      "roi": 6.7,
+      "mercado_viable": 187,
+      "mercado_bruto": 457,
+      "localidades_los": [
+        "El Claro",
+        "La Carleña Dos",
+        "Los Fresnos",
+        "La Carleña. | BLOQUEADAS (2): Estación Llano",
+        "San Diego"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4080,
@@ -4190,7 +7342,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 3,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4083,
@@ -4203,18 +7367,19 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 7700,
-      "capex": 30800,
-      "roi": 4.0,
-      "mercado_viable": 44,
-      "mercado_bruto": 44,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 7880,
+      "capex": 32000,
+      "roi": 4.1,
+      "mercado_viable": 47,
+      "mercado_bruto": 47,
       "localidades_los": [
-        "Tónichi"
+        "Tónichi",
+        "Punta de Fierro"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -4237,7 +7402,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10860,
+      "capex": 72400,
+      "roi": 6.7,
+      "mercado_viable": 181,
+      "mercado_bruto": 194,
+      "localidades_los": [
+        "Tepache. | BLOQUEADAS (1): Casa Grande"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4086,
@@ -4248,7 +7427,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 16680,
+      "capex": 111200,
+      "roi": 6.7,
+      "mercado_viable": 278,
+      "mercado_bruto": 278,
+      "localidades_los": [
+        "Trincheras",
+        "El Quelitoso",
+        "Las Galeras",
+        "La Laguna",
+        "Ejido la Playa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4087,
@@ -4261,18 +7458,26 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 4900,
-      "capex": 19600,
-      "roi": 4.0,
-      "mercado_viable": 28,
-      "mercado_bruto": 28,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 21100,
+      "capex": 127600,
+      "roi": 6.0,
+      "mercado_viable": 298,
+      "mercado_bruto": 330,
       "localidades_los": [
-        "San José (San Enrique)"
+        "San José (San Enrique)",
+        "La Sangre (La Sangre Nueva)",
+        "Pueblo Nuevo (Pueblo Nuevo Ocuca)",
+        "San Manuel (San Manuel Ocuca)",
+        "Santa Isabel (La Cuchilla). | BLOQUEADAS (5): San José",
+        "Antonio Romo Badilla",
+        "Castañeda Barceló (San José Nuevo)",
+        "El Maguey",
+        "Ramón Badilla Moreno"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -4309,7 +7514,29 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 10800,
+      "capex": 72000,
+      "roi": 6.7,
+      "mercado_viable": 180,
+      "mercado_bruto": 190,
+      "localidades_los": [
+        "La Carabina",
+        "Solidaridad",
+        "Comunidad Xóchitl (Grupo Xóchitl)",
+        "La Ladrillera Canal Alto",
+        "Ampliación Ladrillera",
+        "18 de Septiembre",
+        "Bordo del Canal Alto Sur",
+        "El Milagro (Pedro García Navarro)",
+        "Canal Alto los Capomos. | Sin dato (1): Bordo del Canal (Calzada Francisco Villanueva)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4010,
@@ -4320,7 +7547,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8400,
+      "capex": 56000,
+      "roi": 6.7,
+      "mercado_viable": 140,
+      "mercado_bruto": 140,
+      "localidades_los": [
+        "Jécori"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3950,
@@ -4353,7 +7594,47 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 148920,
+      "capex": 992800,
+      "roi": 6.7,
+      "mercado_viable": 2482,
+      "mercado_bruto": 2830,
+      "localidades_los": [
+        "Pueblo Mayo",
+        "Rosales",
+        "Capohuiza",
+        "Los Bahuises",
+        "Loma del Refugio",
+        "Tesia",
+        "Chihuahuita",
+        "Los Limones",
+        "Mezquital de Buiyacusi",
+        "Rancho del Padre",
+        "Agiabampo",
+        "Sibacobe",
+        "Mezquital de Tesia",
+        "Palo Blanco",
+        "El Chapote",
+        "La Quince",
+        "Bemelabampo",
+        "La Batalla",
+        "Josonteco",
+        "Cuchujaqui",
+        "Casa Blanca",
+        "La Cruz de Rosales. | BLOQUEADAS (6): Buiyacusi",
+        "Tetapeche",
+        "La Pera",
+        "San Francisco",
+        "Navomora",
+        "La Perita. | Sin dato (1): Yorentamehua"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3977,
@@ -4364,7 +7645,35 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 102840,
+      "capex": 685600,
+      "roi": 6.7,
+      "mercado_viable": 1714,
+      "mercado_bruto": 1725,
+      "localidades_los": [
+        "Ingeniero Luis B. Sánchez",
+        "Nuevo Michoacán (Estación Riíto)",
+        "Mesa Rica",
+        "Mesa Rica Dos",
+        "Guadalupe",
+        "Emiliano Zapata",
+        "Juárez Leyes de Reforma",
+        "Nuevo León",
+        "Los Tornero",
+        "El Barranco",
+        "La Entrada (Emiliano Zapata)",
+        "Colonia Coahuila",
+        "Federico Robles",
+        "Coahuila. | Sin dato (2): La Curva de la Nuevo León",
+        "Ninguno [María de Jesús Cázares]"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3989,
@@ -4388,18 +7697,21 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 875,
-      "capex": 3500,
-      "roi": 4.0,
-      "mercado_viable": 5,
-      "mercado_bruto": 5,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1535,
+      "capex": 7900,
+      "roi": 5.1,
+      "mercado_viable": 16,
+      "mercado_bruto": 16,
       "localidades_los": [
-        "El Durazno"
+        "El Durazno",
+        "La Curva",
+        "Los Fresnitos",
+        "El Carnaval"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -4411,7 +7723,22 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 5,
+      "localidades_los": [
+        "Ninguno [Juan Carlos Ochoa Valenzuela]. | Sin dato (2): Dávila [Taller]",
+        "La Puerta Negra"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3987,
@@ -4447,7 +7774,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 91980,
+      "capex": 613200,
+      "roi": 6.7,
+      "mercado_viable": 1533,
+      "mercado_bruto": 1533,
+      "localidades_los": [
+        "San Ignacio Río Muerto"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3835,
@@ -4458,7 +7799,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3420,
+      "capex": 22800,
+      "roi": 6.7,
+      "mercado_viable": 57,
+      "mercado_bruto": 69,
+      "localidades_los": [
+        "Arivechi. | Sin dato (2): Santo Tomás",
+        "Pónida"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3836,
@@ -4538,7 +7894,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 33660,
+      "capex": 224400,
+      "roi": 6.7,
+      "mercado_viable": 561,
+      "mercado_bruto": 561,
+      "localidades_los": [
+        "Mi Patria es Primero",
+        "Antonio Rosales",
+        "San Pablo Dos",
+        "Narciso Mendoza"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3843,
@@ -4549,7 +7922,27 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 33840,
+      "capex": 225600,
+      "roi": 6.7,
+      "mercado_viable": 564,
+      "mercado_bruto": 564,
+      "localidades_los": [
+        "Guásimas (De Belem)",
+        "Juan Rodríguez",
+        "Junelancahui (El Mezquite)",
+        "Baugo (Guásimas)",
+        "Sonora",
+        "Pozo la Mesteña",
+        "El Morgan"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3844,
@@ -4560,7 +7953,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 82560,
+      "capex": 550400,
+      "roi": 6.7,
+      "mercado_viable": 1376,
+      "mercado_bruto": 1380,
+      "localidades_los": [
+        "José María Morelos y Pavón (La Atravezada)",
+        "Santa María de Guaymas",
+        "La Palma",
+        "Úrsulo Galván",
+        "Maytorena. | BLOQUEADAS (1): El Bayo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3845,
@@ -4571,7 +7982,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 17400,
+      "capex": 116000,
+      "roi": 6.7,
+      "mercado_viable": 290,
+      "mercado_bruto": 290,
+      "localidades_los": [
+        "Granados"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3846,
@@ -4582,7 +8007,29 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 32700,
+      "capex": 218000,
+      "roi": 6.7,
+      "mercado_viable": 545,
+      "mercado_bruto": 545,
+      "localidades_los": [
+        "Francisco Márquez",
+        "Guadalupe Victoria",
+        "El Yaqui",
+        "Nicolás Bravo",
+        "Nuevo San Francisco",
+        "Triunfo Santa Rosa",
+        "Edmundo Sánchez (El Chorizo)",
+        "Adolfo de la Huerta",
+        "Cincuenta y Dos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3848,
@@ -4593,7 +8040,21 @@ const DATA_TORRES = [
     "dep": "C5i",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2160,
+      "capex": 14400,
+      "roi": 6.7,
+      "mercado_viable": 36,
+      "mercado_bruto": 36,
+      "localidades_los": [
+        "El Realito"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3849,
@@ -4631,7 +8092,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14040,
+      "capex": 93600,
+      "roi": 6.7,
+      "mercado_viable": 234,
+      "mercado_bruto": 234,
+      "localidades_los": [
+        "Tecoripa"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3852,
@@ -4653,7 +8128,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1740,
+      "capex": 11600,
+      "roi": 6.7,
+      "mercado_viable": 29,
+      "mercado_bruto": 29,
+      "localidades_los": [
+        "Ónavas"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3856,
@@ -4677,19 +8166,22 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 1225,
-      "capex": 4900,
-      "roi": 4.0,
-      "mercado_viable": 7,
-      "mercado_bruto": 7,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2725,
+      "capex": 14900,
+      "roi": 5.5,
+      "mercado_viable": 32,
+      "mercado_bruto": 32,
       "localidades_los": [
         "El Chaparral",
-        "La Familia"
+        "La Familia",
+        "Del Carmen [Porcícola]",
+        "Santa María",
+        "Cachanilla I"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -4740,18 +8232,19 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 3,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 41040,
+      "capex": 273600,
+      "roi": 6.7,
+      "mercado_viable": 684,
+      "mercado_bruto": 687,
       "localidades_los": [
-        ". | BLOQUEADAS (1): El Sabino (Mútica)"
+        ". | BLOQUEADAS (1): El Sabino (Mútica)",
+        "Rosario"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -4763,7 +8256,19 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 51,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3862,
@@ -4810,7 +8315,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "Corrales Bella Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3864,
@@ -4858,7 +8377,21 @@ const DATA_TORRES = [
     "dep": "H. Ayto de San Javier",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5700,
+      "capex": 38000,
+      "roi": 6.7,
+      "mercado_viable": 95,
+      "mercado_bruto": 95,
+      "localidades_los": [
+        "San Javier"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3867,
@@ -4967,7 +8500,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1560,
+      "capex": 10400,
+      "roi": 6.7,
+      "mercado_viable": 26,
+      "mercado_bruto": 26,
+      "localidades_los": [
+        "Soyopa"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3873,
@@ -5028,18 +8575,19 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 78,
+      "segmento": "Rural + Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2700,
+      "capex": 18000,
+      "roi": 6.7,
+      "mercado_viable": 45,
+      "mercado_bruto": 123,
       "localidades_los": [
-        ". | BLOQUEADAS (1): Mazocahui"
+        ". | BLOQUEADAS (1): Mazocahui",
+        "Puerta del Sol"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -5062,7 +8610,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7860,
+      "capex": 52400,
+      "roi": 6.7,
+      "mercado_viable": 131,
+      "mercado_bruto": 131,
+      "localidades_los": [
+        "Villa Pesqueira (Mátape)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4032,
@@ -5073,7 +8635,23 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 67620,
+      "capex": 450800,
+      "roi": 6.7,
+      "mercado_viable": 1127,
+      "mercado_bruto": 1138,
+      "localidades_los": [
+        "Bahía de Kino",
+        "Estero Santa Cruz",
+        "Condominios Paraíso. | Sin dato (1): Colonia el Paraíso"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3880,
@@ -5086,14 +8664,14 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
+      "segmento": "Rural + Suburbano",
       "tier": 2,
       "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
       "mrr": 17325,
       "capex": 69300,
       "roi": 4.0,
       "mercado_viable": 99,
-      "mercado_bruto": 228,
+      "mercado_bruto": 234,
       "localidades_los": [
         "Santa Rosa (Santa Rosa de Lima)",
         "San Nicolás",
@@ -5101,7 +8679,7 @@ const DATA_TORRES = [
         "Santa Ana",
         "La Concepción"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -5115,19 +8693,22 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 8,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 31020,
+      "capex": 206800,
+      "roi": 6.7,
+      "mercado_viable": 517,
+      "mercado_bruto": 525,
       "localidades_los": [
         ". | BLOQUEADAS (2): Ciénega del Trigo (Trigo Colón Trigo Moreno)",
-        "Los Pilares"
+        "Los Pilares",
+        "Yécora",
+        "Pimas (Juan Diego de los Pimas)",
+        "El Barco"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -5139,7 +8720,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12900,
+      "capex": 86000,
+      "roi": 6.7,
+      "mercado_viable": 215,
+      "mercado_bruto": 215,
+      "localidades_los": [
+        "Nácori Chico",
+        "El Sauz"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3883,
@@ -5150,7 +8746,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9120,
+      "capex": 60800,
+      "roi": 6.7,
+      "mercado_viable": 152,
+      "mercado_bruto": 157,
+      "localidades_los": [
+        "La Colorada",
+        "Estación Torres (Estación Serdán)",
+        "Rosario. | BLOQUEADAS (2): El Pilar",
+        "La Mina (Retiros Espirituales)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3884,
@@ -5161,7 +8774,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8280,
+      "capex": 55200,
+      "roi": 6.7,
+      "mercado_viable": 138,
+      "mercado_bruto": 144,
+      "localidades_los": [
+        "San Miguelito. | BLOQUEADAS (1): La Mora"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3885,
@@ -5183,7 +8810,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8880,
+      "capex": 59200,
+      "roi": 6.7,
+      "mercado_viable": 148,
+      "mercado_bruto": 148,
+      "localidades_los": [
+        "El Castillo",
+        "El Nuevo Castillo",
+        "Chumampaco",
+        "La Cooperativa",
+        "La Escuelita (La Cooperativa)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3889,
@@ -5194,7 +8839,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2700,
+      "capex": 18000,
+      "roi": 6.7,
+      "mercado_viable": 45,
+      "mercado_bruto": 45,
+      "localidades_los": [
+        "Pueblo Nuevo (La Cuchilla)",
+        "La Curva"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3890,
@@ -5205,7 +8865,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4680,
+      "capex": 31200,
+      "roi": 6.7,
+      "mercado_viable": 78,
+      "mercado_bruto": 78,
+      "localidades_los": [
+        "Singapur"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3891,
@@ -5216,7 +8890,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 89280,
+      "capex": 595200,
+      "roi": 6.7,
+      "mercado_viable": 1488,
+      "mercado_bruto": 1488,
+      "localidades_los": [
+        "Francisco Javier Mina (Campo 60)",
+        "Primero de Mayo (Campo 77)",
+        "Campo Treinta y Uno (Ampliación Treinta y Uno)",
+        "Ontagota"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3892,
@@ -5227,7 +8918,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 69540,
+      "capex": 463600,
+      "roi": 6.7,
+      "mercado_viable": 1159,
+      "mercado_bruto": 1159,
+      "localidades_los": [
+        "San José de Bácum",
+        "Francisco I. Madero (Campo 30)",
+        "Miguel Alemán (La Noria)",
+        "El Juvani",
+        "El Campito"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3893,
@@ -5238,7 +8947,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 14340,
+      "capex": 95600,
+      "roi": 6.7,
+      "mercado_viable": 239,
+      "mercado_bruto": 239,
+      "localidades_los": [
+        "Independencia (Campo 104)",
+        "San Isidro (El Polvorón)",
+        "Demetrio Vallejo",
+        "La Ocho"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3894,
@@ -5249,7 +8975,27 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15540,
+      "capex": 103600,
+      "roi": 6.7,
+      "mercado_viable": 259,
+      "mercado_bruto": 270,
+      "localidades_los": [
+        "Villa Guadalupe",
+        "El Bateve",
+        "Enrique Landa B.",
+        "San José",
+        "Bernabé Arana",
+        "Vicente Guerrero",
+        "Bateve Segundo (2 de Marzo). | Sin dato (1): Los Médanos (Los Mélagos)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3895,
@@ -5262,18 +9008,23 @@ const DATA_TORRES = [
     "estatus": "Torre terminada",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 1225,
-      "capex": 4900,
-      "roi": 4.0,
-      "mercado_viable": 7,
-      "mercado_bruto": 7,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 18505,
+      "capex": 120100,
+      "roi": 6.5,
+      "mercado_viable": 295,
+      "mercado_bruto": 295,
       "localidades_los": [
-        "La Tina"
+        "La Tina",
+        "Atotonilco",
+        "La Democracia",
+        "Bachomobampo",
+        "Jaramillo (Bloque 1707)",
+        "La Doce (Bloque 1217)"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -5285,7 +9036,27 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 54420,
+      "capex": 362800,
+      "roi": 6.7,
+      "mercado_viable": 907,
+      "mercado_bruto": 918,
+      "localidades_los": [
+        "Bahía de Lobos",
+        "Tetabiate",
+        "Agraristas de Ciudad Obregón",
+        "Emiliano Zapata",
+        "San Francisco Río Muerto (Las Cachoras)",
+        "El Tápiro",
+        "Sonora. | Sin dato (1): San Francisco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3897,
@@ -5296,7 +9067,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 13980,
+      "capex": 93200,
+      "roi": 6.7,
+      "mercado_viable": 233,
+      "mercado_bruto": 233,
+      "localidades_los": [
+        "Santa María del Buaraje",
+        "El Bordo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3898,
@@ -5307,7 +9093,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9720,
+      "capex": 64800,
+      "roi": 6.7,
+      "mercado_viable": 162,
+      "mercado_bruto": 162,
+      "localidades_los": [
+        "Etchohuaquila"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3899,
@@ -5329,7 +9129,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 28020,
+      "capex": 186800,
+      "roi": 6.7,
+      "mercado_viable": 467,
+      "mercado_bruto": 470,
+      "localidades_los": [
+        "Guadalupe de Juárez",
+        "Cábora. | BLOQUEADAS (1): Cocoraque"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3901,
@@ -5340,7 +9155,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3300,
+      "capex": 22000,
+      "roi": 6.7,
+      "mercado_viable": 55,
+      "mercado_bruto": 55,
+      "localidades_los": [
+        "Jostahueca"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3902,
@@ -5351,7 +9180,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11580,
+      "capex": 77200,
+      "roi": 6.7,
+      "mercado_viable": 193,
+      "mercado_bruto": 193,
+      "localidades_los": [
+        "Lázaro Cárdenas (Mayojusálit)",
+        "Agustín Melgar",
+        "General Gabriel Leyva Solano (Gabriel Leyva)",
+        "Basiabampo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3903,
@@ -5362,7 +9208,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 22320,
+      "capex": 148800,
+      "roi": 6.7,
+      "mercado_viable": 372,
+      "mercado_bruto": 372,
+      "localidades_los": [
+        "Jecopaco",
+        "Joaquín Amaro",
+        "Buáraje Viejo",
+        "Miguel de la Madrid Uno",
+        "Francisco Araiza Celaya (Bloque 1620)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3904,
@@ -5373,7 +9237,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8460,
+      "capex": 56400,
+      "roi": 6.7,
+      "mercado_viable": 141,
+      "mercado_bruto": 141,
+      "localidades_los": [
+        "El Sifón (Sifón Canal Alto)",
+        "Musuabampo"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3910,
@@ -5384,7 +9263,26 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 60960,
+      "capex": 406400,
+      "roi": 6.7,
+      "mercado_viable": 1016,
+      "mercado_bruto": 1016,
+      "localidades_los": [
+        "Bacame Nuevo",
+        "Agua Blanca",
+        "Bayajorit",
+        "Guaytana",
+        "Siete Leguas",
+        "Bretaña"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3905,
@@ -5395,7 +9293,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 4,
+      "localidades_los": [
+        "Ninguno [Juan Carlos Sornia]. | Sin dato (1): Bachoco"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3906,
@@ -5406,7 +9318,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 42780,
+      "capex": 285200,
+      "roi": 6.7,
+      "mercado_viable": 713,
+      "mercado_bruto": 713,
+      "localidades_los": [
+        "Allende (El Dieciocho)",
+        "Altos de Jecopaco",
+        "Brasil (La Dieciséis)",
+        "Los Machochos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3907,
@@ -5417,7 +9346,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 73980,
+      "capex": 493200,
+      "roi": 6.7,
+      "mercado_viable": 1233,
+      "mercado_bruto": 1233,
+      "localidades_los": [
+        "Paredón Colorado (Paredón Viejo)",
+        "Paredoncito",
+        "Aceitunitas (Sube y Baja)",
+        "Chinotagueca la Loma"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3908,
@@ -5428,7 +9374,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5820,
+      "capex": 38800,
+      "roi": 6.7,
+      "mercado_viable": 97,
+      "mercado_bruto": 108,
+      "localidades_los": [
+        "Batevito (Colonia Irrigación)",
+        "Vargas",
+        "Santa María (Costa Rica). | Sin dato (1): Lora"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3909,
@@ -5439,7 +9401,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1860,
+      "capex": 12400,
+      "roi": 6.7,
+      "mercado_viable": 31,
+      "mercado_bruto": 31,
+      "localidades_los": [
+        "La Quince",
+        "Sonora Progresista",
+        "Agropecuaria Santa Bárbara"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3916,
@@ -5450,7 +9428,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 420,
+      "capex": 2800,
+      "roi": 6.7,
+      "mercado_viable": 7,
+      "mercado_bruto": 7,
+      "localidades_los": [
+        "La Esperanza"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3911,
@@ -5461,7 +9453,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 55020,
+      "capex": 366800,
+      "roi": 6.7,
+      "mercado_viable": 917,
+      "mercado_bruto": 917,
+      "localidades_los": [
+        "Buaysiacobe",
+        "Huiroachaca",
+        "El Retiro Viejo",
+        "El Retiro"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3912,
@@ -5472,7 +9481,27 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 34980,
+      "capex": 233200,
+      "roi": 6.7,
+      "mercado_viable": 583,
+      "mercado_bruto": 583,
+      "localidades_los": [
+        "Chucarit",
+        "El Chapote",
+        "Bacajaquía",
+        "Colonia Nacozari",
+        "Bacame Viejo",
+        "Aquichivo",
+        "Barrio Pacheco"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3913,
@@ -5483,7 +9512,27 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 22740,
+      "capex": 151600,
+      "roi": 6.7,
+      "mercado_viable": 379,
+      "mercado_bruto": 381,
+      "localidades_los": [
+        "Jitonhueca",
+        "Bachoco el Alto",
+        "Mocochopo (Yemovari)",
+        "El Juchica",
+        "Tesotahueca",
+        "Puente Roto (La Treinta y Dos)",
+        "Cuatro Hermanos. | BLOQUEADAS (1): Yemobari"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3914,
@@ -5494,7 +9543,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1380,
+      "capex": 9200,
+      "roi": 6.7,
+      "mercado_viable": 23,
+      "mercado_bruto": 92,
+      "localidades_los": [
+        "Las Mayas (Colonia Agrícola Basconcobe)",
+        "Calle Veintiocho",
+        "Joyateve. | BLOQUEADAS (1): Mayocahui"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3915,
@@ -5505,7 +9570,29 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 15180,
+      "capex": 101200,
+      "roi": 6.7,
+      "mercado_viable": 253,
+      "mercado_bruto": 253,
+      "localidades_los": [
+        "Mocorúa",
+        "Mil Hectáreas",
+        "España (Campo Número Uno)",
+        "Las Cucas",
+        "La Cochera",
+        "La Victoria",
+        "El Potrero",
+        "Las Cachimbas",
+        "Ruiz"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3923,
@@ -5516,7 +9603,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 16140,
+      "capex": 107600,
+      "roi": 6.7,
+      "mercado_viable": 269,
+      "mercado_bruto": 269,
+      "localidades_los": [
+        "Sinahuisa",
+        "Saucobe",
+        "Tetacruz"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3917,
@@ -5527,7 +9630,26 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 11760,
+      "capex": 78400,
+      "roi": 6.7,
+      "mercado_viable": 196,
+      "mercado_bruto": 196,
+      "localidades_los": [
+        "Yavaritos",
+        "Adolfo López Mateos",
+        "Faustino Félix Serna",
+        "Presa Nueva",
+        "El Sabinito de Tesia (Tesia y Sus Anexos)",
+        "Jambiolabampo Dos (Los Pollos)"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3918,
@@ -5538,7 +9660,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 4560,
+      "capex": 30400,
+      "roi": 6.7,
+      "mercado_viable": 76,
+      "mercado_bruto": 76,
+      "localidades_los": [
+        "Francisco I. Madero Dos",
+        "Miguel Hidalgo",
+        "Junelancahui (Joconas)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3919,
@@ -5549,7 +9687,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2220,
+      "capex": 14800,
+      "roi": 6.7,
+      "mercado_viable": 37,
+      "mercado_bruto": 37,
+      "localidades_los": [
+        "Licenciado Luis Echeverría Álvarez"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3920,
@@ -5560,7 +9712,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 32880,
+      "capex": 219200,
+      "roi": 6.7,
+      "mercado_viable": 548,
+      "mercado_bruto": 548,
+      "localidades_los": [
+        "Bacabachi",
+        "Chirajobampo",
+        "Felipe Ángeles",
+        "El Reparo"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3921,
@@ -5571,7 +9740,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 17880,
+      "capex": 119200,
+      "roi": 6.7,
+      "mercado_viable": 298,
+      "mercado_bruto": 298,
+      "localidades_los": [
+        "El Saneal",
+        "Santa Isabel (Los Cocos)",
+        "El Viejo Batayaqui"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3922,
@@ -5582,7 +9767,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 20340,
+      "capex": 135600,
+      "roi": 6.7,
+      "mercado_viable": 339,
+      "mercado_bruto": 339,
+      "localidades_los": [
+        "Los Buayums",
+        "Colonia Macías",
+        "La Potable",
+        "Puente San Ignacio",
+        "Álvarez Hermanos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3924,
@@ -5593,7 +9796,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 36180,
+      "capex": 241200,
+      "roi": 6.7,
+      "mercado_viable": 603,
+      "mercado_bruto": 603,
+      "localidades_los": [
+        "Masiaca",
+        "San José Masiaca",
+        "Cucajaqui",
+        "San Pedrito",
+        "La Finca"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3925,
@@ -5604,7 +9825,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 5400,
+      "capex": 36000,
+      "roi": 6.7,
+      "mercado_viable": 90,
+      "mercado_bruto": 90,
+      "localidades_los": [
+        "Choacalle"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3926,
@@ -5617,18 +9852,20 @@ const DATA_TORRES = [
     "estatus": "Torre terminada",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 4,
-      "nivel": "Tier 4: Inviable Comercial (<50 casas viables)",
-      "mrr": 0,
-      "capex": 0,
-      "roi": null,
-      "mercado_viable": 0,
-      "mercado_bruto": 49,
+      "segmento": "Rural + Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6480,
+      "capex": 43200,
+      "roi": 6.7,
+      "mercado_viable": 108,
+      "mercado_bruto": 168,
       "localidades_los": [
-        ". | BLOQUEADAS (1): San Antonio de los Ibarra (San Antonio)"
+        ". | BLOQUEADAS (1): San Antonio de los Ibarra (San Antonio)",
+        "Teachive",
+        "Torocoba. | Sin dato (1): Huasaguari"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / Satelital"
     }
   },
   {
@@ -5640,7 +9877,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2280,
+      "capex": 15200,
+      "roi": 6.7,
+      "mercado_viable": 38,
+      "mercado_bruto": 38,
+      "localidades_los": [
+        "Chichibojoro (Coteco)",
+        "Tojahui"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3928,
@@ -5651,7 +9903,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 6840,
+      "capex": 45600,
+      "roi": 6.7,
+      "mercado_viable": 114,
+      "mercado_bruto": 114,
+      "localidades_los": [
+        "Bachoco",
+        "Jambiolabampo Uno"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3990,
@@ -5673,7 +9940,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9720,
+      "capex": 64800,
+      "roi": 6.7,
+      "mercado_viable": 162,
+      "mercado_bruto": 170,
+      "localidades_los": [
+        "Jopopaco",
+        "Huebampo. | BLOQUEADAS (1): Los Angelitos Reubicación"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3943,
@@ -5684,7 +9966,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3420,
+      "capex": 22800,
+      "roi": 6.7,
+      "mercado_viable": 57,
+      "mercado_bruto": 57,
+      "localidades_los": [
+        "El Chino (San Antonio de los Chinos)",
+        "Las Mayas (La Granadita)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3930,
@@ -5695,7 +9992,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7800,
+      "capex": 52000,
+      "roi": 6.7,
+      "mercado_viable": 130,
+      "mercado_bruto": 130,
+      "localidades_los": [
+        "Sirebampo"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3931,
@@ -5706,7 +10017,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2040,
+      "capex": 13600,
+      "roi": 6.7,
+      "mercado_viable": 34,
+      "mercado_bruto": 34,
+      "localidades_los": [
+        "Bachimojaqui",
+        "Playa Bachomojaqui"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3932,
@@ -5717,7 +10043,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 2820,
+      "capex": 18800,
+      "roi": 6.7,
+      "mercado_viable": 47,
+      "mercado_bruto": 58,
+      "localidades_los": [
+        "Camahuiroa. | Sin dato (1): Playa Camahuiroa"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3996,
@@ -5728,7 +10068,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 4,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3933,
@@ -5739,7 +10091,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 13500,
+      "capex": 90000,
+      "roi": 6.7,
+      "mercado_viable": 225,
+      "mercado_bruto": 225,
+      "localidades_los": [
+        "Las Bocas",
+        "Las Ánimas"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3934,
@@ -5750,7 +10117,26 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 12900,
+      "capex": 86000,
+      "roi": 6.7,
+      "mercado_viable": 215,
+      "mercado_bruto": 215,
+      "localidades_los": [
+        "Melchor Ocampo",
+        "Tierra y Libertad",
+        "Plutarco Elías Calles",
+        "Las Águilas",
+        "El Palomo",
+        "Navopatía"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3935,
@@ -5761,7 +10147,24 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8400,
+      "capex": 56000,
+      "roi": 6.7,
+      "mercado_viable": 140,
+      "mercado_bruto": 140,
+      "localidades_los": [
+        "Benito Juárez",
+        "10 de Abril",
+        "Estación Luis",
+        "La Loma de Estación Luis (Las Vías)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3944,
@@ -5772,7 +10175,31 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 46020,
+      "capex": 306800,
+      "roi": 6.7,
+      "mercado_viable": 767,
+      "mercado_bruto": 767,
+      "localidades_los": [
+        "Agiabampo Uno",
+        "Venustiano Carranza",
+        "Insurgentes de Pueblo Yaqui",
+        "Juan de la Barrera",
+        "Emiliano Zapata Uno",
+        "La Providencia",
+        "Estación Don",
+        "Agiabampo Número Dos (El Campito)",
+        "Torocobampo",
+        "Mayo Fuerte",
+        "Agiabampo Dos"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3936,
@@ -5783,7 +10210,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 9780,
+      "capex": 65200,
+      "roi": 6.7,
+      "mercado_viable": 163,
+      "mercado_bruto": 163,
+      "localidades_los": [
+        "Francisco Sarabia",
+        "24 de Febrero"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 3937,
@@ -5794,7 +10236,23 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3420,
+      "capex": 22800,
+      "roi": 6.7,
+      "mercado_viable": 57,
+      "mercado_bruto": 159,
+      "localidades_los": [
+        "Manuel Caudillo",
+        "Emiliano Zapata Dos. | BLOQUEADAS (2): Totoliboqui",
+        "Sonora Sinaloa (Bamocha)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3938,
@@ -5805,7 +10263,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1680,
+      "capex": 11200,
+      "roi": 6.7,
+      "mercado_viable": 28,
+      "mercado_bruto": 28,
+      "localidades_los": [
+        "Los Citahuis"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3939,
@@ -5816,7 +10288,21 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1140,
+      "capex": 7600,
+      "roi": 6.7,
+      "mercado_viable": 19,
+      "mercado_bruto": 19,
+      "localidades_los": [
+        "Anáhuac"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3940,
@@ -5827,7 +10313,25 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 7980,
+      "capex": 53200,
+      "roi": 6.7,
+      "mercado_viable": 133,
+      "mercado_bruto": 133,
+      "localidades_los": [
+        "Guadalupe Victoria",
+        "Los Toltecas",
+        "Juan Escutia",
+        "Lucio Blanco",
+        "Jubarebampo"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3941,
@@ -5838,7 +10342,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 540,
+      "capex": 3600,
+      "roi": 6.7,
+      "mercado_viable": 9,
+      "mercado_bruto": 9,
+      "localidades_los": [
+        "La Esperanza",
+        "Santa Rosa"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3942,
@@ -5849,7 +10368,22 @@ const DATA_TORRES = [
     "dep": "Telefonía Rural",
     "municipio": "",
     "estatus": "Torre terminada",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3120,
+      "capex": 20800,
+      "roi": 6.7,
+      "mercado_viable": 52,
+      "mercado_bruto": 52,
+      "localidades_los": [
+        "21 de Marzo",
+        "Francisco R. Serrano"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 3945,
@@ -5899,18 +10433,27 @@ const DATA_TORRES = [
     "estatus": "En Operación",
     "activo": true,
     "portafolio": {
-      "segmento": "Rural",
-      "tier": 2,
-      "nivel": "Tier 2: Mercado Medio (50-149 casas viables)",
-      "mrr": 10675,
-      "capex": 42700,
-      "roi": 4.0,
-      "mercado_viable": 61,
-      "mercado_bruto": 61,
+      "segmento": "Rural + Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 43915,
+      "capex": 264300,
+      "roi": 6.0,
+      "mercado_viable": 615,
+      "mercado_bruto": 616,
       "localidades_los": [
-        "San Pedro"
+        "San Pedro",
+        "El Coyote",
+        "José María Morelos",
+        "Estación Coyote",
+        "Torrentera",
+        "Santa Inés",
+        "San Andrés",
+        "Las Lidias (Santa Lidia)",
+        "El Pinito",
+        "Granja los Tres. | Sin dato (1): La Realidad"
       ],
-      "tecnologia": "WISP (PtMP 5GHz)"
+      "tecnologia": "WISP (PtMP 5GHz) / WISP Alta Capacidad / FTTH"
     }
   },
   {
@@ -5922,7 +10465,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 240,
+      "capex": 1600,
+      "roi": 6.7,
+      "mercado_viable": 4,
+      "mercado_bruto": 4,
+      "localidades_los": [
+        "Conrrado"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4013,
@@ -5933,7 +10490,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 24480,
+      "capex": 163200,
+      "roi": 6.7,
+      "mercado_viable": 408,
+      "mercado_bruto": 408,
+      "localidades_los": [
+        "Cruz de Piedra",
+        "San Fernando de Guaymas",
+        "Empalme el Águila (El Ranchito)",
+        "Cochórit",
+        "La Casita de Campo [Restaurant]"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4026,
@@ -5944,7 +10519,44 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 1,
+      "nivel": "Tier 1: Inversion Inmediata (>=150 casas viables)",
+      "mrr": 80880,
+      "capex": 539200,
+      "roi": 6.7,
+      "mercado_viable": 1348,
+      "mercado_bruto": 1348,
+      "localidades_los": [
+        "San Pedro o el Saucito (San Pedro el Saucito)",
+        "Molino de Camou (San Isidro)",
+        "Mesa del Seri",
+        "El Alamito Buenavista (El Tronconal)",
+        "Real del Alamito [Fraccionamiento Campestre]",
+        "San Bartolo",
+        "San Francisco de Batuc",
+        "Santa Emilia",
+        "Fructuoso Méndez",
+        "Jacinto López (La Galera)",
+        "San Juan",
+        "Buena Vista",
+        "Fraccionamiento Campestre las Granjas",
+        "Fraccionamiento Chula Vista",
+        "Manantial de Camoú [Campestre]",
+        "El Cebollón [Campestre]",
+        "La Herradura",
+        "Fraccionamiento Campestre la Colmena",
+        "San Martín (Alamito)",
+        "Fraccionamiento Río Bonito",
+        "La Fuente de la Juventud",
+        "Campestre Casa Blanca",
+        "Buena Vista [Fraccionamiento Campestre]",
+        "La Nopalera"
+      ],
+      "tecnologia": "WISP Alta Capacidad / FTTH"
+    }
   },
   {
     "id": 4027,
@@ -5955,7 +10567,33 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3720,
+      "capex": 24800,
+      "roi": 6.7,
+      "mercado_viable": 62,
+      "mercado_bruto": 62,
+      "localidades_los": [
+        "Milagro de Fátima",
+        "Barlovento",
+        "El Dieciséis",
+        "San Fernando (Norson) [Granja]",
+        "El Rojo (El 57)",
+        "Los Guajolotes",
+        "Santa Zarina",
+        "Florida Tres",
+        "Santa Mónica",
+        "El Carrizo (San Isidro)",
+        "Campo Nuevo (El Capitán)",
+        "Nigromante",
+        "Los Cuates"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4028,
@@ -5966,7 +10604,23 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 300,
+      "capex": 2000,
+      "roi": 6.7,
+      "mercado_viable": 5,
+      "mercado_bruto": 28,
+      "localidades_los": [
+        "Nueva Ilusión [Campestre]. | BLOQUEADAS (3): Los Pinos (Colonia Adolfo López Mateos)",
+        "Las Víboras",
+        "El Pozo"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4029,
@@ -5988,7 +10642,25 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1980,
+      "capex": 13200,
+      "roi": 6.7,
+      "mercado_viable": 33,
+      "mercado_bruto": 39,
+      "localidades_los": [
+        "San Lorenzo",
+        "Valenzuela [Partes Usadas]",
+        "La Biznaga",
+        "Casa Blanca. | BLOQUEADAS (2): El Carrizo",
+        "Buena Vista"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4046,
@@ -5999,7 +10671,32 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 3180,
+      "capex": 21200,
+      "roi": 6.7,
+      "mercado_viable": 53,
+      "mercado_bruto": 165,
+      "localidades_los": [
+        "Ejido Cibuta [Sector Número Uno]",
+        "La Bellota",
+        "El Suizo",
+        "Ejido Cibuta Numero Dos",
+        "El Mezquite",
+        "Santa Mónica. | BLOQUEADAS (7): Cíbuta",
+        "Las Parrillas",
+        "Campestre el Potrero",
+        "Real del Catorce (Hacienda Nogales)",
+        "El Bellotoso",
+        "La Casita",
+        "El Potrero (Ganadera Lomas)"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4048,
@@ -6010,7 +10707,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 138,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4049,
@@ -6087,7 +10796,19 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 0,
+      "capex": 0,
+      "roi": null,
+      "mercado_viable": 0,
+      "mercado_bruto": 5,
+      "localidades_los": [],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4056,
@@ -6153,7 +10874,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 180,
+      "capex": 1200,
+      "roi": 6.7,
+      "mercado_viable": 3,
+      "mercado_bruto": 3,
+      "localidades_los": [
+        "Los Alisos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4062,
@@ -6175,7 +10910,27 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 2,
+      "nivel": "Tier 2: Potencial Medio (50-149 casas)",
+      "mrr": 8700,
+      "capex": 58000,
+      "roi": 6.7,
+      "mercado_viable": 145,
+      "mercado_bruto": 146,
+      "localidades_los": [
+        "Santa Ana Viejo",
+        "San Vicente",
+        "El Injerto",
+        "La Cieneguita",
+        "San Enrique",
+        "La Galveña",
+        "Vacas Pintas. | Sin dato (1): San Carlos"
+      ],
+      "tecnologia": "Satelital"
+    }
   },
   {
     "id": 4089,
@@ -6186,6 +10941,21 @@ const DATA_TORRES = [
     "dep": "CFE",
     "municipio": "",
     "estatus": "En Operación",
-    "activo": true
+    "activo": true,
+    "portafolio": {
+      "segmento": "Suburbano",
+      "tier": 3,
+      "nivel": "Tier 3: Baja Prioridad (<50 casas)",
+      "mrr": 1140,
+      "capex": 7600,
+      "roi": 6.7,
+      "mercado_viable": 19,
+      "mercado_bruto": 22,
+      "localidades_los": [
+        "Morelia",
+        "Santo Domingo. | BLOQUEADAS (1): Los Vidrios Viejos"
+      ],
+      "tecnologia": "Satelital"
+    }
   }
 ];

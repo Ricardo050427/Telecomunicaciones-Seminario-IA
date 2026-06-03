@@ -331,3 +331,11 @@ input[type=range]::-webkit-slider-thumb:hover{box-shadow:0 0 16px rgba(192,57,43
 .mapa-filter-btn.dep-t2 { border-color:#F39C12; color:#F39C12; }
 .mapa-filter-btn.dep-t3 { border-color:#F1C40F; color:#c9a800; }
 .mapa-filter-btn.dep-t4 { border-color:#95A5A6; color:#95A5A6; }
+
+/* Prevent chart canvases from collapsing */
+.chart-card canvas {
+  min-height: 220px;
+}
+.sim-results canvas {
+  min-height: 200px;
+}
