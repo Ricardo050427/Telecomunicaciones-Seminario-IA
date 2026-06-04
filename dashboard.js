@@ -62,17 +62,21 @@ function openModal(html) {
 function ruralModalHTML(r) {
   const c = calcRural(r);
   const losRatio = r.mercado_bruto > 0 ? Math.round(r.mercado_viable / r.mercado_bruto * 100) : 0;
+  const distTxt = r.distancia_prom && r.distancia_prom !== '-' 
+    ? parseFloat(r.distancia_prom).toFixed(1) + ' km' 
+    : '—';
   return `
     <div class="modal-title">📡 ${r.nombre}</div>
-    <div class="modal-sub">ID Torre: ${r.id || '—'} &nbsp;·&nbsp; ${r.tecnologia}</div>
+    <div class="modal-sub">ID Torre: ${r.id || '—'} &nbsp;·&nbsp; ${r.tecnologia} &nbsp;·&nbsp; Dist. prom: ${distTxt}</div>
     <div class="modal-grid">
       <div class="modal-metric"><div class="modal-metric-label">Mercado Bruto</div><div class="modal-metric-value">${fmt(r.mercado_bruto)} hogares</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Mercado Viable (LoS)</div><div class="modal-metric-value" style="color:#4DC88A">${fmt(r.mercado_viable)} hogares</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">Perdido por Cerros</div><div class="modal-metric-value" style="color:#C0392B">${fmt(r.perdido_cerros)} hogares</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">Localidades Totales</div><div class="modal-metric-value">${fmt(r.localidades_total)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Nivel de Inversión</div><div class="modal-metric-value"><span class="tier-tag ${tierClass(r.tier)}">${tierLabel(r.tier)}</span></div></div>
       <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(c.mrr)}/mes</div></div>
       <div class="modal-metric"><div class="modal-metric-label">CAPEX (CPE)</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(c.capex)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(c.roi)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">Perdido por Cerros</div><div class="modal-metric-value" style="color:#C0392B">${fmt(r.perdido_cerros)} hogares</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Coberturas Previas</div><div class="modal-metric-value" style="font-size:.82rem">${r.coberturas || '—'}</div></div>
     </div>
     <div class="progress-bar-wrap">
@@ -187,11 +191,16 @@ function calcPortafolio(p) {
 
 function renderRuralCard(r, idx) {
   const c = calcRural(r);
+  const distSpan = r.distancia_prom && r.distancia_prom !== '-' 
+    ? `<span style="font-size:.68rem;color:var(--text3)">${parseFloat(r.distancia_prom).toFixed(1)} km</span>` 
+    : '';
   return `<div class="node-card" data-type="rural" data-idx="${idx}">
     <div class="node-card-top">
       <div class="node-card-name">📡 ${r.nombre}</div>
       <div class="node-card-meta">
         <span class="tier-tag ${tierClass(r.tier)}">${tierLabel(r.tier)}</span>
+        <span style="font-size:.68rem;color:var(--text3)">${r.localidades_total || 0} localidades</span>
+        ${distSpan}
         <span style="font-size:.68rem;color:var(--text3)">${r.tecnologia}</span>
       </div>
     </div>
@@ -272,6 +281,12 @@ function applyRuralFilters() {
   if (sort === 'mercado') ruralFiltered.sort((a,b) => b.mercado_viable - a.mercado_viable);
   else if (sort === 'mrr') ruralFiltered.sort((a,b) => calcRural(b).mrr - calcRural(a).mrr);
   else if (sort === 'roi') ruralFiltered.sort((a,b) => { const ra=calcRural(a).roi, rb=calcRural(b).roi; return (ra||999)-(rb||999); });
+  else if (sort === 'localidades') ruralFiltered.sort((a,b) => (b.localidades_total || 0) - (a.localidades_total || 0));
+  else if (sort === 'distancia') ruralFiltered.sort((a,b) => {
+    const da = a.distancia_prom === '-' ? 999 : parseFloat(a.distancia_prom);
+    const db = b.distancia_prom === '-' ? 999 : parseFloat(b.distancia_prom);
+    return da - db;
+  });
   document.getElementById('rural-count-label').textContent = ruralFiltered.length + ' Torres';
   document.getElementById('rural-cards').innerHTML = ruralFiltered.map((r,i)=>renderRuralCard(r,i)).join('');
 }
@@ -294,7 +309,12 @@ function applySubFilters() {
   if (sort === 'mercado') subFiltered.sort((a,b) => b.mercado_viable - a.mercado_viable);
   else if (sort === 'mrr') subFiltered.sort((a,b) => calcSub(b).mrr - calcSub(a).mrr);
   else if (sort === 'roi') subFiltered.sort((a,b) => { const ra=calcSub(a).roi, rb=calcSub(b).roi; return (ra||999)-(rb||999); });
-  else if (sort === 'localidades') subFiltered.sort((a,b) => b.localidades_total - a.localidades_total);
+  else if (sort === 'localidades') subFiltered.sort((a,b) => (b.localidades_total || 0) - (a.localidades_total || 0));
+  else if (sort === 'distancia') subFiltered.sort((a,b) => {
+    const da = a.distancia_prom === '-' ? 999 : parseFloat(a.distancia_prom);
+    const db = b.distancia_prom === '-' ? 999 : parseFloat(b.distancia_prom);
+    return da - db;
+  });
   document.getElementById('sub-count-label').textContent = subFiltered.length + ' Nodos';
   document.getElementById('sub-cards').innerHTML = subFiltered.map((r,i)=>renderSubCard(r,i)).join('');
 }
