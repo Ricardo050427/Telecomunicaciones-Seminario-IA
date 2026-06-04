@@ -7,7 +7,7 @@
   <title>Dictamen Estratégico WISP Sonora — Dashboard de Inversión</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <!-- Leaflet.js -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -57,13 +57,13 @@
         <rect x="3" y="14" width="7" height="7" />
         <rect x="14" y="14" width="7" height="7" />
       </svg>
-      Resumen Ejecutivo
+      <span class="tab-text">Resumen Ejecutivo</span>
     </button>
     <button class="tab-btn" data-tab="rural" id="tab-rural">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polygon points="12 2 22 20 2 20" />
       </svg>
-      Nodos Rurales
+      <span class="tab-text">Nodos Rurales</span>
     </button>
     <button class="tab-btn" data-tab="suburbano" id="tab-suburbano">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -71,13 +71,13 @@
         <path
           d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
       </svg>
-      Nodos Suburbanos
+      <span class="tab-text">Nodos Suburbanos</span>
     </button>
     <button class="tab-btn" data-tab="urbano" id="tab-urbano">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
       </svg>
-      Zonas Urbanas
+      <span class="tab-text">Zonas Urbanas</span>
     </button>
     <button class="tab-btn" data-tab="simulador" id="tab-simulador">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -85,7 +85,7 @@
         <line x1="12" y1="20" x2="12" y2="4" />
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
-      Panel de Control
+      <span class="tab-text">Panel de Control</span>
     </button>
   </nav>
 
@@ -389,34 +389,64 @@
         <div class="sim-results">
           <div class="sim-results-header">Resultados del Simulador</div>
           <div class="sim-kpi-grid">
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">MRR Rural</div>
-              <div class="sim-kpi-value" id="sim-mrr-rural">—</div>
-            </div>
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">CAPEX Rural</div>
-              <div class="sim-kpi-value capex" id="sim-capex-rural">—</div>
-            </div>
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">MRR Suburbano</div>
-              <div class="sim-kpi-value" id="sim-mrr-sub">—</div>
-            </div>
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">CAPEX Suburbano</div>
-              <div class="sim-kpi-value capex" id="sim-capex-sub">—</div>
-            </div>
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">MRR Urbano</div>
-              <div class="sim-kpi-value" id="sim-mrr-urb">—</div>
-            </div>
-            <div class="sim-kpi">
-              <div class="sim-kpi-label">CAPEX Urbano</div>
-              <div class="sim-kpi-value capex" id="sim-capex-urb">—</div>
+            <!-- Segmento Rural -->
+            <div class="sim-kpi" style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--sage); border-bottom: 1px solid var(--border-light); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+                🌾 Rural
+              </div>
+              <div>
+                <div class="sim-kpi-label">MRR Proyectado</div>
+                <div class="sim-kpi-value" id="sim-mrr-rural">—</div>
+              </div>
+              <div>
+                <div class="sim-kpi-label">CAPEX Requerido</div>
+                <div class="sim-kpi-value capex" id="sim-capex-rural">—</div>
+              </div>
             </div>
 
+            <!-- Segmento Suburbano -->
+            <div class="sim-kpi" style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--gold); border-bottom: 1px solid var(--border-light); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+                🏘️ Suburbano
+              </div>
+              <div>
+                <div class="sim-kpi-label">MRR Proyectado</div>
+                <div class="sim-kpi-value" id="sim-mrr-sub">—</div>
+              </div>
+              <div>
+                <div class="sim-kpi-label">CAPEX Requerido</div>
+                <div class="sim-kpi-value capex" id="sim-capex-sub">—</div>
+              </div>
+            </div>
+
+            <!-- Segmento Urbano -->
+            <div class="sim-kpi" style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--purple); border-bottom: 1px solid var(--border-light); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+                🏙️ Urbano
+              </div>
+              <div>
+                <div class="sim-kpi-label">MRR Proyectado</div>
+                <div class="sim-kpi-value" id="sim-mrr-urb">—</div>
+              </div>
+              <div>
+                <div class="sim-kpi-label">CAPEX Requerido</div>
+                <div class="sim-kpi-value capex" id="sim-capex-urb">—</div>
+              </div>
+            </div>
           </div>
-          <canvas id="sim-chart" height="200"></canvas>
-          <div class="sim-note">
+          <div class="sim-node-search-box" style="margin-top: 24px; border-top: 1px solid var(--border-light); padding-top: 20px;">
+            <label style="font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 8px;">
+              🔍 Analizar Caso de Estudio Particular
+            </label>
+            <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+              <input type="text" id="sim-node-search" placeholder="🔍 Filtrar por nombre..." class="search-input" style="padding: 8px 12px; font-size: 0.8rem; margin: 0; flex: 1;">
+              <select id="sim-node-selector" class="filter-select" style="padding: 8px 12px; font-size: 0.8rem; flex: 2; border-color: var(--border); min-width: 180px;">
+                <!-- Se llena dinámicamente -->
+              </select>
+            </div>
+            <div id="sim-node-card-container"></div>
+          </div>
+          <div class="sim-note" style="margin-top: 16px;">
             <strong>Nota metodológica:</strong> El MRR se calcula como Mercado Viable × Tasa de Adopción × Ticket
             Mensual. El CAPEX como Clientes Proyectados × Costo por Equipo. ROI = CAPEX / MRR.
           </div>

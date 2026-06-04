@@ -8,11 +8,11 @@ const tierClass = (t) => (['','tier-t1','tier-t2','tier-t3','tier-t4'])[t] || 't
 const tierLabel = (t) => (['','Tier 1','Tier 2','Tier 3','Tier 4'])[t] || 'Tier ?';
 
 const CHART_COLORS = {
-  wine: '#C0392B', wineDark: '#8B1A2E', wineLight: 'rgba(192,57,43,0.15)',
-  gold: '#D4A843', goldLight: 'rgba(212,168,67,0.15)',
-  teal: '#22B89E', tealLight: 'rgba(34,184,158,0.15)',
-  purple: '#9B6FD0', purpleLight: 'rgba(107,63,160,0.15)',
-  white: '#F0ECEC', text2: '#A09090', bg4: '#242424', border2: 'rgba(255,255,255,0.07)'
+  wine: '#8B1A2E', wineDark: '#5C0F1E', wineLight: 'rgba(139, 26, 46, 0.12)',
+  gold: '#C29538', goldLight: 'rgba(194, 149, 56, 0.12)',
+  teal: '#3C8067', tealLight: 'rgba(60, 128, 103, 0.12)',
+  purple: '#7952A3', purpleLight: 'rgba(121, 82, 163, 0.12)',
+  white: '#2C1A1D', text2: '#685558', bg4: '#efe6dd', border2: 'rgba(44, 26, 29, 0.08)'
 };
 
 Chart.defaults.color = CHART_COLORS.text2;
@@ -60,6 +60,7 @@ function openModal(html) {
 }
 
 function ruralModalHTML(r) {
+  const c = calcRural(r);
   const losRatio = r.mercado_bruto > 0 ? Math.round(r.mercado_viable / r.mercado_bruto * 100) : 0;
   return `
     <div class="modal-title">📡 ${r.nombre}</div>
@@ -69,9 +70,9 @@ function ruralModalHTML(r) {
       <div class="modal-metric"><div class="modal-metric-label">Mercado Viable (LoS)</div><div class="modal-metric-value" style="color:#4DC88A">${fmt(r.mercado_viable)} hogares</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Perdido por Cerros</div><div class="modal-metric-value" style="color:#C0392B">${fmt(r.perdido_cerros)} hogares</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Nivel de Inversión</div><div class="modal-metric-value"><span class="tier-tag ${tierClass(r.tier)}">${tierLabel(r.tier)}</span></div></div>
-      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(r.mrr)}/mes</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">CAPEX (CPE)</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(r.capex)}</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(r.roi)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(c.mrr)}/mes</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">CAPEX (CPE)</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(c.capex)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(c.roi)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Coberturas Previas</div><div class="modal-metric-value" style="font-size:.82rem">${r.coberturas || '—'}</div></div>
     </div>
     <div class="progress-bar-wrap">
@@ -89,6 +90,7 @@ function ruralModalHTML(r) {
 }
 
 function subModalHTML(r) {
+  const c = calcSub(r);
   const losRatio = r.mercado_bruto > 0 ? Math.round(r.mercado_viable / r.mercado_bruto * 100) : 0;
   return `
     <div class="modal-title">🏘️ ${r.nombre}</div>
@@ -98,9 +100,9 @@ function subModalHTML(r) {
       <div class="modal-metric"><div class="modal-metric-label">Mercado Viable (LoS)</div><div class="modal-metric-value" style="color:#4DC88A">${fmt(r.mercado_viable)} hogares</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Localidades Totales</div><div class="modal-metric-value">${fmt(r.localidades_total)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Nivel de Inversión</div><div class="modal-metric-value"><span class="tier-tag ${tierClass(r.tier)}">${tierLabel(r.tier)}</span></div></div>
-      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(r.mrr)}/mes</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">CAPEX (CPE)</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(r.capex)}</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(r.roi)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(c.mrr)}/mes</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">CAPEX (CPE)</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(c.capex)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(c.roi)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Perdido por Cerros</div><div class="modal-metric-value" style="color:#C0392B">${fmt(r.perdido_cerros)} hogares</div></div>
     </div>
     <div class="progress-bar-wrap">
@@ -118,16 +120,17 @@ function subModalHTML(r) {
 }
 
 function urbanModalHTML(r) {
+  const c = calcUrb(r);
   return `
     <div class="modal-title">🏙️ ${r.localidad}</div>
     <div class="modal-sub">Municipio: ${r.municipio} &nbsp;·&nbsp; ${r.tecnologia}</div>
     <div class="modal-grid">
       <div class="modal-metric"><div class="modal-metric-label">Viviendas Habitadas</div><div class="modal-metric-value">${fmt(r.viviendas_hab)}</div></div>
       <div class="modal-metric"><div class="modal-metric-label">Sin Internet</div><div class="modal-metric-value" style="color:#C0392B">${fmt(r.sin_internet)} (${r.pct_sin}%)</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">Nodos AP Necesarios</div><div class="modal-metric-value">${fmt(r.nodos)}</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">CAPEX Nodos</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(r.capex)}</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(r.mrr)}/mes</div></div>
-      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(r.roi)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">Nodos AP Necesarios</div><div class="modal-metric-value">${fmt(c.nodos)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">CAPEX Nodos</div><div class="modal-metric-value" style="color:#C0392B">${fmtMXN(c.capex)}</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">MRR Proyectado</div><div class="modal-metric-value" style="color:#D4A843">${fmtMXN(c.mrr)}/mes</div></div>
+      <div class="modal-metric"><div class="modal-metric-label">ROI Estimado</div><div class="modal-metric-value" style="color:#22B89E">${fmtMes(c.roi)}</div></div>
     </div>
     <div class="progress-bar-wrap">
       <div class="progress-bar-label-row"><span>Penetración sin internet</span><span>${r.pct_sin}%</span></div>
@@ -162,6 +165,24 @@ function calcUrb(r) {
   const capex = nodos * params.urb_nodo_cost;
   const roi = mrr > 0 ? (capex / mrr).toFixed(1) : null;
   return { mrr, capex, nodos, roi };
+}
+
+function calcPortafolio(p) {
+  const v = p.mercado_viable || 0;
+  let adopt, ticket, cpe;
+  if (p.segmento === 'Suburbano') {
+    adopt = params.sub_adopt;
+    ticket = params.sub_ticket;
+  } else {
+    adopt = params.rural_adopt;
+    ticket = params.rural_ticket;
+  }
+  cpe = params.cpe_cost;
+  
+  const mrr = Math.round(v * adopt * ticket);
+  const capex = Math.round(v * adopt * cpe);
+  const roi = mrr > 0 ? (capex / mrr).toFixed(1) : null;
+  return { mrr, capex, roi };
 }
 
 function renderRuralCard(r, idx) {
@@ -322,28 +343,94 @@ function renderUrbanKPIs() {
 // ═══════════════════════════ CHARTS ═══════════════════════════
 let chartSegmento, chartMrrSeg, chartTiers, chartCapexMrr, simChart;
 
+// Custom Chart.js Plugin for Center Text in Doughnut Charts
+const centerTextPlugin = {
+  id: 'centerText',
+  afterDraw: function(chart) {
+    if (chart.config.type !== 'doughnut') return;
+    const width = chart.width,
+          height = chart.height,
+          ctx = chart.ctx;
+          
+    const pluginOpts = chart.config.options.plugins.centerText;
+    if (!pluginOpts || !pluginOpts.value) return;
+    
+    ctx.save();
+    
+    // Draw Value
+    ctx.font = pluginOpts.valueFont || "bold 1.75rem 'Outfit', sans-serif";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = pluginOpts.color || "#2C1A1D";
+    
+    const valueText = pluginOpts.value;
+    const valueX = Math.round((width - ctx.measureText(valueText).width) / 2);
+    
+    // Draw Label (if exists)
+    if (pluginOpts.label) {
+      const labelText = pluginOpts.label;
+      ctx.font = pluginOpts.labelFont || "600 0.65rem 'Inter', sans-serif";
+      ctx.fillStyle = pluginOpts.labelColor || "#8C7C7E";
+      const labelX = Math.round((width - ctx.measureText(labelText).width) / 2);
+      
+      // Position both vertically in the center
+      const valueY = height / 2 - 10;
+      const labelY = height / 2 + 12;
+      
+      ctx.fillText(valueText, valueX, valueY);
+      ctx.fillText(labelText, labelX, labelY);
+    } else {
+      const valueY = height / 2;
+      ctx.fillText(valueText, valueX, valueY);
+    }
+    
+    ctx.restore();
+  }
+};
+Chart.register(centerTextPlugin);
+
 function destroyChart(c) { if (c) c.destroy(); }
 
 function buildResumenCharts() {
-  // Pie - mercado por segmento (static: only build once)
+  const ruralViableTotal = DATA_RURALES.reduce((s,r) => s+r.mercado_viable,0);
+  const subViableTotal = DATA_SUBURBANOS.reduce((s,r) => s+r.mercado_viable,0);
+  const urbViableTotal = DATA_URBANOS.reduce((s,r) => s+r.sin_internet,0);
+  const totalViable = ruralViableTotal + subViableTotal + urbViableTotal;
+
+  // Bar - mercado por segmento (static: only build once)
   if (!chartSegmento) {
     chartSegmento = new Chart(document.getElementById('chart-segmento'), {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         labels: ['Rural', 'Suburbano', 'Urbano'],
         datasets: [{
-          data: [
-            DATA_RURALES.reduce((s,r) => s+r.mercado_viable,0),
-            DATA_SUBURBANOS.reduce((s,r) => s+r.mercado_viable,0),
-            DATA_URBANOS.reduce((s,r) => s+r.sin_internet,0)
-          ],
-          backgroundColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
-          borderColor: '#1C1C1C', borderWidth: 3
+          label: 'Hogares Viables',
+          data: [ruralViableTotal, subViableTotal, urbViableTotal],
+          backgroundColor: (context) => {
+            const chart = context.chart;
+            const {ctx, chartArea} = chart;
+            if (!chartArea) return CHART_COLORS.wineLight;
+            const g1 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g1.addColorStop(0, 'rgba(139, 26, 46, 0.12)'); g1.addColorStop(1, 'rgba(139, 26, 46, 0.9)');
+            const g2 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g2.addColorStop(0, 'rgba(60, 128, 103, 0.12)'); g2.addColorStop(1, 'rgba(60, 128, 103, 0.9)');
+            const g3 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g3.addColorStop(0, 'rgba(121, 82, 163, 0.12)'); g3.addColorStop(1, 'rgba(121, 82, 163, 0.9)');
+            return [g1, g2, g3];
+          },
+          borderColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
+          borderWidth: 2, borderRadius: 6,
+          hoverBackgroundColor: ['#8B1A2E', '#3C8067', '#7952A3'],
+          hoverBorderColor: ['#5C0F1E', '#1B5E20', '#5c3d7a'],
+          hoverBorderWidth: 3
         }]
       },
       options: {
         responsive: true, maintainAspectRatio: true,
-        plugins: { legend: { position: 'bottom', labels: { padding:16, font:{size:11} } } }
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { ticks: { callback: v => Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
+          x: { grid: { display: false } }
+        }
       }
     });
   }
@@ -364,9 +451,23 @@ function buildResumenCharts() {
         datasets: [{
           label: 'MRR ($MXN)',
           data: [rMrr, sMrr, uMrr],
-          backgroundColor: [CHART_COLORS.wineLight, CHART_COLORS.tealLight, CHART_COLORS.purpleLight],
+          backgroundColor: (context) => {
+            const chart = context.chart;
+            const {ctx, chartArea} = chart;
+            if (!chartArea) return CHART_COLORS.wineLight;
+            const g1 = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            g1.addColorStop(0, 'rgba(139, 26, 46, 0.12)'); g1.addColorStop(1, 'rgba(139, 26, 46, 0.9)');
+            const g2 = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            g2.addColorStop(0, 'rgba(60, 128, 103, 0.12)'); g2.addColorStop(1, 'rgba(60, 128, 103, 0.9)');
+            const g3 = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            g3.addColorStop(0, 'rgba(121, 82, 163, 0.12)'); g3.addColorStop(1, 'rgba(121, 82, 163, 0.9)');
+            return [g1, g2, g3];
+          },
           borderColor: [CHART_COLORS.wine, CHART_COLORS.teal, CHART_COLORS.purple],
-          borderWidth: 2, borderRadius: 8
+          borderWidth: 2, borderRadius: 8,
+          hoverBackgroundColor: ['#8B1A2E', '#3C8067', '#7952A3'],
+          hoverBorderColor: ['#5C0F1E', '#1B5E20', '#5c3d7a'],
+          hoverBorderWidth: 3
         }]
       },
       options: {
@@ -380,31 +481,50 @@ function buildResumenCharts() {
     });
   }
 
-  // Tier distribution doughnut (static: only build once)
+  // Tier distribution bar (static: only build once)
   if (!chartTiers) {
     const allNodos = [...DATA_RURALES, ...DATA_SUBURBANOS];
     const t1 = allNodos.filter(r => r.tier===1).length;
     const t2 = allNodos.filter(r => r.tier===2).length;
     const t3 = allNodos.filter(r => r.tier===3).length;
     const t4 = allNodos.filter(r => r.tier===4).length;
+
     chartTiers = new Chart(document.getElementById('chart-tiers'), {
-      type: 'doughnut',
+      type: 'bar',
       data: {
-        labels: ['Tier 1 - Inmediata','Tier 2 - Mediano','Tier 3 - Largo','Tier 4 - Satelital'],
+        labels: ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4'],
         datasets: [{
+          label: 'Nodos',
           data: [t1, t2, t3, t4],
-          backgroundColor: ['rgba(192,57,43,0.8)','rgba(212,168,67,0.8)','rgba(107,63,160,0.8)','rgba(100,100,100,0.5)'],
-          borderColor: '#1C1C1C', borderWidth: 3
+          backgroundColor: (context) => {
+            const chart = context.chart;
+            const {ctx, chartArea} = chart;
+            if (!chartArea) return CHART_COLORS.wineLight;
+            const g1 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g1.addColorStop(0, 'rgba(139, 26, 46, 0.12)'); g1.addColorStop(1, 'rgba(139, 26, 46, 0.9)');
+            const g2 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g2.addColorStop(0, 'rgba(194, 149, 56, 0.12)'); g2.addColorStop(1, 'rgba(194, 149, 56, 0.9)');
+            const g3 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g3.addColorStop(0, 'rgba(121, 82, 163, 0.12)'); g3.addColorStop(1, 'rgba(121, 82, 163, 0.9)');
+            const g4 = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            g4.addColorStop(0, 'rgba(140, 124, 126, 0.12)'); g4.addColorStop(1, 'rgba(140, 124, 126, 0.9)');
+            return [g1, g2, g3, g4];
+          },
+          borderColor: [CHART_COLORS.wine, CHART_COLORS.gold, CHART_COLORS.purple, '#8C7C7E'],
+          borderWidth: 2, borderRadius: 6,
+          hoverBackgroundColor: ['#8B1A2E', '#C29538', '#7952A3', '#8C7C7E'],
+          hoverBorderColor: ['#5C0F1E', '#B88D2D', '#5c3d7a', '#685558'],
+          hoverBorderWidth: 3
         }]
       },
       options: {
         responsive: true, maintainAspectRatio: true,
         plugins: {
-          legend: { position: 'bottom', labels: { padding:12, font:{size:10} } },
+          legend: { display: false },
           tooltip: {
-            titleColor: '#F0ECEC',
-            bodyColor: '#D4A843',
-            footerColor: '#A09090',
+            titleColor: '#2C1A1D',
+            bodyColor: '#C29538',
+            footerColor: '#685558',
             footerFont: { size: 10, weight: 'normal' },
             callbacks: {
               label: function(context) {
@@ -421,6 +541,10 @@ function buildResumenCharts() {
               }
             }
           }
+        },
+        scales: {
+          y: { ticks: { callback: v => Number(v).toLocaleString('es-MX') }, grid: { color: CHART_COLORS.border2 } },
+          x: { grid: { display: false } }
         }
       }
     });
@@ -444,9 +568,29 @@ function buildResumenCharts() {
           labels: top10.map(r => r.nombre.length>18 ? r.nombre.slice(0,16)+'…' : r.nombre),
           datasets: [
             { label:'MRR ($)', data: mrrVals,
-              backgroundColor: CHART_COLORS.tealLight, borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6 },
+              backgroundColor: (context) => {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+                if (!chartArea) return CHART_COLORS.tealLight;
+                const g = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                g.addColorStop(0, 'rgba(60, 128, 103, 0.1)');
+                g.addColorStop(1, 'rgba(60, 128, 103, 0.8)');
+                return g;
+              },
+              borderColor: CHART_COLORS.teal, borderWidth:2, borderRadius:6,
+              hoverBackgroundColor: '#3C8067', hoverBorderColor: '#1B5E20', hoverBorderWidth: 3 },
             { label:'CAPEX ($)', data: capexVals,
-              backgroundColor: CHART_COLORS.wineLight, borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6 }
+              backgroundColor: (context) => {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+                if (!chartArea) return CHART_COLORS.wineLight;
+                const g = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                g.addColorStop(0, 'rgba(139, 26, 46, 0.1)');
+                g.addColorStop(1, 'rgba(139, 26, 46, 0.8)');
+                return g;
+              },
+              borderColor: CHART_COLORS.wine, borderWidth:2, borderRadius:6,
+              hoverBackgroundColor: '#8B1A2E', hoverBorderColor: '#5C0F1E', hoverBorderWidth: 3 }
           ]
         },
         options: {
@@ -529,31 +673,17 @@ function updateSimulator() {
   buildResumenCharts();
   buildTopTables();
 
-  // Sim chart
-  if (simChart) {
-    simChart.data.datasets[0].data = [rMrr, sMrr, uMrr];
-    simChart.data.datasets[1].data = [rCap, sCap, uCap];
-    simChart.update('none');
-  } else {
-    simChart = new Chart(document.getElementById('sim-chart'), {
-      type: 'bar',
-      data: {
-        labels: ['Rural','Suburbano','Urbano'],
-        datasets: [
-          { label:'MRR ($)', data:[rMrr,sMrr,uMrr], backgroundColor:[CHART_COLORS.tealLight,CHART_COLORS.tealLight,CHART_COLORS.tealLight], borderColor:[CHART_COLORS.teal,CHART_COLORS.teal,CHART_COLORS.teal], borderWidth:2, borderRadius:8 },
-          { label:'CAPEX ($)', data:[rCap,sCap,uCap], backgroundColor:[CHART_COLORS.wineLight,CHART_COLORS.wineLight,CHART_COLORS.wineLight], borderColor:[CHART_COLORS.wine,CHART_COLORS.wine,CHART_COLORS.wine], borderWidth:2, borderRadius:8 }
-        ]
-      },
-      options: {
-        responsive:true, maintainAspectRatio:true,
-        plugins:{ legend:{position:'top'} },
-        scales: {
-          y:{ ticks:{callback: v=>'$'+Number(v).toLocaleString('es-MX')}, grid:{color:CHART_COLORS.border2} },
-          x:{ grid:{display:false} }
-        }
+  // Update map popups dynamically
+  if (mapaInstance && allMarkers.length > 0) {
+    allMarkers.forEach(function(marker) {
+      if (marker._torreData && marker._torreData.portafolio) {
+        marker.setPopupContent(makeTorrePopup(marker._torreData));
       }
     });
   }
+
+  // Sim chart removed
+  updateSimNodeCard();
 }
 
 // Slider bindings
@@ -600,6 +730,111 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   applyUrbFilters();
 });
 
+let allSimOptions = [];
+
+function initSimNodeSelector() {
+  allSimOptions = [];
+  DATA_RURALES.forEach((r, idx) => {
+    allSimOptions.push({ type: 'rural', index: idx, name: r.nombre, group: 'Rurales' });
+  });
+  DATA_SUBURBANOS.forEach((r, idx) => {
+    allSimOptions.push({ type: 'sub', index: idx, name: r.nombre, group: 'Suburbanos' });
+  });
+  DATA_URBANOS.forEach((r, idx) => {
+    allSimOptions.push({ type: 'urb', index: idx, name: r.localidad, group: 'Urbanos' });
+  });
+
+  const selector = document.getElementById('sim-node-selector');
+  if (!selector) return;
+
+  populateSelector(allSimOptions);
+
+  // Set default to ULTIMO-ESFUERZO
+  const defaultOpt = allSimOptions.find(opt => opt.name === 'ULTIMO-ESFUERZO');
+  if (defaultOpt) {
+    selector.value = `${defaultOpt.type}-${defaultOpt.index}`;
+  }
+
+  const searchInput = document.getElementById('sim-node-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      const filtered = allSimOptions.filter(opt => opt.name.toLowerCase().includes(query));
+      populateSelector(filtered);
+      updateSimNodeCard();
+    });
+  }
+
+  selector.addEventListener('change', () => {
+    updateSimNodeCard();
+  });
+
+  updateSimNodeCard();
+}
+
+function populateSelector(options) {
+  const selector = document.getElementById('sim-node-selector');
+  if (!selector) return;
+
+  const prevVal = selector.value;
+
+  // Group options by group
+  const groups = {};
+  options.forEach(opt => {
+    if (!groups[opt.group]) groups[opt.group] = [];
+    groups[opt.group].push(opt);
+  });
+
+  let html = '';
+  for (const groupName in groups) {
+    html += `<optgroup label="${groupName}">`;
+    groups[groupName].forEach(opt => {
+      const val = `${opt.type}-${opt.index}`;
+      html += `<option value="${val}">${opt.name}</option>`;
+    });
+    html += `</optgroup>`;
+  }
+
+  selector.innerHTML = html;
+
+  if (prevVal && options.some(opt => `${opt.type}-${opt.index}` === prevVal)) {
+    selector.value = prevVal;
+  } else if (options.length > 0) {
+    const firstOpt = options[0];
+    selector.value = `${firstOpt.type}-${firstOpt.index}`;
+  }
+}
+
+function updateSimNodeCard() {
+  const selector = document.getElementById('sim-node-selector');
+  const container = document.getElementById('sim-node-card-container');
+  if (!selector || !container) return;
+
+  const val = selector.value;
+  if (!val) {
+    container.innerHTML = '<div style="color:var(--text3);text-align:center;padding:12px;">No hay resultados</div>';
+    return;
+  }
+
+  const parts = val.split('-');
+  const type = parts[0];
+  const idx = parseInt(parts[1]);
+
+  let cardHTML = '';
+  if (type === 'rural') {
+    const r = DATA_RURALES[idx];
+    cardHTML = renderRuralCard(r, idx).replace('data-type="rural"', 'data-type="rural-sim"');
+  } else if (type === 'sub') {
+    const r = DATA_SUBURBANOS[idx];
+    cardHTML = renderSubCard(r, idx).replace('data-type="sub"', 'data-type="sub-sim"');
+  } else if (type === 'urb') {
+    const r = DATA_URBANOS[idx];
+    cardHTML = renderUrbanCard(r, idx).replace('data-type="urb"', 'data-type="urb-sim"');
+  }
+
+  container.innerHTML = cardHTML;
+}
+
 // ═══════════════════════════ INIT ═══════════════════════════
 function init() {
   updateHeaderKPI();
@@ -608,6 +843,7 @@ function init() {
   applyRuralFilters();
   applySubFilters();
   applyUrbFilters();
+  initSimNodeSelector();
 }
 
 document.addEventListener('DOMContentLoaded', init);
@@ -619,8 +855,11 @@ document.addEventListener('click', function(e) {
   var type = card.dataset.type;
   var idx = parseInt(card.dataset.idx);
   if (type === 'rural') openModal(ruralModalHTML(ruralFiltered[idx]));
+  else if (type === 'rural-sim') openModal(ruralModalHTML(DATA_RURALES[idx]));
   else if (type === 'sub') openModal(subModalHTML(subFiltered[idx]));
+  else if (type === 'sub-sim') openModal(subModalHTML(DATA_SUBURBANOS[idx]));
   else if (type === 'urb') openModal(urbanModalHTML(urbFiltered[idx]));
+  else if (type === 'urb-sim') openModal(urbanModalHTML(DATA_URBANOS[idx]));
 });
 
 
@@ -634,27 +873,27 @@ var clusterGroup = null;
 var mapaInited   = false;
 
 var DEP_COLORS = {
-  'Telefonía Rural': '#27AE60',
-  'CFE':             '#F39C12',
-  'Seguridad':       '#E74C3C',
-  'Telemax':         '#E67E22',
-  'Radio Sonora':    '#9B59B6',
-  'SEC':             '#3498DB',
-  'Hacienda':        '#1ABC9C',
-  'Contraloría':     '#BDC3C7',
-  'C5i':             '#8E44AD',
+  'Telefonía Rural': '#3C8067',
+  'CFE':             '#C29538',
+  'Seguridad':       '#C0392B',
+  'Telemax':         '#D97724',
+  'Radio Sonora':    '#7952A3',
+  'SEC':             '#2E6F9E',
+  'Hacienda':        '#1A8B7C',
+  'Contraloría':     '#7F8C8D',
+  'C5i':             '#6C3FA0',
   'Ejecutivo':       '#2980B9',
 };
 
 function getDepColor(dep) {
-  return DEP_COLORS[dep] || '#95A5A6';
+  return DEP_COLORS[dep] || '#8C7C7E';
 }
 
 var TIER_COLORS = {
-  1: '#E74C3C',
-  2: '#F39C12',
-  3: '#F1C40F',
-  4: '#95A5A6',
+  1: '#8B1A2E',
+  2: '#C29538',
+  3: '#7952A3',
+  4: '#8C7C7E',
 };
 var TIER_LABELS = {
   1: 'Tier 1 — Inversión Inmediata',
@@ -705,12 +944,13 @@ function makeTorrePopup(t) {
 
   if (t.portafolio) {
     var p = t.portafolio;
-    var tierColors = ['','#E74C3C','#E67E22','#F1C40F','#95A5A6'];
+    var c = calcPortafolio(p);
+    var tierColors = ['','#8B1A2E','#C29538','#7952A3','#8C7C7E'];
     html += '<div class="popup-portafolio-badge">⭐ EN PORTAFOLIO — Tier ' + p.tier + '</div>';
     html += '<div class="popup-kpi-row">';
-    html += '<div class="popup-kpi"><div class="pk-label">MRR</div><div class="pk-value">$' + (p.mrr||0).toLocaleString('es-MX') + '</div></div>';
-    html += '<div class="popup-kpi"><div class="pk-label">CAPEX</div><div class="pk-value">$' + (p.capex||0).toLocaleString('es-MX') + '</div></div>';
-    html += '<div class="popup-kpi"><div class="pk-label">ROI</div><div class="pk-value">' + (p.roi ? p.roi + ' m' : 'N/A') + '</div></div>';
+    html += '<div class="popup-kpi"><div class="pk-label">MRR</div><div class="pk-value">$' + (c.mrr||0).toLocaleString('es-MX') + '</div></div>';
+    html += '<div class="popup-kpi"><div class="pk-label">CAPEX</div><div class="pk-value">$' + (c.capex||0).toLocaleString('es-MX') + '</div></div>';
+    html += '<div class="popup-kpi"><div class="pk-label">ROI</div><div class="pk-value">' + (c.roi ? c.roi + ' m' : 'N/A') + '</div></div>';
     html += '</div>';
     html += '<div class="popup-kpi-row" style="grid-template-columns:1fr 1fr;">';
     html += '<div class="popup-kpi"><div class="pk-label">Mercado Viable</div><div class="pk-value">' + (p.mercado_viable||0).toLocaleString('es-MX') + '</div></div>';
@@ -718,12 +958,49 @@ function makeTorrePopup(t) {
     html += '</div>';
 
     if (p.localidades_los && p.localidades_los.length > 0) {
-      html += '<div class="popup-los-title">🏘️ Localidades con LOS (' + p.localidades_los.length + '):</div>';
-      html += '<ul class="popup-los-list">';
+      var losLocalities = [];
+      var blockedLocalities = [];
+      
       p.localidades_los.forEach(function(loc) {
-        html += '<li>' + loc + '</li>';
+        if (loc.indexOf('| BLOQUEADAS') !== -1) {
+          var parts = loc.split('| BLOQUEADAS');
+          var viableName = parts[0].trim();
+          if (viableName.endsWith('.')) {
+            viableName = viableName.slice(0, -1).trim();
+          }
+          if (viableName) losLocalities.push(viableName);
+          
+          var blockedPart = parts[1];
+          var colonIdx = blockedPart.indexOf(':');
+          if (colonIdx !== -1) {
+            var blockedNames = blockedPart.slice(colonIdx + 1).trim();
+            if (blockedNames) blockedLocalities.push(blockedNames);
+          } else {
+            var blockedNames = blockedPart.trim();
+            if (blockedNames) blockedLocalities.push(blockedNames);
+          }
+        } else {
+          if (loc.trim()) losLocalities.push(loc.trim());
+        }
       });
-      html += '</ul>';
+
+      if (losLocalities.length > 0) {
+        html += '<div class="popup-los-title">🏘️ Localidades con LOS (' + losLocalities.length + '):</div>';
+        html += '<ul class="popup-los-list">';
+        losLocalities.forEach(function(loc) {
+          html += '<li>' + loc + '</li>';
+        });
+        html += '</ul>';
+      }
+
+      if (blockedLocalities.length > 0) {
+        html += '<div class="popup-los-title" style="color:var(--primary); border-top:1px solid var(--border-light); margin-top:10px; padding-top:8px;">🚫 Localidades Bloqueadas (' + blockedLocalities.length + '):</div>';
+        html += '<ul class="popup-blocked-list">';
+        blockedLocalities.forEach(function(loc) {
+          html += '<li>' + loc + '</li>';
+        });
+        html += '</ul>';
+      }
     }
   }
   return html;
@@ -740,8 +1017,8 @@ function initMapaTorres() {
     preferCanvas: true
   });
 
-  // Dark tile layer (CartoDB Dark Matter)
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  // Light tile layer (CartoDB Positron)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '© OpenStreetMap contributors © CARTO',
     maxZoom: 19,
     subdomains: 'abcd'
@@ -824,5 +1101,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   // Init map on load (Resumen is the default active tab)
-  setTimeout(initMapaTorres, 500);
+  setTimeout(initMapaTorres, 300);
+
+  // Listen for window resize to adjust map dimensions and prevent overflows
+  window.addEventListener('resize', function() {
+    if (mapaInstance) {
+      mapaInstance.invalidateSize();
+    }
+  });
 });
